@@ -1,0 +1,2374 @@
+[17010] -- portchange --
+[17050] fastboot: getvar:slot-count
+[17050] fastboot: getvar:slot-suffixes
+[17060] fastboot: reboot-bootloader
+[17060] rebooting the d�
+Format: Log Type - Time(microsec) - Message
+Log type: B - since boot(excluding boot rom).  D - delta
+B -     83234 - SBL1, Start
+B -     88511 - scatterload_region && ram_init, Start
+D -         0 - scatterload_region && ram_init, Delta
+B -    105469 - pm_device_init, Start
+D -     26474 - pm_device_init, Delta
+B -    132065 - boot_flash_init, Start
+D -     11712 - boot_flash_init, Delta
+B -    144204 - boot_config_data_table_init, Start
+D -         0 - boot_config_data_table_init, Delta
+B -    150365 - sbl1_ddr_set_params, Start
+B -    155153 - Pre_DDR_clock_init, Start
+D -       274 - Pre_DDR_clock_init, Delta
+D -         0 - sbl1_ddr_set_params, Delta
+B -    168787 - pm_driver_init, Start
+D -     16500 - pm_driver_init, Delta
+B -    185318 - clock_init, Start
+D -       183 - clock_init, Delta
+B -    188398 - Image Load, Start
+B -    207186 - Tz Execution, Start
+D -    183671 - Tz Execution, Delta
+B -    398970 - Image Load, Start
+B -    408639 - SignaL PBL to Jump to RPM FW
+B -    408913 - sbl1_wait_for_ddr_training, Start
+D -     31720 - sbl1_wait_for_ddr_training, Delta
+B -    447923 - Image Load, Start
+B -    448624 - WDT Execution, Start
+D -       213 - WDT Execution, Delta
+B -    451247 - Image Load, Start
+B -    469303 - sbl1_efs_handle_cookies, Start
+D -       213 - sbl1_efs_handle_cookies, Delta
+B -    471286 - RPM sync cookie updated
+B -    475586 - SBL1, End
+Android Bootloader - UART_DM Initialized!!!
+[0] welcome to lk
+
+[10] platform_init()
+[10] target_init()
+[210] hw version voltage value=3
+[210] ddr version  value=1,14
+[210] rf version voltage value=30
+[310] Done initialization of the card
+[330] Display Init: Start
+[330] detect pannel ID=:0x0
+[340] JDI panel, panel_id=1
+[580] MDP GDSC already enabled
+[580] msm_fb_alloc enter:fb->width=1080,fb->height=1920,fb->bpp=24
+[590] fbcon_setup  enter.
+[590] Config MIPI_CMD_PANEL.
+[720] Neal board_hardware_id = 8!
+[720] partition_get_index : name=reserve3
+[720] partition_get_index : name=reserve3, n=25
+[730] get_gamma_index : -48
+[730] msm_display_on  enter.
+[730] Turn on MIPI_CMD_PANEL.
+[730] Display Init: Done
+[740] vbatt_low_shutdown_handle enter.
+[740] lfc Configure gpios for QUP instance: 0
+[740] bq27541_init:OK
+[760] partition_get_index : name=aboot
+[760] partition_get_index : name=aboot, n=4
+[770] after msm_boot_mode_init, boot mode is=0
+[770]  reboot mode is=2003195136
+[770]  sxh  set_msm_boot_mode_by_gpio  goto normal mode power on!
+# [830] command not found
+# # [930]  wwx  set_msm_boot_mode=1
+[930]  wwx  reboot mode =2003195136
+[930] partition_get_index : name=LOGO
+[930] partition_get_index : name=LOGO, n=21
+[940] splash_screen_mmc:MAGIC: SPLASH!!, width: 446, height: 56
+[950] splash_screen_mmc 4101 YXQ first_read_flag=1
+[950] msm_display_on  enter.
+[950] Turn on MIPI_CMD_PANEL.
+YXQ backlight level 100
+[960] lm3630_enable-----lm3630_enable: !
+[960] yanghai Configure gpios for QUP instance: 1
+[970] QUP IN:bl:8, ff:32, OUT:bl:8, ff:32
+[970] gpio_ap_switch_config
+[970] lfc Configure gpios for QUP instance: 5
+[980] bq24196_init:OK
+[990] QUP IN:bl:8, ff:32, OUT:bl:8, ff:32
+[1000] partition_get_index : name=LOGO
+[1000] partition_get_index : name=LOGO, n=21
+[1000] splash_screen_mmc:MAGIC: SPLASH!!, width: 446, height: 56
+[1010] splash_screen_mmc 4101 YXQ first_read_flag=0
+[1010] msm_display_on  enter.
+[1020] Turn on MIPI_CMD_PANEL.
+[1020] partition_get_index : name=system
+[1020] partition_get_index : name=system, n=13
+[1030] partition_get_index : name=userdata
+[1030] partition_get_index : name=userdata, n=27
+[1040] partition_get_index : name=cache
+[1040] partition_get_index : name=cache, n=15
+[1040] fastboot_init()
+[1050] partition_get_index : name=ssd
+[1050] partition_get_index : name=ssd, n=19
+[1060] Loading keystore failed status 6 [1060] ERROR: scm_protect_keystore Failed[1160] USB init ept @ 0xf987000
+[1180] udc_start()
+[1320] -- reset --
+[1320] -- portchange --
+[1390] -- reset --
+[1390] -- portchange --
+[1490] fastboot: processing commands
+[3550] fastboot: getvar:slot-count
+[3550] fastboot: getvar:slot-suffixes
+[3560] fastboot: download:00e35800
+[4150] fastboot: boot
+[4160] qcom,msm-id entry not found
+[4170] DTB found with bestmatch soc rev id 0x0.Board soc rev id 0x10001
+[4170] ddr info:  ddr_manufacture_info=Samsung  ddr_row0_info=14,len:47,version:1
+[4180] LCD_id 0 yxr
+[4180] cmdline: PMOS_NO_OUTPUT_REDIRECT androidboot.emmc=true androidboot.serialno=946806ce androidboot.baseband=msm mdss_mdp.panel=1:dsi:0:qcom,mdss_dsi_jdi_1080p_cmd oppo.pcb_version=12 ddr_manufacture_info=Samsung  ddr_row0_info=14 LCD_id<4 oppo.rf_version=66[4200] pm8x41_get_is_cold_boot: Warm boot
+[4210] WARM: power_on_reason  is USB_CHG [0x90]
+[4210] pm8x41_get_is_cold_boot: Warm boot
+[4220] WARM: power_on_reason  is KPADPWR_N [0x90]
+[4220] pm8x41_get_is_cold_boot: Warm boot
+[4220] WARM: power_off_reason  is KPDPWR_N [0x80]
+[4230] cold boot
+[4230] The power_on_reason is  androidboot.startupmode=pwrkey
+[4240] cmdline = PMOS_NO_OUTPUT_REDIRECT androidboot.emmc=true androidboot.serialno=946806ce androidboot.baseband=msm mdss_mdp.panel=1:dsi:0:qcom,mdss_dsi_jdi_1080p_cmd oppo.pcb_version=12 ddr_manufacture_info=Samsung  ddr_row0_info=14 LCD_id<4 oppo.rf_version=6[4260] Updating device tree: start
+[4260] Updating device tree: done
+[4270] Turn off MIPI_CMD_PANEL.
+[4270] Continuous splash enabled, keeping panel alive.
+[4270] booting linux @ 0x8000, ramdisk @ 0x2000000 (9138719), tags/device tree @ 0x1e00000
+[13150] -- portchange --
+[13190] fastboot: getvar:slot-count
+[13200] fastboot: getvar:slot-suffixes
+[13200] fastboot: reboot-bootloader
+[13200] rebooting the d�
+Format: Log Type - Time(microsec) - Message
+Log type: B - since boot(excluding boot rom).  D - delta
+B -     83173 - SBL1, Start
+B -     88450 - scatterload_region && ram_init, Start
+D -         0 - scatterload_region && ram_init, Delta
+B -    105408 - pm_device_init, Start
+D -     26474 - pm_device_init, Delta
+B -    132004 - boot_flash_init, Start
+D -     10742 - boot_flash_init, Delta
+B -    14$112 - boot_config_data_table_init, Start
+D -         0 - boot_config_data_table_init, Delta
+B -    150304 - sbl1_ddr_set_params, Start
+B -    155092 - Pre_DDR_clock_init, Start
+D -       274 - Pre_DDR_clock_init, Delta
+D -         0 - sbl1_ddr_set_params, Delta
+B -    168726 - pm_driver_init, Start
+D -     16531 - pm_driver_init, Delta
+B -    185257 - clock_init, Start
+D -       152 - clock_init, Delta
+B -    188337 - Image Load, Start
+B -    207125 - Tz Execution, Start
+D -    183610 - Tz Execution, Delta
+B -    398879 - Image Load, Start
+B -    408791 - sbl1_wait_for_ddr_training, Start
+D -     31689 - sbl1_wait_for_ddr_training, Delta
+B -    447770 - Image Load, Start
+B -    448502 - WDT Execution, Start
+D -       213 - WDT Execution, Delta
+B -    451095 - Image Load, Start
+B -    469151 - sbl1_efs_handle_cookies, Start
+D -       244 - sbl1_efs_handle_cookies, Delta
+B -    471164 - RPM sync cookie updated
+B -    475434 - SBL1, End
+Android Bootloader - UART_DM Initialized!!!
+[0] welcome to lk
+
+[10] platform_init()
+[10] target_init()
+[210] hw version voltage value=3
+[210] ddr version  value=1,14
+[210] rf version voltagevalue=30
+[310] Done initialization of the card
+[330] Display Init: Start
+[330] detect pannel ID=:0x0
+[340] JDI panel, panel_id=1
+[580] MDP GDSC already enabled
+[580] msm_fb_alloc enter:fb->width=1080,fb->height=1920,fb->bpp=24
+[590] fbcon_setup  enter.
+[590] Config MIPI_CMD_PANEL.
+[720] Neal board_hardware_id = 8!
+[720] partition_get_index : name=reserve3
+[720] partition_get_index : name=reserve3, n=25
+[730] get_gamma_index : -48
+[730] msm_display_on  enter.
+[730] Turn on MIPI_CMD_PANEL.
+[730] Display Init: Done
+[740] vbatt_low_shutdown_handle enter.
+[740] lfc Configure gpios for QUP instance: 0
+[740] bq27541_init:OK
+[760] partition_get_index : name=aboot
+[760] partition_get_index : name=aboot, n=4
+[770] after msm_boot_mode_init, boot mode is=0
+[770]  reboot mode is=2003195136
+[770]  sxh  set_msm_boot_mode_by_gpio  goto normal mode power on!
+# [830] command not found
+# # [930]  wwx  set_msm_boot_mode=1
+[930]  wwx  reboot mode =2003195136
+[930] partition_get_index : name=LOGO
+[930] partition_get_index : name=LOGO, n=21
+[940] splash_screen_mmc:MAGIC: SPLASH!!, width: 446, height: 56
+[950] splash_screen_mmc 4101 YXQ first_read_flag=1
+[950] msm_display_on  enter.
+[950] Turn on MIPI_CMD_PANEL.
+YXQ backlight level 100
+[960] lm3630_enable-----lm3630_enable: !
+[960] yanghai Configure gpios for QUP instance: 1
+[970] QUP IN:bl:8, ff:32, OUT:bl:8, ff:32
+[970] gpio_ap_switch_config
+[970] lfc Configure gpios for QUP instance: 5
+[980] bq24196_init:OK
+[990] QUP IN:bl:8, ff:32, OUT:bl:8, ff:32
+[1000] partition_get_index : name=LOGO
+[1000] partition_get_index : name=LOGO, n=21
+[1000] splash_screen_mmc:MAGIC: SPLASH!!, width: 446, height: 56
+[1010] splash_screen_mmc 4101 YXQ first_read_flag=0
+[1010] msm_display_on  enter.
+[1020] Turn on MIPI_CMD_PANEL.
+[1020] partition_get_index : name=system
+[1020] partition_get_index : name=system, n=13
+[1030] partition_get_index : name=userdata
+[1030] partition_get_index : name=userdata, n=27
+[1040] partition_get_index : name=cache
+[1040] partition_get_index : name=cache, n=15
+[1040] fastboot_init()
+[1050] partition_get_index : name=ssd
+[1050] partition_get_index : name=ssd, n=19
+[1060] Loading keystore failed status 6 [1060] ERROR: scm_protect_keystore Failed[1160] USB init ept @ 0xf987000
+[1180] udc_start()
+[1560] -- reset --
+[1560] -- portchange --
+[1640] -- reset --
+[1640] -- portchange --
+[1740] fastboot: processing commands
+[8580] -- portchange --
+[8620] fastboot: getvar:slot-count
+[8630] fastboot: getvar:slot-suffixes
+[8630] fastboot: download:00e35800
+[9220] fastboot: boot
+[9240] qcom,msm-id entry not found
+[9240] DTB found with bestmatch soc rev id 0x0.Board soc rev id 0x10001
+[9250] ddr info:  ddr_manufacture_info=Samsung  ddr_row0_info=14,len:47,version:1
+[9260] LCD_id 0 yxr
+[9260] cmdline: PMOS_NO_OUTPUT_REDIRECT androidboot.emmc=true androidboot.serialno=946806ce androidboot.baseband=msm mdss_mdp.panel=1:dsi:0:qcom,mdss_dsi_jdi_1080p_cmd oppo.pcb_version=12 ddr_manufacture_info=Samsung  ddr_row0_info=14 LCD_id<4 oppo.rf_version=66[9280] pm8x41_get_is_cold_boot: Warm boot
+[9280] WARM: power_on_reason  is USB_CHG [0x90]
+[9290] pm8x41_get_is_cold_boot: Warm boot
+[9290] WARM: power_on_reason  is KPADPWR_N [0x90]
+[9300] pm8x41_get_is_cold_boot: Warm boot
+[9300] WARM: power_off_reason  is KPDPWR_N [0x80]
+[9300] cold boot
+[9310] The power_on_reason is  androidboot.startupmode=pwrkey
+[9310] cmdline = PMOS_NO_OUTPUT_REDIRECT androidboot.emmc=true androidboot.serialno=946806ce androidboot.baseband=msm mdss_mdp.panel=1:dsi:0:qcom,mdss_dsi_jdi_1080p_cmd oppo.pcb_version=12 ddr_manufacture_info=Samsung  ddr_row0_info=14 LCD_id<4 oppo.rf_version=6[9330] Updating device tree: start
+[9340] Updating device tree: done
+[9340] Turn off MIPI_CMD_PANEL.
+[9340] Continuous splash enabled, keeping panel alive.
+[9350] booting linux @ 0x8000, ramdisk @ 0x2000000 (9138719), tags/device tree @ 0x1e00000
+[12290] -- portchange --
+[12340] fastboot: getvar:slot-count
+[12340] fastboot: getvar:slot-suffixes
+[12340] fastboot: reboot-bootloader
+[12340] rebooting the d�
+Format: Log Type - Time(microsec) - Message
+Log type: B - since boot(excluding boot rom).  D - delta
+B -     83143 - SBL1, Start
+B -     88419 - scatterload_region $& ram_init, Start
+D -         0 - scatterload_region && ram_init, Delta
+B -    105377 - pm_device_init, Start
+D -     26443 - pm_device_init, Delta
+B -    131912 - boot_flash_init, Start
+D -     11742 - boot_flash_init, Delta
+B -    144021 ) boot_confag_data_table_init, Start
+D -         0 - boot_config_data_table_init, Delta
+B -    150212 - sbl1_ddr_set_params, Start
+B -    155001 - Pre_DDR_clock_init, Start
+D -       274 - Pre_DDR_clock_init, Delta
+D -         0 - sbl1_ddr_set_params, Delta
+B -    168634 - pm_driver_init, Start
+D -     16500 - pm_driver_init, Delta
+B -    185165 - clock_init, Start
+D -       183 - clock_init, Delta
+B -    188246 - Image Load, Start
+B -    207034 - Tz Execution, Start
+D -    183671 - Tz Execution, Delta
+B -    398848 - Image Load, Start
+B -    408486 - Signal PBL to Julp to RPM FW
+B -    408761 - sbl1_wait_for_ddr_tr`ining, Start
+D -     31689 - sbl1_wait_for_ddr_training, Delta
+B -    447740 - Image Load, Start
+B -    448441 - WDT Execution, Start
+D -       213 - WDT Execution, Delta
+B -    451064 - Image Load, Start
+B -    469120 - sbl1_efs_handle_cookies, Start
+D -       213 - sbl1_efs_handle_cookies, Delta
+B -    471103 - RPM sync cookie updated
+B -    475403 - SBL1, End
+Android Bootloader - UART_DM Initialized!!!
+[0] welcome to lk
+
+[10] platform_init()
+[10] target_init()
+[210] hw version voltage value=3
+[210] ddr version  value=1,14
+[210] rf version voltage value=30
+[310] Done initialization of the card
+[330] Display Init: Start
+[330] detect pannel ID=:0x0
+[340] JDI panel, panel_id=1
+[580] MDP GDSC already enabled
+[580] msm_fb_alloc enter:fb->width=1080,fb->height=1920,fb->bpp=24
+[590] fbcon_setup  enter.
+[590] Config MIPI_CMD_PANEL.
+[720] Neal board_hardware_id = 8!
+[720] partition_get_index : name=reserve3
+[720] partition_get_index : name=reserve3, n=25
+[730] get_gamma_index : -48
+[730] msm_display_on  enter.
+[730] Turn on MIPI_CMD_PANEL.
+[730] Display Init: Done
+[740] vbatt_low_shutdown_handle enter.
+[740] lfc Configure gpios for QUP instance: 0
+[740] bq27541_init:OK
+[760] partition_get_index : name=aboot
+[760] partition_get_index : name=aboot, n=4
+[770] after msm_boot_mode_init, boot mode is=0
+[770]  reboot mode is=2003195136
+[770]  sxh  set_msm_boot_mode_by_gpio  goto normal mode power on!
+# [830] command not found
+# # [930]  wwx  set_msm_boot_mode=1
+[930]  wwx  reboot mode =2003195136
+[930] partition_get_index : name=LOGO
+[930] partition_get_index : name=LOGO, n=21
+[940] splash_screen_mmc:MAGIC: SPLASH!!, width: 446, height: 56
+[950] splash_screen_mmc 4101 YXQ first_read_flag=1
+[950] msm_display_on  enter.
+[950] Turn on MIPI_CMD_PANEL.
+YXQ backlight level 100
+[960] lm3630_enable-----lm3630_enable: !
+[960] yanghai Configure gpios for QUP instance: 1
+[970] QUP IN:bl:8, ff:32, OUT:bl:8, ff:32
+[970] gpio_ap_switch_config
+[970] lfc Configure gpios for QUP instance: 5
+[980] bq24196_init:OK
+[990] QUP IN:bl:8, ff:32, OUT:bl:8, ff:32
+[1000] partition_get_index : name=LOGO
+[1000] partition_get_index : name=LOGO, n=21
+[1000] splash_screen_mmc:MAGIC: SPLASH!!, width: 446, height: 56
+[1010] splash_screen_mmc 4101 YXQ first_read_flag=0
+[1010] msm_display_on  enter.
+[1020] Turn on MIPI_CMD_PANEL.
+[1020] partition_get_index : name=system
+[1020] partition_get_index : name=system, n=13
+[1030] partition_get_index : name=userdata
+[1030] partition_get_index : name=userdata, n=27
+[1040] partition_get_index : name=cache
+[1040] partition_get_index : name=cache, n=15
+[1040] fastboot_init()
+[1050] partition_get_index : name=ssd
+[1050] partition_get_index : name=ssd, n=19
+[1060] Loading keystore failed status 6 [1060] ERROR: scm_protect_keystore Failed[1160] USB init ept @ 0xf987000
+[1180] udc_start()
+[1490] -- reset --
+[1490] -- portchange --
+[1560] -- reset --
+[1560] -- portchange --
+[1660] fastboot: processing commands
+[8220] -- portchange --
+[8260] fastboot: getvar:slot-count
+[8270] fastboot: getvar:slot-suffixes
+[8270] fastboot: download:00e35800
+[8860] fastboot: boot
+[8880] qcom,msm-id entry not found
+[8880] DTB found with bestmatch soc rev id 0x0.Board soc rev id 0x10001
+[8890] ddr info:  ddr_manufacture_info=Samsung  ddr_row0_info=14,len:47,version:1
+[8890] LCD_id 0 yxr
+[8890] cmdline: console=/dev/ttyMSM0,115200,n8 PMOS_NO_OUTPUT_REDIRECT androidboot.emmc=true androidboot.serialno=946806ce androidboot.baseband=msm mdss_mdp.panel=1:dsi:0:qcom,mdss_dsi_jdi_1080p_cmd oppo.pcb_version=12 ddr_manufacture_info=Samsung  ddr_row0_info[8920] pm8x41_get_is_cold_boot: Warm boot
+[8920] WARM: power_on_reason  is USB_CHG [0x90]
+[8930] pm8x41_get_is_cold_boot: Warm boot
+[8930] WARM: power_on_reason  is KPADPWR_N [0x90]
+[8930] pm8x41_get_is_cold_boot: Warm boot
+[8940] WARM: power_off_reason  is KPDPWR_N [0x80]
+[8940] cold boot
+[8940] The power_on_reason is  androidboot.startupmode=pwrkey
+[8950] cmdline = console=/dev/ttyMSM0,115200,n8 PMOS_NO_OUTPUT_REDIRECT androidboot.emmc=true androidboot.serialno=946806ce androidboot.baseband=msm mdss_mdp.panel=1:dsi:0:qcom,mdss_dsi_jdi_1080p_cmd oppo.pcb_version=12 ddr_manufacture_info=Samsung  ddr_row0_inf[8970] Updating device tree: start
+[8980] Updating device tree: done
+[8980] Turn off MIPI_CMD_PANEL.
+[8980] Continuous splash enabled, keeping panel alive.
+[8990] booting linux @ 0x8000, ramdisk @ 0x2000000 (9138719), tags/device tree @ 0x1e00000
+[13070] -- portchange --
+[13110] fastboot: getvar:slot-count
+[13120] fastboot: getvar:slot-suffixes
+[13120] fastboot: reboot-bootloader
+[13120] rebooting the d�
+Format: Log Type - Time(microsec) - Message
+Log type: B - since boot(excluding boot rom).  D - delta
+B -     83234 - SBL1, Start
+B -     88511 - scatterload_region && ram_init, Start
+D -         0 - scatterload_region && ram_init, Delta
+B -    105499 - pm_device_init, Start
+D -     26443 - pm_device_init, Delta
+B -    132034 - boot_flash_init, Start
+D -     11742 - boot_flash_init, Delta
+                                        B -    144143 - boot_bonfig_data_tableinIt, Start
+D -         0 - boot_config_data_table_init, Delta
+B -    150334 - sbl1_ddr_set_params, Start
+B -    155123 - Pre_DDR_clock_init, Start
+D -       274 - Pre_DDR_clock_init, Delta
+D -         0 - sbl1_ddr_set_params, Delta
+B -    168756 - pm_driver_init, Start
+D -     16500 - pm_driver_init, Delta
+B -    185287 - clock_init, Start
+D -       183 - clock_init, Delta
+B -    188368 - Image Load, Start
+B -    207156 - Tz Execution, Start
+D -    183671 - Tz Execution, Delta
+B -    398940 - Image Load, Start
+B -    408547 - Signal PBL to Jump to RPM FW
+B -    408822 - sbl1_wait_for_ddr_training, Start
+D -     31659 - sbl1_wait_for_ddr_training, Delta
+B -    447801 - Image Load, Start
+B -    448533 - WDT Execution, Start
+D -       213 - WDT Execution, Delta
+B -    451125 - Image Load, Start
+B -    469181 - sbl1_efs_handle_cookies, Start
+D -       244 - sbl1_efs_handle_cookies, Delta
+B -    471194 - RPM sync cookie updated
+B -    475464 - SBL1, End
+Android Bootloader - UART_DM Initialized!!!
+[0] welcome to lk
+
+[10] platform_init()
+[10] target_init()
+[210] hw version voltage value=3
+[210] ddr version  value=1,14
+[210] rf version voltage value=30
+[310] Done initialization of the card
+[330] Display Init: Start
+[330] detect pannel ID=:0x0
+[340] JDI panel, panel_id=1
+[580] MDP GDSC already enabled
+[580] msm_fb_alloc enter:fb->width=1080,fb->height=1920,fb->bpp=24
+[590] fbcon_setup  enter.
+[590] Config MIPI_CMD_PANEL.
+[720] Neal board_hardware_id = 8!
+[720] partition_get_index : name=reserve3
+[720] partition_get_index : name=reserve3, n=25
+[730] get_gamma_index : -48
+[730] msm_display_on  enter.
+[730] Turn on MIPI_CMD_PANEL.
+[730] Display Init: Done
+[740] vbatt_low_shutdown_handle enter.
+[740] lfc Configure gpios for QUP instance: 0
+[740] bq27541_init:OK
+[760] partition_get_index : name=aboot
+[760] partition_get_index : name=aboot, n=4
+[770] after msm_boot_mode_init, boot mode is=0
+[770]  reboot mode is=2003195136
+[770]  sxh  set_msm_boot_mode_by_gpio  goto normal mode power on!
+# [830] command not found
+# # [930]  wwx  set_msm_boot_mode=1
+[930]  wwx  reboot mode =2003195136
+[930] partition_get_index : name=LOGO
+[930] partition_get_index : name=LOGO, n=21
+[940] splash_screen_mmc:MAGIC: SPLASH!!, width: 446, height: 56
+[950] splash_screen_mmc 4101 YXQ first_read_flag=1
+[950] msm_display_on  enter.
+[950] Turn on MIPI_CMD_PANEL.
+YXQ backlight level 100
+[960] lm3630_enable-----lm3630_enable: !
+[960] yanghai Configure gpios for QUP instance: 1
+[970] QUP IN:bl:8, ff:32, OUT:bl:8, ff:32
+[970] gpio_ap_switch_config
+[970] lfc Configure gpios for QUP instance: 5
+[980] bq24196_init:OK
+[990] QUP IN:bl:8, ff:32, OUT:bl:8, ff:32
+[1000] partition_get_index : name=LOGO
+[1000] partition_get_index : name=LOGO, n=21
+[1000] splash_screen_mmc:MAGIC: SPLASH!!, width: 446, height: 56
+[1010] splash_screen_mmc 4101 YXQ first_read_flag=0
+[1010] msm_display_on  enter.
+[1020] Turn on MIPI_CMD_PANEL.
+[1020] partition_get_index : name=system
+[1020] partition_get_index : name=system, n=13
+[1030] partition_get_index : name=userdata
+[1030] partition_get_index : name=userdata, n=27
+[1040] partition_get_index : name=cache
+[1040] partition_get_index : name=cache, n=15
+[1040] fastboot_init()
+[1050] partition_get_index : name=ssd
+[1050] partition_get_index : name=ssd, n=19
+[1060] Loading keystore failed status 6 [1060] ERROR: scm_protect_keystore Failed[1160] USB init ept @ 0xf987000
+[1180] udc_start()
+[1410] -- reset --
+[1410] -- portchange --
+[1490] -- reset --
+[1490] -- portchange --
+[1590] fastboot: processing commands
+[2310] fastboot: getvar:slot-count
+[2310] fastboot: getvar:slot-suffixes
+[2320] fastboot: download:00e35800
+[2910] fastboot: boot
+[2920] qcom,msm-id entry not found
+[2930] DTB found with bestmatch soc rev id 0x0.Board soc rev id 0x10001
+[2930] ddr info:  ddr_manufacture_info=Samsung  ddr_row0_info=14,len:47,version:1
+[2940] LCD_id 0 yxr
+[2940] cmdline: console=ttyMSM0,115200,n8 PMOS_NO_OUTPUT_REDIRECT androidboot.emmc=true androidboot.serialno=946806ce androidboot.baseband=msm mdss_mdp.panel=1:dsi:0:qcom,mdss_dsi_jdi_1080p_cmd oppo.pcb_version=12 ddr_manufacture_info=Samsung  ddr_row0_info=14 L[2960] pm8x41_get_is_cold_boot: Warm boot
+[2970] WARM: power_on_reason  is USB_CHG [0x90]
+[2970] pm8x41_get_is_cold_boot: Warm boot
+[2980] WARM: power_on_reason  is KPADPWR_N [0x90]
+[2980] pm8x41_get_is_cold_boot: Warm boot
+[2980] WARM: power_off_reason  is KPDPWR_N [0x80]
+[2990] cold boot
+[2990] The power_on_reason is  androidboot.startupmode=pwrkey
+[3000] cmdline = console=ttyMSM0,115200,n8 PMOS_NO_OUTPUT_REDIRECT androidboot.emmc=true androidboot.serialno=946806ce androidboot.baseband=msm mdss_mdp.panel=1:dsi:0:qcom,mdss_dsi_jdi_1080p_cmd oppo.pcb_version=12 ddr_manufacture_info=Samsung  ddr_row0_info=14 [3020] Updating device tree: start
+[3020] Updating device tree: done
+[3030] Turn off MIPI_CMD_PANEL.
+[3030] Continuous splash enabled, keeping panel alive.
+[3030] booting linux @ 0x8000, ramdisk @ 0x2000000 (9138719), tags/device tree @ 0x1e00000
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 4.15.0-rc6 (jean@racecar) (gcc version 7.2.0 (Arch Repository)) #34 SMP PREEMPT Fri Jan 5 21:22:09 EST 2018
+[    0.000000] CPU: ARMv7 Processor [512f06f1] revision 1 (ARMv7), cr=10c5787d
+[    0.000000] CPU: div instructions available: patching division code
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, PIPT instruction cache
+[    0.000000] OF: fdt: Machine model: OnePlus One
+[    0.000000] Memory policy: Data cache writealloc
+[    0.000000] cma: Reserved 16 MiB at 0xbf000000
+[    0.000000] random: fast init done
+[    0.000000] percpu: Embedded 17 pages/cpu @(ptrval) s39116 r8192 d22324 u69632
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 752384
+[    0.000000] Kernel command line: console=ttyMSM0,115200,n8 PMOS_NO_OUTPUT_REDIRECT androidboot.emmc=true androidboot.serialno=946806ce androidboot.baseband=msm mdss_mdp.panel=1:dsi:0:qcom,mdss_dsi_jdi_1080p_cmd oppo.pcb_version=12 ddr_manufacture_info=Samsung  ddr_row0_info=14 LCD_id<4 oppo.rf_version=66 maxcpus=4 androidboot.startupmode=pwrkey androidboot.mode=normal lk_version=V1.0
+[    0.000000] Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+[    0.000000] Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+[    0.000000] Memory: 2951192K/3015680K available (8192K kernel code, 804K rwdata, 3156K rodata, 1024K init, 280K bss, 48104K reserved, 16384K cma-reserved, 2342912K highmem)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+[    0.000000]     vmalloc : 0xf0800000 - 0xff800000   ( 240 MB)
+[    0.000000]     lowmem  : 0xc0000000 - 0xf0000000   ( 768 MB)
+[    0.000000]     pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+[    0.000000]     modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+[    0.000000]       .text : 0x(ptrval) - 0x(ptrval)   (9184 kB)
+[    0.000000]       .init : 0x(ptrval) - 0x(ptrval)   (1024 kB)
+[    0.000000]       .data : 0x(ptrval) - 0x(ptrval)   ( 805 kB)
+[    0.000000]        .bss : 0x(ptrval) - 0x(ptrval)   ( 281 kB)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[    0.000000] Preemptible hierarchical RCU implementation.
+[    0.000000]  Tasks RCU enabled.
+[    0.000000] NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+[    0.000000] arch_timer: cp15 and mmio timer(s) running at 19.20MHz (virt/virt).
+[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x46d987e47, max_idle_ns: 440795202767 ns
+[    0.000005] sched_clock: 56 bits at 19MHz, resolution 52ns, wraps every 4398046511078ns
+[    0.000017] Switching to timer-based delay loop, resolution 52ns
+[    0.000334] Console: colour dummy device 80x30
+[    0.000359] Calibrating delay loop (skipped), value calculated using timer frequency.. 38.40 BogoMIPS (lpj=192000)
+[    0.000376] pid_max: default: 32768 minimum: 301
+[    0.000481] Mount-cache hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.000495] Mountpoint-cache hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.001008] CPU: Testing write buffer coherency: ok
+[    0.001240] CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+[    0.039943] Setting up static identity map for 0x300000 - 0x300060
+[    0.059949] Hierarchical SRCU implementation.
+[    0.100028] smp: Bringing up secondary CPUs ...
+[    0.170430] CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+[    0.240579] CPU2: thread -1, cpu 2, socket 0, mpidr 80000002
+[    0.310732] CPU3: thread -1, cpu 3, socket 0, mpidr 80000003
+[    0.310918] smp: Brought up 1 node, 4 CPUs
+[    0.310937] SMP: Total of 4 processors activated (153.60 BogoMIPS).
+[    0.310946] CPU: All CPU(s) started in SVC mode.
+[    0.312323] devtmpfs: initialized
+[    0.319707] VFP support v0.3: implementor 51 architecture 64 part 6f variant 2 rev 1
+[    0.320010] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.320029] futex hash table entries: 1024 (order: 4, 65536 bytes)
+[    0.320753] pinctrl core: initialized pinctrl subsystem
+[    0.321651] NET: Registered protocol family 16
+[    0.323294] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.324465] cpuidle: using governor menu
+[    0.325037] hw-breakpoint: found 5 (+1 reserved) breakpoint and 4 watchpoint registers.
+[    0.325048] hw-breakpoint: maximum watchpoint size is 8 bytes.
+[    0.349827] reg-fixed-voltage vreg-boost: could not find pctldev for node /soc/spmi@fc4cf000/pm8941@0/gpios@c000/boost-bypass, deferring probe
+[    0.350678] vgaarb: loaded
+[    0.351140] SCSI subsystem initialized
+[    0.351541] usbcore: registered new interface driver usbfs
+[    0.351603] usbcore: registered new interface driver hub
+[    0.351702] usbcore: registered new device driver usb
+[    0.352767] Advanced Linux Sound Architecture Driver Initialized.
+[    0.353678] clocksource: Switched to clocksource arch_sys_counter
+[    0.418574] NET: Registered protocol family 2
+[    0.418991] TCP established hash table entries: 8192 (order: 3, 32768 bytes)
+[    0.419043] TCP bind hash table entries: 8192 (order: 4, 65536 bytes)
+[    0.419122] TCP: Hash tables configured (established 8192 bind 8192)
+[    0.419205] UDP hash table entries: 512 (order: 2, 16384 bytes)
+[    0.419230] UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+[    0.419379] NET: Registered protocol family 1
+[    0.419778] RPC: Registered named UNIX socket transport module.
+[    0.419789] RPC: Registered udp transport module.
+[    0.419798] RPC: Registered tcp transport module.
+[    0.419806] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.420457] Trying to unpack rootfs image as initramfs...
+[    0.724990] Freeing initrd memory: 8928K
+[    0.725792] hw perfevents: enabled with armv7_krait PMU driver, 5 counters available
+[    0.727358] Initialise system trusted keyrings
+[    0.727539] workingset: timestamp_bits=30 max_order=20 bucket_order=0
+[    0.732870] NFS: Registering the id_resolver key type
+[    0.732894] Key type id_resolver registered
+[    0.732904] Key type id_legacy registered
+[    0.733462] jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+[    0.733830] fuse init (API version 7.26)
+[    0.738443] Key type asymmetric registered
+[    0.738456] Asymmetric key parser 'x509' registered
+[    0.738507] bounce: pool size: 64 pages
+[    0.738553] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 249)
+[    0.738566] io scheduler noop registered
+[    0.738576] io scheduler deadline registered
+[    0.738775] io scheduler cfq registered (default)
+[    0.738787] io scheduler mq-deadline registered
+[    0.738797] io scheduler kyber registered
+[    0.760430] msm_serial f991e000.serial: msm_serial: detected port #0
+[    0.760481] msm_serial f991e000.serial: uartclk = 7372800
+[    0.760524] f991e000.serial: ttyMSM0 at MMIO 0xf991e000 (irq = 27, base_baud = 460800) is a MSM
+[    0.760552] msm_serial: console setup on port #0
+[    1.377866] console [ttyMSM0] enabled
+[    1.382998] msm_serial: driver initialized
+[    1.396847] brd: module loaded
+[    1.405066] loop: module loaded
+[    1.405545] SCSI Media Changer driver v0.25
+[    1.407800] spmi spmi-0: PMIC arbiter version v1 (0x20000002)
+[    1.427057] s1: supplied by regulator-dummy
+[    1.427370] s2: supplied by regulator-dummy
+[    1.430328] s3: supplied by regulator-dummy
+[    1.434570] s4: Bringing 5100000uV into 5000000-5000000uV
+[    1.438626] l1: supplied by regulator-dummy
+[    1.444263] l2: supplied by regulator-dummy
+[    1.448206] l3: supplied by regulator-dummy
+[    1.452383] l4: supplied by regulator-dummy
+[    1.456577] l5: supplied by regulator-dummy
+[    1.460715] l6: supplied by regulator-dummy
+[    1.464917] l7: supplied by regulator-dummy
+[    1.469055] l8: supplied by regulator-dummy
+[    1.473219] l9: supplied by regulator-dummy
+[    1.477428] l10: supplied by regulator-dummy
+[    1.481554] l11: supplied by regulator-dummy
+[    1.486108] l12: supplied by regulator-dummy
+[    1.490325] l13: supplied by regulator-dummy
+[    1.494608] l14: supplied by regulator-dummy
+[    1.498844] l15: supplied by regulator-dummy
+[    1.503094] l16: supplied by regulator-dummy
+[    1.507392] l17: supplied by regulator-dummy
+[    1.511602] l18: supplied by regulator-dummy
+[    1.515891] l19: supplied by regulator-dummy
+[    1.520118] l20: supplied by regulator-dummy
+[    1.524407] l21: supplied by regulator-dummy
+[    1.528637] l22: supplied by regulator-dummy
+[    1.532880] l23: supplied by regulator-dummy
+[    1.537159] l24: supplied by regulator-dummy
+[    1.541403] lvs1: supplied by regulator-dummy
+[    1.545610] lvs2: supplied by regulator-dummy
+[    1.549854] lvs3: supplied by regulator-dummy
+[    1.554378] 5vs1: supplied by s4
+[    1.558587] 5vs2: supplied by s4
+[    1.562749] libphy: Fixed MDIO Bus: probed
+[    1.565013] SLIP: version 0.8.4-NET3.019-NEWTTY (dynamic channels, max=256) (6 bit encapsulation enabled).
+[    1.568668] CSLIP: code copyright 1989 Regents of the University of California.
+[    1.578389] usbcore: registered new interface driver ax88179_178a
+[    1.585579] usbcore: registered new interface driver cdc_ether
+[    1.591794] usbcore: registered new interface driver net1080
+[    1.597549] usbcore: registered new interface driver cdc_subset
+[    1.603356] usbcore: registered new interface driver cdc_ncm
+[    1.609191] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    1.614893] ehci-pci: EHCI PCI platform driver
+[    1.621274] usbcore: registered new interface driver cdc_acm
+[    1.625635] cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+[    1.645801] input: pm8941_pwrkey as /devices/platform/soc/fc4cf000.spmi/spmi-0/0-00/fc4cf000.spmi:pm8941@0:pwrkey@800/input/input0
+[    1.647204] rtc-pm8xxx fc4cf000.spmi:pm8941@0:rtc@6000: rtc core: registered pm8xxx_rtc as rtc0
+[    1.656610] i2c /dev entries driver
+[    1.665310] IR NEC protocol handler initialized
+[    1.668483] IR RC5(x/sz) protocol handler initialized
+[    1.672999] IR RC6 protocol handler initialized
+[    1.678230] IR JVC protocol handler initialized
+[    1.682546] IR Sony protocol handler initialized
+[    1.687082] IR SANYO protocol handler initialized
+[    1.691922] IR Sharp protocol handler initialized
+[    1.696543] IR MCE Keyboard/mouse protocol handler initialized
+[    1.701212] IR XMP protocol handler initialized
+[    1.707385] qcom-smbb fc4cf000.spmi:pm8941@0:charger@1000: Initializing SMBB rev 3
+[    1.714717] otg-vbus: supplied by 5vs1
+[    1.719651] qcom-tsens fc4a8000.thermal-sensor: tsens calibration failed
+[    1.723379] device-mapper: ioctl: 4.37.0-ioctl (2017-09-20) initialised: dm-devel@redhat.com
+[    1.729807] cpuidle: enable-method property 'qcom,kpss-acc-v2' found operations
+[    1.738190] cpuidle: enable-method property 'qcom,kpss-acc-v2' found operations
+[    1.745207] cpuidle: enable-method property 'qcom,kpss-acc-v2' found operations
+[    1.752466] cpuidle: enable-method property 'qcom,kpss-acc-v2' found operations
+[    1.760150] sdhci: Secure Digital Host Controller Interface driver
+[    1.766957] sdhci: Copyright(c) Pierre Ossman
+[    1.773172] sdhci-pltfm: SDHCI platform and OF driver helper
+[    1.779238] usbcore: registered new interface driver usbhid
+[    1.783330] usbhid: USB HID core driver
+[    1.789011] remoteproc remoteproc0: releasing adsp-pil
+[    1.795951] oprofile: using timer interrupt.
+[    1.797854] NET: Registered protocol family 17
+[    1.802144] Key type dns_resolver registered
+[    1.806664] Registering SWP/SWPB emulation handler
+[    1.811847] Loading compiled-in X.509 certificates
+[    1.853740] remoteproc remoteproc0: releasing adsp-pil
+[    1.855842] rtc-pm8xxx fc4cf000.spmi:pm8941@0:rtc@6000: setting system clock to 1972-07-22 04:36:07 UTC (80627767)
+[    1.857905] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[    1.863297] s1: supplied by regulator-dummy
+[    1.863345] s1: Bringing 0uV into 675000-675000uV
+[    1.864918] remoteproc remoteproc0: releasing adsp-pil
+[    1.865354] s2: supplied by regulator-dummy
+[    1.865819] s2: Bringing 0uV into 500000-500000uV
+[    1.866189] s3: supplied by regulator-dummy
+[    1.866238] s3: Bringing 0uV into 1050000-1050000uV
+[    1.866624] s4: supplied by regulator-dummy
+[    1.866903] s5: supplied by regulator-dummy
+[    1.867165] s6: supplied by regulator-dummy
+[    1.867457] s7: supplied by regulator-dummy
+[    1.867727] s8: supplied by regulator-dummy
+[    1.868253] s1: supplied by regulator-dummy
+[    1.868312] s1: Bringing 0uV into 1300000-1300000uV
+[    1.869898] qcom_adsp_pil adsp-pil: adsp-pil supply px not found, using dummy regulator
+[    1.870599] remoteproc remoteproc0: adsp-pil is available
+[    1.872400] s2: supplied by regulator-dummy
+[    1.872461] s2: Bringing 0uV into 2150000-2150000uV
+[    1.872600] remoteproc remoteproc0: Direct firmware load for adsp.mdt failed with error -2
+[    1.872611] remoteproc remoteproc0: powering up adsp-pil
+[    1.872684] remoteproc remoteproc0: Direct firmware load for adsp.mdt failed with error -2
+[    1.872693] remoteproc remoteproc0: request_firmware failed: -2
+[    1.873249] s3: supplied by regulator-dummy
+[    1.873295] s3: Bringing 0uV into 1800000-1800000uV
+[    1.874090] l1: supplied by s1
+[    1.874146] l1: Bringing 0uV into 1225000-1225000uV
+[    1.874675] l2: supplied by s3
+[    1.874724] l2: Bringing 0uV into 1200000-1200000uV
+[    1.875161] l3: supplied by s1
+[    1.875205] l3: Bringing 0uV into 1000000-1000000uV
+[    1.875661] l4: supplied by s1
+[    1.875705] l4: Bringing 0uV into 1225000-1225000uV
+[    1.876148] l5: supplied by s2
+[    1.876195] l5: Bringing 0uV into 1800000-1800000uV
+[    1.876576] l6: supplied by s2
+[    1.876631] l6: Bringing 0uV into 1800000-1800000uV
+[    1.877190] l7: supplied by s2
+[    1.877236] l7: Bringing 0uV into 1800000-1800000uV
+[    1.877743] l8: supplied by vph-pwr
+[    1.877790] l8: Bringing 0uV into 1800000-1800000uV
+[    1.878220] l9: supplied by vreg-boost
+[    1.878269] l9: Bringing 0uV into 1800000-1800000uV
+[    1.878682] l10: supplied by vreg-boost
+[    1.878726] l10: Bringing 0uV into 1800000-1800000uV
+[    1.879149] l11: supplied by s1
+[    1.879203] l11: Bringing 0uV into 1225000-1225000uV
+[    1.879651] l12: supplied by s2
+[    1.879701] l12: Bringing 0uV into 1800000-1800000uV
+[    1.880252] l13: supplied by vreg-boost
+[    1.880297] l13: Bringing 0uV into 1800000-1800000uV
+[    1.880912] l14: supplied by s2
+[    1.880966] l14: Bringing 0uV into 1800000-1800000uV
+[    1.881446] l15: supplied by s2
+[    1.881490] l15: Bringing 0uV into 2050000-2050000uV
+[    1.881924] l16: supplied by vph-pwr
+[    1.881968] l16: Bringing 0uV into 2700000-2700000uV
+[    1.882433] l17: supplied by vreg-boost
+[    1.882479] l17: Bringing 0uV into 2700000-2700000uV
+[    1.882911] l18: supplied by vph-pwr
+[    1.882956] l18: Bringing 0uV into 2850000-2850000uV
+[    1.883366] l19: supplied by vph-pwr
+[    1.883423] l19: Bringing 0uV into 2900000-2900000uV
+[    1.883924] l20: supplied by vreg-boost
+[    1.883969] l20: Bringing 0uV into 2950000-2950000uV
+[    1.884597] l21: supplied by vreg-boost
+[    1.884641] l21: Bringing 0uV into 2950000-2950000uV
+[    1.885275] l22: supplied by vreg-boost
+[    1.885323] l22: Bringing 0uV into 3000000-3000000uV
+[    1.885765] l23: supplied by vreg-boost
+[    1.885808] l23: Bringing 0uV into 2800000-2800000uV
+[    1.886277] l24: supplied by vreg-boost
+[    1.886332] l24: Bringing 0uV into 3075000-3075000uV
+[    1.886960] lvs1: supplied by s3
+[    1.887311] lvs2: supplied by s3
+[    1.887652] lvs3: supplied by s3
+[    1.887984] 5vs1: supplied by regulator-dummy
+[    1.888312] 5vs2: supplied by regulator-dummy
+[    1.892121] mmc0: Switching to 3.3V signalling voltage failed
+[    1.953854] mmc0: SDHCI controller on f9824900.sdhci [f9824900.sdhci] using ADMA 64-bit
+[    2.043416] mmc0: new HS200 MMC card at address 0001
+[    2.044034] mmcblk0: mmc0:0001 064GE2 58.2 GiB
+[    2.044264] mmcblk0boot0: mmc0:0001 064GE2 partition 1 4.00 MiB
+[    2.044580] mmcblk0boot1: mmc0:0001 064GE2 partition 2 4.00 MiB
+[    2.047171] mmcblk0rpmb: mmc0:0001 064GE2 partition 3 4.00 MiB, chardev (246:0)
+[    2.053320] Alternate GPT is invalid, using primary GPT.
+[    2.053391]  mmcblk0: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11 p12 p13 p14 p15 p16 p17 p18 p19 p20 p21 p22 p23 p24 p25 p26 p27 p28 p29
+[    2.265815] cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[    2.274582] platform regulatory.0: Direct firmware load for regulatory.db failed with error -2
+[    2.280773] cfg80211: failed to load regulatory.db
+[    2.284571] s2: disabling
+[    2.284775] l6: disabling
+[    2.285160] l7: disabling
+[    2.285326] l13: disabling
+[    2.285541] l21: disabling
+[    2.285944] l24: disabling
+[    2.286342] ALSA devic[    2.314408] Freeing unused kernel memory: 1024K
+### postmarketOS initramfs ###
+modprobe: module ext4 not found in modules.dep
+Mount subpartitions of /dev/mmcblk0p14
+fbsplash: can't open '/dev/fb0': No such file or directory
+Setup usb network
+ifconfig: SIOCSIFADDR: No such device
+ifconfig: SIOCSIFADDR: No such device
+ifconfig: SIOCSIFADDR: No such device
+Start the dhcpcd daemon (forks into background)
+Mount boot partition (/dev/dm-0)
+[    3.106769] EXT4-fs (dm-0): couldn't mount as ext3 due to feature incompatibilities
+[    3.109498] EXT4-fs (dm-0): mounted filesystem without journal. Opts: (null)
+Extract /boot/initramfs-postmarketos-mainline-extra
+23299 blocks
+Check/repair root filesystem (/dev/mapper/mmcblk0p14p2)
+e2fsck 1.43.7 (16-Oct-2017)
+Pass 1: Checking inodes, blocks, and sizes
+Pass 2: Checking directory structure
+Pass 3: Checking directory connectivity
+Pass 4: Checking reference counts
+Pass 5: Checking group summary information
+[    4.748215] mmcblk0: error -84 transferring data, sector 897024, nr 8, cmd response 0x900, card status 0xc00
+[    4.752120] mmc0: Switching to 3.3V signalling voltage failed
+[    4.941942] mmcblk0: error -84 transferring data, sector 897024, nr 8, cmd response 0x900, card status 0xc00
+[    4.941977] print_req_error: I/O error, dev mmcblk0, sector 897024
+[    4.950862] Buffer I/O error on dev dm-1, logical block 65536, lost async page write
+[    4.958491] mmcblk0: error -84 transferring data, sector 372744, nr 8, cmd response 0x900, card status 0xc00
+[    4.964815] print_req_error: I/O error, dev mmcblk0, sector 372744
+[    4.974555] Buffer I/O error on dev dm-1, logical block 1, lost async page write
+Error writing file system info: I/O error
+
+pmOS_root: ***** FILE SYSTEM WAS MODIFIED *****
+Resize root filesystem (/dev/mapper/mmcblk0p14p2)
+resize2fs 1.43.7 (16-Oct-2017)
+The filesystem is already 329216 (4k) blocks long.  Nothing to do!
+
+Mount root partition (/dev/mapper/mmcblk0p14p2)
+[    5.105314] EXT4-fs (dm-1): mounted filesystem with ordered data mode. Opts: (null)
+umount: can't unmount /dev: Invalid argument
+
+   OpenRC 0.24.1.a941ee4a0b is starting up Linux 4.15.0-rc6 (armv7l)
+
+ * Mounting /proc ... [ ok ]
+ * Mounting /run ... * /run/openrc: creating directory
+ * /run/lock: creating directory
+ * /run/lock: correcting owner
+ * Caching service dependencies ... [ ok ]
+ * Caching service dependencies ... [ ok ]
+ * Clock skew detected with `/etc/init.d'
+ * Adjusting mtime of `/run/openrc/deptree' to Fri Jan  5 04:26:34 2018
+
+ * Mounting devtmpfs on /dev ... [ ok ]
+
+ * Mounting /dev/pts ... [ ok ]
+
+ * Mounting /dev/shm ... [ ok ]
+ * Mounting /sys ... [ ok ]
+ * Mounting debug filesystem ... [ ok ]
+ * Mounting config filesystem ... [ ok ]
+ * Mounting fuse control filesystem ... [ ok ]
+ * Mounting cgroup filesystem ... [ ok ]
+ * Starting udev ... [ ok ]
+ * Generating a rule to create a /dev/root symlink ... [ ok ]
+ * Populating /dev with existing devices through uevents ... [ ok ]
+ * Checking local filesystems  ...pmOS_root: clean, 12590/77616 files, 149948/329216 blocks
+pmOS_boot: clean, 16/9480 files, 27689/37888 blocks
+ [ ok ]
+ * Remounting root filesystem read/write ... [ ok ]
+ * Remounting filesystems ... [ ok ]
+ * Mounting local filesystems ... [ ok ]
+ * WARNING: clock skew detected!
+ * Setting the local clock based on last shutdown time ... [ ok ]
+ * Loading modules ... [ ok ]
+ * Setting system clock using the hardware clock [UTC] ... [ ok ]
+ * Configuring kernel parameters ...sysctl: error: 'net.ipv4.tcp_syncookies' is an unknown key
+ [ ok ]
+ * Creating user login records ... [ ok ]
+ * Wiping /tmp directory ... [ ok ]
+ * Setting hostname ... [ ok ]
+ * Starting busybox klogd ... [ ok ]
+ * Starting busybox syslog ... [ ok ]
+ * WARNING: clock skew detected!
+ * Starting D-BUS system messagebus ... [ ok ]
+ * Could not find a wireless interface
+ * ERROR: wpa_supplicant failed to start
+ * Starting networking ...awk: /etc/network/interfaces: No such file or directory
+ * ERROR: networking failed to start
+ * ERROR: cannot start chronyd as networking would not start
+ * ERROR: cannot start haveged as networking would not start
+ * Starting sshd ... [ ok ]
+ * Activating swap file ...Configured swap file size is 0, skipping creation.
+ [ ok ]
+[8390] -- portchange --
+[8440] fastboot: getvar:slot-count
+[8440] fastboot: getvar:slot-suffixes
+[8450] fastboot: reboot-bootloader
+[8450] rebooting the d�
+Format: Log Type - Time(microsec) - Message
+Log type: B - since boot(excluding boot rom).  D - delta
+B -     83234 - SBL1, Start
+B -     88511 - scatterload_region && ram_init, Start
+D -         0 - scatterload_region && ram_init, Delta
+B -    105469 - pm_device_init, Start
+D -     26443 - pm_device_init, Delta
+B -    132034 - boot_flash_init, Start
+D -     11742 - boot_flash_init, Delta
+B -    144143 - boot_config_data_table_init, Start
+D -         0 - boot_config_data_table_init, Delta
+B -    150334 - sbl1_ddr_set_params, Start
+B -    155123 - Pre_DDR_clock_init, Start
+D -       274 - Pre_DDR_clock_init, Delta
+D -         0 - sbl1_ddr_set_params, Delta
+B -    168756 - pm_driver_init, Start
+D -     16500 - pm_driver_init, Delta
+B -    185287 - clock_init, Start
+D -       183 - clock_init, Delta
+B -    188368 - Image Load, Start
+B -    207156 - Tz Execution, Start
+D -    183610 - Tz Execution, Delta
+B -    398909 - Image Load, Start
+B -    408517 - Signal PBL to Jump to RPM FW
+B-    408791 - sbl1_wait_for_ddr_trainIng, Start
+D -     31689 - sbl1_wait_for_ddr_training, Delta
+B -    447770 - Image Load, Start
+B -    448472 - WDT Execution, Start
+D -       213 - WDT Execution, Delta
+B -    451095 - Image Load, Start
+B -    469151 - sbl1_efs_handle_cookies, Start
+D -       213 - sbl1_efs_handle_cookies, Delta
+B -    471133 - RPM sync cookie updated
+B -    475434 - SBL1, End
+Android Bootloader - UART_DM Initialized!!!
+[0] welcome to lk
+
+[10] platform_init()
+[10] target_init()
+[210] hw version voltage value=3
+[210] ddr version  value=1,14
+[210] rf version voltage value=30
+[310] Done initialization of the card
+[330] Display Init: Start
+[330] detect pannel ID=:0x0
+[340] JDI panel, panel_id=1
+[580] MDP GDSC already enabled
+[580] msm_fb_alloc enter:fb->width=1080,fb->height=1920,fb->bpp=24
+[590] fbcon_setup  enter.
+[590] Config MIPI_CMD_PANEL.
+[720] Neal board_hardware_id = 8!
+[720] partition_get_index : name=reserve3
+[720] partition_get_index : name=reserve3, n=25
+[730] get_gamma_index : -48
+[730] msm_display_on  enter.
+[730] Turn on MIPI_CMD_PANEL.
+[730] Display Init: Done
+[740] vbatt_low_shutdown_handle enter.
+[740] lfc Configure gpios for QUP instance: 0
+[740] bq27541_init:OK
+[760] partition_get_index : name=aboot
+[760] partition_get_index : name=aboot, n=4
+[770] after msm_boot_mode_init, boot mode is=0
+[770]  reboot mode is=2003195136
+[770]  sxh  set_msm_boot_mode_by_gpio  goto normal mode power on!
+# [830] command not found
+# # [930]  wwx  set_msm_boot_mode=1
+[930]  wwx  reboot mode =2003195136
+[930] partition_get_index : name=LOGO
+[930] partition_get_index : name=LOGO, n=21
+[940] splash_screen_mmc:MAGIC: SPLASH!!, width: 446, height: 56
+[950] splash_screen_mmc 4101 YXQ first_read_flag=1
+[950] msm_display_on  enter.
+[950] Turn on MIPI_CMD_PANEL.
+YXQ backlight level 100
+[960] lm3630_enable-----lm3630_enable: !
+[960] yanghai Configure gpios for QUP instance: 1
+[970] QUP IN:bl:8, ff:32, OUT:bl:8, ff:32
+[970] gpio_ap_switch_config
+[970] lfc Configure gpios for QUP instance: 5
+[980] bq24196_init:OK
+[990] QUP IN:bl:8, ff:32, OUT:bl:8, ff:32
+[1000] partition_get_index : name=LOGO
+[1000] partition_get_index : name=LOGO, n=21
+[1000] splash_screen_mmc:MAGIC: SPLASH!!, width: 446, height: 56
+[1010] splash_screen_mmc 4101 YXQ first_read_flag=0
+[1010] msm_display_on  enter.
+[1020] Turn on MIPI_CMD_PANEL.
+[1020] partition_get_index : name=system
+[1020] partition_get_index : name=system, n=13
+[1030] partition_get_index : name=userdata
+[1030] partition_get_index : name=userdata, n=27
+[1040] partition_get_index : name=cache
+[1040] partition_get_index : name=cache, n=15
+[1040] fastboot_init()
+[1050] partition_get_index : name=ssd
+[1050] partition_get_index : name=ssd, n=19
+[1060] Loading keystore failed status 6 [1060] ERROR: scm_protect_keystore Failed[1160] USB init ept @ 0xf987000
+[1180] udc_start()
+[1410] -- reset --
+[1410] -- portchange --
+[1490] -- reset --
+[1490] -- portchange --
+[1590] fastboot: processing commands
+[3450] fastboot: getvar:slot-count
+[3450] fastboot: getvar:slot-suffixes
+[3460] fastboot: download:00e35800
+[4040] fastboot: boot
+[4060] qcom,msm-id entry not found
+[4060] DTB found with bestmatch soc rev id 0x0.Board soc rev id 0x10001
+[4070] ddr info:  ddr_manufacture_info=Samsung  ddr_row0_info=14,len:47,version:1
+[4080] LCD_id 0 yxr
+[4080] cmdline: console=ttyMSM0,115200,n8 PMOS_NO_OUTPUT_REDIRECT androidboot.emmc=true androidboot.serialno=946806ce androidboot.baseband=msm mdss_mdp.panel=1:dsi:0:qcom,mdss_dsi_jdi_1080p_cmd oppo.pcb_version=12 ddr_manufacture_info=Samsung  ddr_row0_info=14 L[4100] pm8x41_get_is_cold_boot: Warm boot
+[4100] WARM: power_on_reason  is USB_CHG [0x90]
+[4110] pm8x41_get_is_cold_boot: Warm boot
+[4110] WARM: power_on_reason  is KPADPWR_N [0x90]
+[4120] pm8x41_get_is_cold_boot: Warm boot
+[4120] WARM: power_off_reason  is KPDPWR_N [0x80]
+[4130] cold boot
+[4130] The power_on_reason is  androidboot.startupmode=pwrkey
+[4130] cmdline = console=ttyMSM0,115200,n8 PMOS_NO_OUTPUT_REDIRECT androidboot.emmc=true androidboot.serialno=946806ce androidboot.baseband=msm mdss_mdp.panel=1:dsi:0:qcom,mdss_dsi_jdi_1080p_cmd oppo.pcb_version=12 ddr_manufacture_info=Samsung  ddr_row0_info=14 [4160] Updating device tree: start
+[4160] Updating device tree: done
+[4160] Turn off MIPI_CMD_PANEL.
+[4160] Continuous splash enabled, keeping panel alive.
+[4170] booting linux @ 0x8000, ramdisk @ 0x2000000 (9139053), tags/device tree @ 0x1e00000
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 4.15.0-rc6 (jean@racecar) (gcc version 7.2.0 (Arch Repository)) #35 SMP PREEMPT Fri Jan 5 21:33:30 EST 2018
+[    0.000000] CPU: ARMv7 Processor [512f06f1] revision 1 (ARMv7), cr=10c5787d
+[    0.000000] CPU: div instructions available: patching division code
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, PIPT instruction cache
+[    0.000000] OF: fdt: Machine model: OnePlus One
+[    0.000000] Memory policy: Data cache writealloc
+[    0.000000] cma: Reserved 16 MiB at 0xbf000000
+[    0.000000] random: fast init done
+[    0.000000] percpu: Embedded 17 pages/cpu @(ptrval) s39116 r8192 d22324 u69632
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 752384
+[    0.000000] Kernel command line: console=ttyMSM0,115200,n8 PMOS_NO_OUTPUT_REDIRECT androidboot.emmc=true androidboot.serialno=946806ce androidboot.baseband=msm mdss_mdp.panel=1:dsi:0:qcom,mdss_dsi_jdi_1080p_cmd oppo.pcb_version=12 ddr_manufacture_info=Samsung  ddr_row0_info=14 LCD_id<4 oppo.rf_version=66 maxcpus=4 androidboot.startupmode=pwrkey androidboot.mode=normal lk_version=V1.0
+[    0.000000] Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+[    0.000000] Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+[    0.000000] Memory: 2951192K/3015680K available (8192K kernel code, 804K rwdata, 3156K rodata, 1024K init, 280K bss, 48104K reserved, 16384K cma-reserved, 2342912K highmem)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+[    0.000000]     vmalloc : 0xf0800000 - 0xff800000   ( 240 MB)
+[    0.000000]     lowmem  : 0xc0000000 - 0xf0000000   ( 768 MB)
+[    0.000000]     pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+[    0.000000]     modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+[    0.000000]       .text : 0x(ptrval) - 0x(ptrval)   (9184 kB)
+[    0.000000]       .init : 0x(ptrval) - 0x(ptrval)   (1024 kB)
+[    0.000000]       .data : 0x(ptrval) - 0x(ptrval)   ( 805 kB)
+[    0.000000]        .bss : 0x(ptrval) - 0x(ptrval)   ( 281 kB)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[    0.000000] Preemptible hierarchical RCU implementation.
+[    0.000000]  Tasks RCU enabled.
+[    0.000000] NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+[    0.000000] arch_timer: cp15 and mmio timer(s) running at 19.20MHz (virt/virt).
+[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x46d987e47, max_idle_ns: 440795202767 ns
+[    0.000005] sched_clock: 56 bits at 19MHz, resolution 52ns, wraps every 4398046511078ns
+[    0.000017] Switching to timer-based delay loop, resolution 52ns
+[    0.000333] Console: colour dummy device 80x30
+[    0.000359] Calibrating delay loop (skipped), value calculated using timer frequency.. 38.40 BogoMIPS (lpj=192000)
+[    0.000375] pid_max: default: 32768 minimum: 301
+[    0.000480] Mount-cache hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.000494] Mountpoint-cache hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.001006] CPU: Testing write buffer coherency: ok
+[    0.001236] CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+[    0.039943] Setting up static identity map for 0x300000 - 0x300060
+[    0.059949] Hierarchical SRCU implementation.
+[    0.100028] smp: Bringing up secondary CPUs ...
+[    0.170430] CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+[    0.240580] CPU2: thread -1, cpu 2, socket 0, mpidr 80000002
+[    0.310733] CPU3: thread -1, cpu 3, socket 0, mpidr 80000003
+[    0.310919] smp: Brought up 1 node, 4 CPUs
+[    0.310938] SMP: Total of 4 processors activated (153.60 BogoMIPS).
+[    0.310947] CPU: All CPU(s) started in SVC mode.
+[    0.312324] devtmpfs: initialized
+[    0.319708] VFP support v0.3: implementor 51 architecture 64 part 6f variant 2 rev 1
+[    0.320011] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.320030] futex hash table entries: 1024 (order: 4, 65536 bytes)
+[    0.320758] pinctrl core: initialized pinctrl subsystem
+[    0.321656] NET: Registered protocol family 16
+[    0.323299] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.324469] cpuidle: using governor menu
+[    0.325042] hw-breakpoint: found 5 (+1 reserved) breakpoint and 4 watchpoint registers.
+[    0.325053] hw-breakpoint: maximum watchpoint size is 8 bytes.
+[    0.349838] reg-fixed-voltage vreg-boost: could not find pctldev for node /soc/spmi@fc4cf000/pm8941@0/gpios@c000/boost-bypass, deferring probe
+[    0.350721] vgaarb: loaded
+[    0.351183] SCSI subsystem initialized
+[    0.351584] usbcore: registered new interface driver usbfs
+[    0.351646] usbcore: registered new interface driver hub
+[    0.351745] usbcore: registered new device driver usb
+[    0.352809] Advanced Linux Sound Architecture Driver Initialized.
+[    0.353719] clocksource: Switched to clocksource arch_sys_counter
+[    0.418568] NET: Registered protocol family 2
+[    0.418984] TCP established hash table entries: 8192 (order: 3, 32768 bytes)
+[    0.419036] TCP bind hash table entries: 8192 (order: 4, 65536 bytes)
+[    0.419114] TCP: Hash tables configured (established 8192 bind 8192)
+[    0.419197] UDP hash table entries: 512 (order: 2, 16384 bytes)
+[    0.419222] UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+[    0.419371] NET: Registered protocol family 1
+[    0.419773] RPC: Registered named UNIX socket transport module.
+[    0.419783] RPC: Registered udp transport module.
+[    0.419793] RPC: Registered tcp transport module.
+[    0.419801] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.420450] Trying to unpack rootfs image as initramfs...
+[    0.723828] Freeing initrd memory: 8928K
+[    0.724626] hw perfevents: enabled with armv7_krait PMU driver, 5 counters available
+[    0.726191] Initialise system trusted keyrings
+[    0.726371] workingset: timestamp_bits=30 max_order=20 bucket_order=0
+[    0.731699] NFS: Registering the id_resolver key type
+[    0.731722] Key type id_resolver registered
+[    0.731731] Key type id_legacy registered
+[    0.732288] jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+[    0.732598] fuse init (API version 7.26)
+[    0.737271] Key type asymmetric registered
+[    0.737284] Asymmetric key parser 'x509' registered
+[    0.737336] bounce: pool size: 64 pages
+[    0.737382] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 249)
+[    0.737395] io scheduler noop registered
+[    0.737404] io scheduler deadline registered
+[    0.737604] io scheduler cfq registered (default)
+[    0.737616] io scheduler mq-deadline registered
+[    0.737626] io scheduler kyber registered
+[    0.759264] msm_serial f991e000.serial: msm_serial: detected port #0
+[    0.759315] msm_serial f991e000.serial: uartclk = 7372800
+[    0.759358] f991e000.serial: ttyMSM0 at MMIO 0xf991e000 (irq = 27, base_baud = 460800) is a MSM
+[    0.759386] msm_serial: console setup on port #0
+[    1.376699] console [ttyMSM0] enabled
+[    1.381831] msm_serial: driver initialized
+[    1.395686] brd: module loaded
+[    1.403916] loop: module loaded
+[    1.404394] SCSI Media Changer driver v0.25
+[    1.406650] spmi spmi-0: PMIC arbiter version v1 (0x20000002)
+[    1.425922] s1: supplied by regulator-dummy
+[    1.426235] s2: supplied by regulator-dummy
+[    1.429192] s3: supplied by regulator-dummy
+[    1.433400] s4: Bringing 5100000uV into 5000000-5000000uV
+[    1.437525] l1: supplied by regulator-dummy
+[    1.443089] l2: supplied by regulator-dummy
+[    1.447107] l3: supplied by regulator-dummy
+[    1.451250] l4: supplied by regulator-dummy
+[    1.455441] l5: supplied by regulator-dummy
+[    1.459581] l6: supplied by regulator-dummy
+[    1.463781] l7: supplied by regulator-dummy
+[    1.467921] l8: supplied by regulator-dummy
+[    1.472084] l9: supplied by regulator-dummy
+[    1.476292] l10: supplied by regulator-dummy
+[    1.480418] l11: supplied by regulator-dummy
+[    1.484975] l12: supplied by regulator-dummy
+[    1.489189] l13: supplied by regulator-dummy
+[    1.493447] l14: supplied by regulator-dummy
+[    1.497739] l15: supplied by regulator-dummy
+[    1.501960] l16: supplied by regulator-dummy
+[    1.506258] l17: supplied by regulator-dummy
+[    1.510468] l18: supplied by regulator-dummy
+[    1.514757] l19: supplied by regulator-dummy
+[    1.518985] l20: supplied by regulator-dummy
+[    1.523243] l21: supplied by regulator-dummy
+[    1.527531] l22: supplied by regulator-dummy
+[    1.531746] l23: supplied by regulator-dummy
+[    1.536023] l24: supplied by regulator-dummy
+[    1.540269] lvs1: supplied by regulator-dummy
+[    1.544473] lvs2: supplied by regulator-dummy
+[    1.548719] lvs3: supplied by regulator-dummy
+[    1.553215] 5vs1: supplied by s4
+[    1.557479] 5vs2: supplied by s4
+[    1.561614] libphy: Fixed MDIO Bus: probed
+[    1.563876] SLIP: version 0.8.4-NET3.019-NEWTTY (dynamic channels, max=256) (6 bit encapsulation enabled).
+[    1.567533] CSLIP: code copyright 1989 Regents of the University of California.
+[    1.577253] usbcore: registered new interface driver ax88179_178a
+[    1.584444] usbcore: registered new interface driver cdc_ether
+[    1.590659] usbcore: registered new interface driver net1080
+[    1.596414] usbcore: registered new interface driver cdc_subset
+[    1.602221] usbcore: registered new interface driver cdc_ncm
+[    1.608057] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    1.613757] ehci-pci: EHCI PCI platform driver
+[    1.620140] usbcore: registered new interface driver cdc_acm
+[    1.624498] cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+[    1.644702] input: pm8941_pwrkey as /devices/platform/soc/fc4cf000.spmi/spmi-0/0-00/fc4cf000.spmi:pm8941@0:pwrkey@800/input/input0
+[    1.646108] rtc-pm8xxx fc4cf000.spmi:pm8941@0:rtc@6000: rtc core: registered pm8xxx_rtc as rtc0
+[    1.655511] i2c /dev entries driver
+[    1.664211] IR NEC protocol handler initialized
+[    1.667384] IR RC5(x/sz) protocol handler initialized
+[    1.671900] IR RC6 protocol handler initialized
+[    1.677132] IR JVC protocol handler initialized
+[    1.681448] IR Sony protocol handler initialized
+[    1.685983] IR SANYO protocol handler initialized
+[    1.690822] IR Sharp protocol handler initialized
+[    1.695445] IR MCE Keyboard/mouse protocol handler initialized
+[    1.700112] IR XMP protocol handler initialized
+[    1.706286] qcom-smbb fc4cf000.spmi:pm8941@0:charger@1000: Initializing SMBB rev 3
+[    1.713539] otg-vbus: supplied by 5vs1
+[    1.718585] qcom-tsens fc4a8000.thermal-sensor: tsens calibration failed
+[    1.722281] device-mapper: ioctl: 4.37.0-ioctl (2017-09-20) initialised: dm-devel@redhat.com
+[    1.728708] cpuidle: enable-method property 'qcom,kpss-acc-v2' found operations
+[    1.737091] cpuidle: enable-method property 'qcom,kpss-acc-v2' found operations
+[    1.744108] cpuidle: enable-method property 'qcom,kpss-acc-v2' found operations
+[    1.751366] cpuidle: enable-method property 'qcom,kpss-acc-v2' found operations
+[    1.759053] sdhci: Secure Digital Host Controller Interface driver
+[    1.765857] sdhci: Copyright(c) Pierre Ossman
+[    1.772072] sdhci-pltfm: SDHCI platform and OF driver helper
+[    1.778205] usbcore: registered new interface driver usbhid
+[    1.782231] usbhid: USB HID core driver
+[    1.787912] remoteproc remoteproc0: releasing adsp-pil
+[    1.794762] oprofile: using timer interrupt.
+[    1.796751] NET: Registered protocol family 17
+[    1.801043] Key type dns_resolver registered
+[    1.805563] Registering SWP/SWPB emulation handler
+[    1.810814] Loading compiled-in X.509 certificates
+[    1.852983] remoteproc remoteproc0: releasing adsp-pil
+[    1.854721] rtc-pm8xxx fc4cf000.spmi:pm8941@0:rtc@6000: setting system clock to 1972-07-22 04:38:21 UTC (80627901)
+[    1.857162] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[    1.874752] cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[    1.875534] platform regulatory.0: Direct firmware load for regulatory.db failed with error -2
+[    1.881579] cfg80211: failed to load regulatory.db
+[    1.885552] s1: supplied by regulator-dummy
+[    1.885610] s1: Bringing 0uV into 675000-675000uV
+[    1.886497] ALSA device list:
+[    1.886501]   No soundcards found.
+[    1.887149] remoteproc remoteproc0: releasing adsp-pil
+[    1.888066] s2: supplied by regulator-dummy
+[    1.888116] s2: Bringing 0uV into 500000-500000uV
+[    1.888501] s3: supplied by regulator-dummy
+[    1.888548] s3: Bringing 0uV into 1050000-1050000uV
+[    1.888965] s4: supplied by regulator-dummy
+[    1.889255] s5: supplied by regulator-dummy
+[    1.889545] s6: supplied by regulator-dummy
+[    1.889841] s7: supplied by regulator-dummy
+[    1.890141] s8: supplied by regulator-dummy
+[    1.890698] s1: supplied by regulator-dummy
+[    1.890747] s1: Bringing 0uV into 1300000-1300000uV
+[    1.892340] qcom_adsp_pil adsp-pil: adsp-pil supply px not found, using dummy regulator
+[    1.893029] remoteproc remoteproc0: adsp-pil is available
+[    1.894781] s2: supplied by regulator-dummy
+[    1.894923] s2: Bringing 0uV into 2150000-2150000uV
+[    1.895057] remoteproc remoteproc0: Direct firmware load for adsp.mdt failed with error -2
+[    1.895068] remoteproc remoteproc0: powering up adsp-pil
+[    1.895141] remoteproc remoteproc0: Direct firmware load for adsp.mdt failed with error -2
+[    1.895150] remoteproc remoteproc0: request_firmware failed: -2
+[    1.895717] s3: supplied by regulator-dummy
+[    1.895764] s3: Bringing 0uV into 1800000-1800000uV
+[    1.896571] l1: supplied by s1
+[    1.896621] l1: Bringing 0uV into 1225000-1225000uV
+[    1.897171] l2: supplied by s3
+[    1.897219] l2: Bringing 0uV into 1200000-1200000uV
+[    1.897672] l3: supplied by s1
+[    1.897734] l3: Bringing 0uV into 1000000-1000000uV
+[    1.898201] l4: supplied by s1
+[    1.898252] l4: Bringing 0uV into 1225000-1225000uV
+[    1.898723] l5: supplied by s2
+[    1.898771] l5: Bringing 0uV into 1800000-1800000uV
+[    1.899175] l6: supplied by s2
+[    1.899222] l6: Bringing 0uV into 1800000-1800000uV
+[    1.899784] l7: supplied by s2
+[    1.899831] l7: Bringing 0uV into 1800000-1800000uV
+[    1.900351] l8: supplied by vph-pwr
+[    1.900411] l8: Bringing 0uV into 1800000-1800000uV
+[    1.900819] l9: supplied by vreg-boost
+[    1.900866] l9: Bringing 0uV into 1800000-1800000uV
+[    1.901299] l10: supplied by vreg-boost
+[    1.901350] l10: Bringing 0uV into 1800000-1800000uV
+[    1.901801] l11: supplied by s1
+[    1.901849] l11: Bringing 0uV into 1225000-1225000uV
+[    1.902317] l12: supplied by s2
+[    1.902366] l12: Bringing 0uV into 1800000-1800000uV
+[    1.902934] l13: supplied by vreg-boost
+[    1.902993] l13: Bringing 0uV into 1800000-1800000uV
+[    1.903638] l14: supplied by s2
+[    1.903685] l14: Bringing 0uV into 1800000-1800000uV
+[    1.904170] l15: supplied by s2
+[    1.904214] l15: Bringing 0uV into 2050000-2050000uV
+[    1.904646] l16: supplied by vph-pwr
+[    1.904699] l16: Bringing 0uV into 2700000-2700000uV
+[    1.905155] l17: supplied by vreg-boost
+[    1.905200] l17: Bringing 0uV into 2700000-2700000uV
+[    1.905630] l18: supplied by vph-pwr
+[    1.905676] l18: Bringing 0uV into 2850000-2850000uV
+[    1.906091] l19: supplied by vph-pwr
+[    1.906137] l19: Bringing 0uV into 2900000-2900000uV
+[    1.906602] l20: supplied by vreg-boost
+[    1.906656] l20: Bringing 0uV into 2950000-2950000uV
+[    1.907264] l21: supplied by vreg-boost
+[    1.907319] l21: Bringing 0uV into 2950000-2950000uV
+[    1.907928] l22: supplied by vreg-boost
+[    1.907973] l22: Bringing 0uV into 3000000-3000000uV
+[    1.908417] l23: supplied by vreg-boost
+[    1.908466] l23: Bringing 0uV into 2800000-2800000uV
+[    1.908950] l24: supplied by vreg-boost
+[    1.908994] l24: Bringing 0uV into 3075000-3075000uV
+[    1.909608] lvs1: supplied by s3
+[    1.909945] lvs2: supplied by s3
+[    1.910295] lvs3: supplied by s3
+[    1.910637] 5vs1: supplied by regulator-dummy
+[    1.910969] 5vs2: supplied by regulator-dummy
+[    1.914784] mmc0: Switching to 3.3V signalling voltage failed
+[    1.973824] mmc0: SDHCI controller on f9824900.sdhci [f9824900.sdhci] using ADMA 64-bit
+[    2.060357] mmc0: new high speed MMC card at address 0001
+[    2.060858] mmcblk0: mmc0:0001 064GE2 58.2 GiB
+[    2.061155] mmcblk0boot0: mmc0:0001 064GE2 partition 1 4.00 MiB
+[    2.061556] mmcblk0boot1: mmc0:0001 064GE2 partition 2 4.00 MiB
+[    2.061865] mmcblk0rpmb: mmc0:0001 064GE2 partition 3 4.00 MiB, chardev (246:0)
+[    2.063652] Alternate GPT is invalid, using prima�[    2.290144] Freeing unused kernel memory: 1024K
+### postmarketOS initramfs ###
+modprobe: module ext4 not found in modules.dep
+Mount subpartitions of /dev/mmcblk0p14
+fbsplash: can't open '/dev/fb0': No such file or directory
+Setup usb network
+ifconfig: SIOCSIFADDR: No such device
+ifconfig: SIOCSIFADDR: No such device
+ifconfig: SIOCSIFADDR: No such device
+Start the dhcpcd daemon (forks into background)
+Mount boot partition (/dev/dm-0)
+[    3.422507] EXT4-fs (dm-0): couldn't mount as ext3 due to feature incompatibilities
+[    3.426000] EXT4-fs (dm-0): mounted filesystem without journal. Opts: (null)
+Extract /boot/initramfs-postmarketos-mainline-extra
+23299 blocks
+Check/repair root filesystem (/dev/mapper/mmcblk0p14p2)
+e2fsck 1.43.7 (16-Oct-2017)
+pmOS_root: recovering journal
+Pass 1: Checking inodes, blocks, and sizes
+Pass 2: Checking directory structure
+Pass 3: Checking directory connectivity
+Pass 4: Checking reference counts
+Pass 5: Checking group summary information
+pmOS_root: 12590/77616 files (0.1% non-contiguous), 149948/329216 blocks
+Resize root filesystem (/dev/mapper/mmcblk0p14p2)
+resize2fs 1.43.7 (16-Oct-2017)
+The filesystem is already 329216 (4k) blocks long.  Nothing to do!
+
+Mount root partition (/dev/mapper/mmcblk0p14p2)
+[    5.841576] EXT4-fs (dm-1): mounted filesystem with ordered data mode. Opts: (null)
+umount: can't unmount /dev: Invalid argument
+
+   OpenRC 0.24.1.a941ee4a0b is starting up Linux 4.15.0-rc6 (armv7l)
+
+ * Mounting /proc ... [ ok ]
+ * Mounting /run ... * /run/openrc: creating directory
+ * /run/lock: creating directory
+ * /run/lock: correcting owner
+ * Caching service dependencies ... [ ok ]
+ * Caching service dependencies ... [ ok ]
+ * Clock skew detected with `/etc/init.d'
+ * Adjusting mtime of `/run/openrc/deptree' to Fri Jan  5 04:26:34 2018
+
+ * Mounting devtmpfs on /dev ... [ ok ]
+
+ * Mounting /dev/pts ... [ ok ]
+
+ * Mounting /dev/shm ... [ ok ]
+ * Mounting /sys ... [ ok ]
+ * Mounting debug filesystem ... [ ok ]
+ * Mounting config filesystem ... [ ok ]
+ * Mounting fuse control filesystem ... [ ok ]
+ * Mounting cgroup filesystem ... [ ok ]
+ * Starting udev ... [ ok ]
+ * Generating a rule to create a /dev/root symlink ... [ ok ]
+ * Populating /dev with existing devices through uevents ... [ ok ]
+ * Checking local filesystems  ...pmOS_root: clean, 12590/77616 files, 149948/329216 blocks
+pmOS_boot was not cleanly unmounted, check forced.
+pmOS_boot: 16/9480 files (31.3% non-contiguous), 27689/37888 blocks
+ * Filesystems repaired
+ [ !! ]
+ * Remounting root filesystem read/write ... [ ok ]
+ * Remounting filesystems ... [ ok ]
+ * Mounting local filesystems ... [ ok ]
+ * WARNING: clock skew detected!
+ * Setting the local clock based on last shutdown time ... [ ok ]
+ * Loading modules ... [ ok ]
+ * Setting system clock using the hardware clock [UTC] ... [ ok ]
+ * Configuring kernel parameters ...sysctl: error: 'net.ipv4.tcp_syncookies' is an unknown key
+ [ ok ]
+ * Creating user login records ... [ ok ]
+ * Wiping /tmp directory ... [ ok ]
+ * Setting hostname ... [ ok ]
+ * Starting busybox klogd ... [ ok ]
+ * Starting busybox syslog ... [ ok ]
+ * WARNING: clock skew detected!
+ * Starting D-BUS system messagebus ... [ ok ]
+ * Could not find a wireless interface
+ * ERROR: wpa_supplicant failed to start
+ * Starting networking ...awk: /etc/network/interfaces: No such file or directory
+ * ERROR: networking failed to start
+ * ERROR: cannot start chronyd as networking would not start
+ * ERROR: cannot start haveged as networking would not start
+ * Starting sshd ... [ ok ]
+ * Activating swap file ...Configured swap file size is 0, skipping creation.
+ [ ok ]
+[11240] -- portchange --
+[11280] fastboot: getvar:slot-count
+[11290] fastboot: getvar:slot-suffixes
+[11290] fastboot: reboot-bootloader
+[11290] rebooting the d�
+Format: Log Type - Time(microsec) - Message
+Log type: B - since boot(excluding boot rom).  D - delta
+B -     83204 - SBL1, Start
+B -     88480 - scatterload_region && ram_init, Start
+D -         0 - scatterload_region && ram_init, Delta
+B -    105438 - pm_device_init, Spart
+D -     26474 - pm_device_init, Delta
+B -    132034 - boot_flash_init, Start
+D -    11712 - boot_flash_init, Delta
+B -    144143 - boot_config_data_table_init, Start
+D -         0 - boot_config_data_table_init, Delta
+B -    150304 - sbl1_ddr_set_params, Start
+B -    155123 - Pre_DDR_clock_init, Start
+D -       244 - Pre_DDR_clock_init, Delta
+D -         0 - sbl1_ddr_set_params, Delta
+B -    168726 - pm_driver_init, Start
+D -     16500 - pm_driver_init, Delta
+B -    185257 - clock_init, Start
+D -       183 - clock_init, Delta
+B -    188337 - Image Load, Start
+B -    207125 - Tz Execution, Start
+D -    183701 - Tz Execution, Delta
+B -    398909 - Image Load, Start
+B -    408578 - Signal PBL to Jump to RPM FW
+B -    408852 - sbl1_wait_for_ddr_training, Start
+D -     31689 - sbl1_wait_for_ddr_training, Delta
+B -    447862 - Image Load, Start
+B -    448563 - WDT Execution, Start
+D -       213 - WDT Execution, Delta
+B -    451186 - Image Load, Start
+B -    469242 - sbl1_efs_handle_cookies, Start
+D -       244 - sbl1_efs_handle_cookies, Delta
+B -    471225 - RPM sync cookie updated
+B -    475525 - SBL1, End
+Android Bootloader - UART_DM Initialized!!!
+[0] welcome to lk
+[10] platform_init()
+[10] target_init()
+[210] hw version voltage value=3
+[210] ddr version  value=1,14
+[210] rf version voltage value=30
+[310] Done initialization of the card
+[330] Display Init: Start
+[330] detect pannel ID=:0x0
+[330] JDI panel, panel_id=1
+[580] MDP GDSC already enabled
+[580] msm_fb_alloc enter:fb->width=1080,fb->height=1920,fb->bpp=24
+[590] fbcon_setup  enter.
+[590] Config MIPI_CMD_PANEL.
+[710] Neal board_hardware_id = 8!
+[720] partition_get_index : name=reserve3
+[720] partition_get_index : name=reserve3, n=25
+[730] get_gamma_index : -48
+[730] msm_display_on  enter.
+[730] Turn on MIPI_CMD_PANEL.
+[730] Display Init: Done
+[740] vbatt_low_shutdown_handle enter.
+[740] lfc Configure gpios for QUP instance: 0
+[740] bq27541_init:OK
+[750] partition_get_index : name=aboot
+[750] partition_get_index : name=aboot, n=4
+[760] after msm_boot_mode_init, boot mode is=0
+[760]  reboot mode is=2003195136
+[760]  sxh  set_msm_boot_mode_by_gpio  goto normal mode power on!
+# [820] command not found
+# # [920]  wwx  set_msm_boot_mode=1
+[920]  wwx  reboot mode =2003195136
+[920] partition_get_index : name=LOGO
+[920] partition_get_index : name=LOGO, n=21
+[930] splash_screen_mmc:MAGIC: SPLASH!!, width: 446, height: 56
+[940] splash_screen_mmc 4101 YXQ first_read_flag=1
+[940] msm_display_on  enter.
+[940] Turn on MIPI_CMD_PANEL.
+YXQ backlight level 100
+[950] lm3630_enable-----lm3630_enable: !
+[950] yanghai Configure gpios for QUP instance: 1
+[960] QUP IN:bl:8, ff:32, OUT:bl:8, ff:32
+[960] gpio_ap_switch_config
+[960] is_battery_weak enter.
+[970] lfc Configure gpios for QUP instance: 0
+[970] bq27541_init:OK
+[980] lfc lk bq27541 get batt volt:4199799
+[980] lfc Configure gpios for QUP instance: 5
+[980] bq24196_init:OK
+[1000] QUP IN:bl:8, ff:32, OUT:bl:8, ff:32
+[1010] partition_get_index : name=LOGO
+[1010] partition_get_index : name=LOGO, n=21
+[1010] splash_screen_mmc:MAGIC: SPLASH!!, width: 446, height: 56
+[1020] splash_screen_mmc 4101 YXQ first_read_flag=0
+[1030] msm_display_on  enter.
+[1030] Turn on MIPI_CMD_PANEL.
+[1030] partition_get_index : name=system
+[1030] partition_get_index : name=system, n=13
+[1040] partition_get_index : name=userdata
+[1040] partition_get_index : name=userdata, n=27
+[1050] partition_get_index : name=cache
+[1050] partition_get_index : name=cache, n=15
+[1050] fastboot_init()
+[1060] partition_get_index : name=ssd
+[1060] partition_get_index : name=ssd, n=19
+[1070] Loading keystore failed status 6 [1070] ERROR: scm_protect_keystore Failed[1170] USB init ept @ 0xf987000
+[1190] udc_start()
+[1420] -- reset --
+[1420] -- portchange --
+[1500] -- reset --
+[1500] -- portchange --
+[1600] fastboot: processing commands
+[2680] fastboot: getvar:slot-count
+[2680] fastboot: getvar:slot-suffixes
+[2690] fastboot: download:00e35800
+[3280] fastboot: boot
+[3300] qcom,msm-id entry not found
+[3300] DTB found with bestmatch soc rev id 0x0.Board soc rev id 0x10001
+[3310] ddr info:  ddr_manufacture_info=Samsung  ddr_row0_info=14,len:47,version:1
+[3310] LCD_id 0 yxr
+[3310] cmdline: console=ttyMSM0,115200,n8 PMOS_NO_OUTPUT_REDIRECT androidboot.emmc=true androidboot.serialno=946806ce androidboot.baseband=msm mdss_mdp.panel=1:dsi:0:qcom,mdss_dsi_jdi_1080p_cmd oppo.pcb_version=12 ddr_manufacture_info=Samsung  ddr_row0_info=14 L[3340] pm8x41_get_is_cold_boot: Warm boot
+[3340] WARM: power_on_reason  is USB_CHG [0x10]
+[3340] pm8x41_get_is_cold_boot: Warm boot
+[3350] WARM: power_off_reason  is PS_HOLD [0x2]
+[3350] cold boot
+[3350] The power_on_reason is  androidboot.startupmode=charger
+[3360] cmdline = console=ttyMSM0,115200,n8 PMOS_NO_OUTPUT_REDIRECT androidboot.emmc=true androidboot.serialno=946806ce androidboot.baseband=msm mdss_mdp.panel=1:dsi:0:qcom,mdss_dsi_jdi_1080p_cmd oppo.pcb_version=12 ddr_manufacture_info=Samsung  ddr_row0_info=14 [3380] Updating device tree: start
+[3390] Updating device tree: done
+[3390] Turn off MIPI_CMD_PANEL.
+[3390] Continuous splash enabled, keeping panel alive.
+[3400] booting linux @ 0x8000, ramdisk @ 0x2000000 (9139053), tags/device tree @ 0x1e00000
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 4.15.0-rc6 (jean@racecar) (gcc version 7.2.0 (Arch Repository)) #35 SMP PREEMPT Fri Jan 5 21:33:30 EST 2018
+[    0.000000] CPU: ARMv7 Processor [512f06f1] revision 1 (ARMv7), cr=10c5787d
+[    0.000000] CPU: div instructions available: patching division code
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, PIPT instruction cache
+[    0.000000] OF: fdt: Machine model: OnePlus One
+[    0.000000] Memory policy: Data cache writealloc
+[    0.000000] cma: Reserved 16 MiB at 0xbf000000
+[    0.000000] random: fast init done
+[    0.000000] percpu: Embedded 17 pages/cpu @(ptrval) s39116 r8192 d22324 u69632
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 752384
+[    0.000000] Kernel command line: console=ttyMSM0,115200,n8 PMOS_NO_OUTPUT_REDIRECT androidboot.emmc=true androidboot.serialno=946806ce androidboot.baseband=msm mdss_mdp.panel=1:dsi:0:qcom,mdss_dsi_jdi_1080p_cmd oppo.pcb_version=12 ddr_manufacture_info=Samsung  ddr_row0_info=14 LCD_id<4 oppo.rf_version=66 maxcpus=4 androidboot.startupmode=charger androidboot.mode=charger lk_version=V1.0
+[    0.000000] Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+[    0.000000] Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+[    0.000000] Memory: 2951192K/3015680K available (8192K kernel code, 804K rwdata, 3156K rodata, 1024K init, 280K bss, 48104K reserved, 16384K cma-reserved, 2342912K highmem)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+[    0.000000]     vmalloc : 0xf0800000 - 0xff800000   ( 240 MB)
+[    0.000000]     lowmem  : 0xc0000000 - 0xf0000000   ( 768 MB)
+[    0.000000]     pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+[    0.000000]     modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+[    0.000000]       .text : 0x(ptrval) - 0x(ptrval)   (9184 kB)
+[    0.000000]       .init : 0x(ptrval) - 0x(ptrval)   (1024 kB)
+[    0.000000]       .data : 0x(ptrval) - 0x(ptrval)   ( 805 kB)
+[    0.000000]        .bss : 0x(ptrval) - 0x(ptrval)   ( 281 kB)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[    0.000000] Preemptible hierarchical RCU implementation.
+[    0.000000]  Tasks RCU enabled.
+[    0.000000] NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+[    0.000000] arch_timer: cp15 and mmio timer(s) running at 19.20MHz (virt/virt).
+[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x46d987e47, max_idle_ns: 440795202767 ns
+[    0.000005] sched_clock: 56 bits at 19MHz, resolution 52ns, wraps every 4398046511078ns
+[    0.000018] Switching to timer-based delay loop, resolution 52ns
+[    0.000333] Console: colour dummy device 80x30
+[    0.000359] Calibrating delay loop (skipped), value calculated using timer frequency.. 38.40 BogoMIPS (lpj=192000)
+[    0.000376] pid_max: default: 32768 minimum: 301
+[    0.000481] Mount-cache hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.000495] Mountpoint-cache hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.001007] CPU: Testing write buffer coherency: ok
+[    0.001240] CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+[    0.039946] Setting up static identity map for 0x300000 - 0x300060
+[    0.059951] Hierarchical SRCU implementation.
+[    0.100030] smp: Bringing up secondary CPUs ...
+[    0.170432] CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+[    0.240581] CPU2: thread -1, cpu 2, socket 0, mpidr 80000002
+[    0.310732] CPU3: thread -1, cpu 3, socket 0, mpidr 80000003
+[    0.310919] smp: Brought up 1 node, 4 CPUs
+[    0.310938] SMP: Total of 4 processors activated (153.60 BogoMIPS).
+[    0.310947] CPU: All CPU(s) started in SVC mode.
+[    0.312322] devtmpfs: initialized
+[    0.319707] VFP support v0.3: implementor 51 architecture 64 part 6f variant 2 rev 1
+[    0.320009] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.320028] futex hash table entries: 1024 (order: 4, 65536 bytes)
+[    0.320757] pinctrl core: initialized pinctrl subsystem
+[    0.321653] NET: Registered protocol family 16
+[    0.323296] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.324469] cpuidle: using governor menu
+[    0.325043] hw-breakpoint: found 5 (+1 reserved) breakpoint and 4 watchpoint registers.
+[    0.325054] hw-breakpoint: maximum watchpoint size is 8 bytes.
+[    0.349838] reg-fixed-voltage vreg-boost: could not find pctldev for node /soc/spmi@fc4cf000/pm8941@0/gpios@c000/boost-bypass, deferring probe
+[    0.350689] vgaarb: loaded
+[    0.351151] SCSI subsystem initialized
+[    0.351551] usbcore: registered new interface driver usbfs
+[    0.351614] usbcore: registered new interface driver hub
+[    0.351712] usbcore: registered new device driver usb
+[    0.352777] Advanced Linux Sound Architecture Driver Initialized.
+[    0.353688] clocksource: Switched to clocksource arch_sys_counter
+[    0.418535] NET: Registered protocol family 2
+[    0.418951] TCP established hash table entries: 8192 (order: 3, 32768 bytes)
+[    0.419003] TCP bind hash table entries: 8192 (order: 4, 65536 bytes)
+[    0.419081] TCP: Hash tables configured (established 8192 bind 8192)
+[    0.419164] UDP hash table entries: 512 (order: 2, 16384 bytes)
+[    0.419189] UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+[    0.419339] NET: Registered protocol family 1
+[    0.419738] RPC: Registered named UNIX socket transport module.
+[    0.419749] RPC: Registered udp transport module.
+[    0.419758] RPC: Registered tcp transport module.
+[    0.419766] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.420417] Trying to unpack rootfs image as initramfs...
+[    0.723836] Freeing initrd memory: 8928K
+[    0.724637] hw perfevents: enabled with armv7_krait PMU driver, 5 counters available
+[    0.726203] Initialise system trusted keyrings
+[    0.726382] workingset: timestamp_bits=30 max_order=20 bucket_order=0
+[    0.731709] NFS: Registering the id_resolver key type
+[    0.731732] Key type id_resolver registered
+[    0.731741] Key type id_legacy registered
+[    0.732297] jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+[    0.732607] fuse init (API version 7.26)
+[    0.737312] Key type asymmetric registered
+[    0.737325] Asymmetric key parser 'x509' registered
+[    0.737376] bounce: pool size: 64 pages
+[    0.737423] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 249)
+[    0.737435] io scheduler noop registered
+[    0.737445] io scheduler deadline registered
+[    0.737644] io scheduler cfq registered (default)
+[    0.737656] io scheduler mq-deadline registered
+[    0.737666] io scheduler kyber registered
+[    0.759296] msm_serial f991e000.serial: msm_serial: detected port #0
+[    0.759347] msm_serial f991e000.serial: uartclk = 7372800
+[    0.759391] f991e000.serial: ttyMSM0 at MMIO 0xf991e000 (irq = 27, base_baud = 460800) is a MSM
+[    0.759419] msm_serial: console setup on port #0
+[    1.376907] console [ttyMSM0] enabled
+[    1.382039] msm_serial: driver initialized
+[    1.395897] brd: module loaded
+[    1.404114] loop: module loaded
+[    1.404593] SCSI Media Changer driver v0.25
+[    1.406851] spmi spmi-0: PMIC arbiter version v1 (0x20000002)
+[    1.426130] s1: supplied by regulator-dummy
+[    1.426442] s2: supplied by regulator-dummy
+[    1.429400] s3: supplied by regulator-dummy
+[    1.433608] s4: Bringing 5100000uV into 5000000-5000000uV
+[    1.437734] l1: supplied by regulator-dummy
+[    1.443300] l2: supplied by regulator-dummy
+[    1.447315] l3: supplied by regulator-dummy
+[    1.451456] l4: supplied by regulator-dummy
+[    1.455651] l5: supplied by regulator-dummy
+[    1.459790] l6: supplied by regulator-dummy
+[    1.463995] l7: supplied by regulator-dummy
+[    1.468129] l8: supplied by regulator-dummy
+[    1.472292] l9: supplied by regulator-dummy
+[    1.476499] l10: supplied by regulator-dummy
+[    1.480626] l11: supplied by regulator-dummy
+[    1.485184] l12: supplied by regulator-dummy
+[    1.489397] l13: supplied by regulator-dummy
+[    1.493655] l14: supplied by regulator-dummy
+[    1.497945] l15: supplied by regulator-dummy
+[    1.502166] l16: supplied by regulator-dummy
+[    1.506466] l17: supplied by regulator-dummy
+[    1.510675] l18: supplied by regulator-dummy
+[    1.514965] l19: supplied by regulator-dummy
+[    1.519192] l20: supplied by regulator-dummy
+[    1.523451] l21: supplied by regulator-dummy
+[    1.527737] l22: supplied by regulator-dummy
+[    1.531954] l23: supplied by regulator-dummy
+[    1.536234] l24: supplied by regulator-dummy
+[    1.540478] lvs1: supplied by regulator-dummy
+[    1.544682] lvs2: supplied by regulator-dummy
+[    1.548928] lvs3: supplied by regulator-dummy
+[    1.553424] 5vs1: supplied by s4
+[    1.557686] 5vs2: supplied by s4
+[    1.561822] libphy: Fixed MDIO Bus: probed
+[    1.564087] SLIP: version 0.8.4-NET3.019-NEWTTY (dynamic channels, max=256) (6 bit encapsulation enabled).
+[    1.567742] CSLIP: code copyright 1989 Regents of the University of California.
+[    1.577463] usbcore: registered new interface driver ax88179_178a
+[    1.584649] usbcore: registered new interface driver cdc_ether
+[    1.590866] usbcore: registered new interface driver net1080
+[    1.596622] usbcore: registered new interface driver cdc_subset
+[    1.602429] usbcore: registered new interface driver cdc_ncm
+[    1.608264] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    1.613966] ehci-pci: EHCI PCI platform driver
+[    1.620346] usbcore: registered new interface driver cdc_acm
+[    1.624707] cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+[    1.644901] input: pm8941_pwrkey as /devices/platform/soc/fc4cf000.spmi/spmi-0/0-00/fc4cf000.spmi:pm8941@0:pwrkey@800/input/input0
+[    1.646306] rtc-pm8xxx fc4cf000.spmi:pm8941@0:rtc@6000: rtc core: registered pm8xxx_rtc as rtc0
+[    1.655713] i2c /dev entries driver
+[    1.664408] IR NEC protocol handler initialized
+[    1.667585] IR RC5(x/sz) protocol handler initialized
+[    1.672099] IR RC6 protocol handler initialized
+[    1.677331] IR JVC protocol handler initialized
+[    1.681647] IR Sony protocol handler initialized
+[    1.686182] IR SANYO protocol handler initialized
+[    1.691021] IR Sharp protocol handler initialized
+[    1.695643] IR MCE Keyboard/mouse protocol handler initialized
+[    1.700312] IR XMP protocol handler initialized
+[    1.706485] qcom-smbb fc4cf000.spmi:pm8941@0:charger@1000: Initializing SMBB rev 3
+[    1.713774] otg-vbus: supplied by 5vs1
+[    1.718752] qcom-tsens fc4a8000.thermal-sensor: tsens calibration failed
+[    1.722485] device-mapper: ioctl: 4.37.0-ioctl (2017-09-20) initialised: dm-devel@redhat.com
+[    1.728906] cpuidle: enable-method property 'qcom,kpss-acc-v2' found operations
+[    1.737292] cpuidle: enable-method property 'qcom,kpss-acc-v2' found operations
+[    1.744305] cpuidle: enable-method property 'qcom,kpss-acc-v2' found operations
+[    1.751564] cpuidle: enable-method property 'qcom,kpss-acc-v2' found operations
+[    1.759250] sdhci: Secure Digital Host Controller Interface driver
+[    1.766056] sdhci: Copyright(c) Pierre Ossman
+[    1.772273] sdhci-pltfm: SDHCI platform and OF driver helper
+[    1.778402] usbcore: registered new interface driver usbhid
+[    1.782431] usbhid: USB HID core driver
+[    1.788114] remoteproc remoteproc0: releasing adsp-pil
+[    1.795059] oprofile: using timer interrupt.
+[    1.796952] NET: Registered protocol family 17
+[    1.801244] Key type dns_resolver registered
+[    1.805755] Registering SWP/SWPB emulation handler
+[    1.811014] Loading compiled-in X.509 certificates
+[    1.853288] remoteproc remoteproc0: releasing adsp-pil
+[    1.855033] rtc-pm8xxx fc4cf000.spmi:pm8941@0:rtc@6000: setting system clock to 1972-07-22 04:40:35 UTC (80628035)
+[    1.857459] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[    1.874714] cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[    1.875657] platform regulatory.0: Direct firmware load for regulatory.db failed with error -2
+[    1.876900] s1: supplied by regulator-dummy
+[    1.876956] s1: Bringing 0uV into 675000-675000uV
+[    1.877827] s2: supplied by regulator-dummy
+[    1.877871] s2: Bringing 0uV into 500000-500000uV
+[    1.878235] s3: supplied by regulator-dummy
+[    1.878280] s3: Bringing 0uV into 1050000-1050000uV
+[    1.878675] s4: supplied by regulator-dummy
+[    1.878941] s5: supplied by regulator-dummy
+[    1.879211] s6: supplied by regulator-dummy
+[    1.879486] s7: supplied by regulator-dummy
+[    1.879762] s8: supplied by regulator-dummy
+[    1.880297] s1: supplied by regulator-dummy
+[    1.880347] s1: Bringing 0uV into 1300000-1300000uV
+[    1.880879] s2: supplied by regulator-dummy
+[    1.880923] s2: Bringing 0uV into 2150000-2150000uV
+[    1.881476] s3: supplied by regulator-dummy
+[    1.881529] s3: Bringing 0uV into 1800000-1800000uV
+[    1.882817] s2: disabling
+[    1.882944] ALSA device list:
+[    1.882947]   No soundcards found.
+[    1.883521] qcom_adsp_pil adsp-pil: adsp-pil supply px not found, using dummy regulator
+[    1.883952] l1: supplied by s1
+[    1.884001] l1: Bringing 0uV into 1225000-1225000uV
+[    1.884535] l2: supplied by s3
+[    1.884578] l2: Bringing 0uV into 1200000-1200000uV
+[    1.885016] l3: supplied by s1
+[    1.885070] l3: Bringing 0uV into 1000000-1000000uV
+[    1.885518] l4: supplied by s1
+[    1.885567] l4: Bringing 0uV into 1225000-1225000uV
+[    1.886013] l5: supplied by s2
+[    1.886056] l5: Bringing 0uV into 1800000-1800000uV
+[    1.886441] l6: supplied by s2
+[    1.886485] l6: Bringing 0uV into 1800000-1800000uV
+[    1.887037] l7: supplied by s2
+[    1.887084] l7: Bringing 0uV into 1800000-1800000uV
+[    1.887597] l8: supplied by vph-pwr
+[    1.887656] l8: Bringing 0uV into 1800000-1800000uV
+[    1.888060] l9: supplied by vreg-boost
+[    1.888104] l9: Bringing 0uV into 1800000-1800000uV
+[    1.888516] l10: supplied by vreg-boost
+[    1.888561] l10: Bringing 0uV into 1800000-1800000uV
+[    1.888992] l11: supplied by s1
+[    1.889040] l11: Bringing 0uV into 1225000-1225000uV
+[    1.889486] l12: supplied by s2
+[    1.889529] l12: Bringing 0uV into 1800000-1800000uV
+[    1.890080] l13: supplied by vreg-boost
+[    1.890133] l13: Bringing 0uV into 1800000-1800000uV
+[    1.891130] remoteproc remoteproc0: adsp-pil is available
+[    1.892870] l14: supplied by s2
+[    1.892922] l14: Bringing 0uV into 1800000-1800000uV
+[    1.893033] remoteproc remoteproc0: Direct firmware load for adsp.mdt failed with error -2
+[    1.893044] remoteproc remoteproc0: powering up adsp-pil
+[    1.893146] remoteproc remoteproc0: Direct firmware load for adsp.mdt failed with error -2
+[    1.893156] remoteproc remoteproc0: request_firmware failed: -2
+[    1.893503] l15: supplied by s2
+[    1.893551] l15: Bringing 0uV into 2050000-2050000uV
+[    1.894134] l16: supplied by vph-pwr
+[    1.894180] l16: Bringing 0uV into 2700000-2700000uV
+[    1.894638] l17: supplied by vreg-boost
+[    1.895013] l17: Bringing 0uV into 2700000-2700000uV
+[    1.895452] l18: supplied by vph-pwr
+[    1.895506] l18: Bringing 0uV into 2850000-2850000uV
+[    1.895913] l19: supplied by vph-pwr
+[    1.895968] l19: Bringing 0uV into 2900000-2900000uV
+[    1.896436] l20: supplied by vreg-boost
+[    1.896481] l20: Bringing 0uV into 2950000-2950000uV
+[    1.897089] l21: supplied by vreg-boost
+[    1.897133] l21: Bringing 0uV into 2950000-2950000uV
+[    1.897744] l22: supplied by vreg-boost
+[    1.897800] l22: Bringing 0uV into 3000000-3000000uV
+[    1.898241] l23: supplied by vreg-boost
+[    1.898287] l23: Bringing 0uV into 2800000-2800000uV
+[    1.898760] l24: supplied by vreg-boost
+[    1.898805] l24: Bringing 0uV into 3075000-3075000uV
+[    1.899427] lvs1: supplied by s3
+[    1.899765] lvs2: supplied by s3
+[    1.900094] lvs3: supplied by s3
+[    1.900449] 5vs1: supplied by regulator-dummy
+[    1.900774] 5vs2: supplied by regulator-dummy
+[    1.912843] mmc0: Switching to 3.3V signalling voltage failed
+[    1.973918] mmc0: SDHCI controller on f9824900.sdhci [f9824900.sdhci] using ADMA 64-bit
+[    2.060254] mmc0: new high speed MMC card at address 0001
+[    2.060762] mmcblk0: mmc0:0001 064GE2 58.2 GiB
+[    2.060908] mmcblk0boot0: mmc0:0001 064GE2 partition 1 4.00 MiB
+[    2.061221] mmcblk0boot1: mmc0:0001 064GE2 partition 2 4.00 MiB
+[    2.063364] mmcblk0rpmb: mmc0:0001 064GE2 partition 3 4.00 MiB, chardev (246:0)
+[    2.067714] Alternate GPT is invalid, using primary GPT.
+[    2.067785]  mmcblk0: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11 p12 p13 p14 p15 p16 p17 p18 p19 p20 p21 p22 p23 p24 p25 p26 p27 �[    2.294709] Freeing unused kernel memory: 1024K
+### postmarketOS initramfs ###
+modprobe: module ext4 not found in modules.dep
+Mount subpartitions of /dev/mmcblk0p14
+fbsplash: can't open '/dev/fb0': No such file or directory
+Setup usb network
+ifconfig: SIOCSIFADDR: No such device
+ifconfig: SIOCSIFADDR: No such device
+ifconfig: SIOCSIFADDR: No such device
+Start the dhcpcd daemon (forks into background)
+Mount boot partition (/dev/dm-0)
+[    3.410282] EXT4-fs (dm-0): couldn't mount as ext3 due to feature incompatibilities
+[    3.413395] EXT4-fs (dm-0): mounted filesystem without journal. Opts: (null)
+Extract /boot/initramfs-postmarketos-mainline-extra
+23299 blocks
+Check/repair root filesystem (/dev/mapper/mmcblk0p14p2)
+e2fsck 1.43.7 (16-Oct-2017)
+pmOS_root: recovering journal
+Pass 1: Checking inodes, blocks, and sizes
+Pass 2: Checking directory structure
+Pass 3: Checking directory connectivity
+Pass 4: Checking reference counts
+Pass 5: Checking group summary information
+pmOS_root: 12590/77616 files (0.1% non-contiguous), 149948/329216 blocks
+Resize root filesystem (/dev/mapper/mmcblk0p14p2)
+resize2fs 1.43.7 (16-Oct-2017)
+The filesystem is already 329216 (4k) blocks long.  Nothing to do!
+
+Mount root partition (/dev/mapper/mmcblk0p14p2)
+[    5.863885] EXT4-fs (dm-1): mounted filesystem with ordered data mode. Opts: (null)
+umount: can't unmount /dev: Invalid argument
+
+   OpenRC 0.24.1.a941ee4a0b is starting up Linux 4.15.0-rc6 (armv7l)
+
+ * Mounting /proc ... [ ok ]
+ * Mounting /run ... * /run/openrc: creating directory
+ * /run/lock: creating directory
+ * /run/lock: correcting owner
+ * Caching service dependencies ... [ ok ]
+ * Caching service dependencies ... [ ok ]
+ * Clock skew detected with `/etc/init.d'
+ * Adjusting mtime of `/run/openrc/deptree' to Fri Jan  5 04:26:34 2018
+
+ * Mounting devtmpfs on /dev ... [ ok ]
+
+ * Mounting /dev/pts ... [ ok ]
+
+ * Mounting /dev/shm ... [ ok ]
+ * Mounting /sys ... [ ok ]
+ * Mounting debug filesystem ... [ ok ]
+ * Mounting config filesystem ... [ ok ]
+ * Mounting fuse control filesystem ... [ ok ]
+ * Mounting cgroup filesystem ... [ ok ]
+ * Starting udev ... [ ok ]
+ * Generating a rule to create a /dev/root symlink ... [ ok ]
+ * Populating /dev with existing devices through uevents ... [ ok ]
+ * Checking local filesystems  ...pmOS_root: clean, 12590/77616 files, 149948/329216 blocks
+pmOS_boot was not cleanly unmounted, check forced.
+pmOS_boot: 16/9480 files (31.3% non-contiguous), 27689/37888 blocks
+ * Filesystems repaired
+ [ !! ]
+ * Remounting root filesystem read/write ... [ ok ]
+ * Remounting filesystems ... [ ok ]
+ * Mounting local filesystems ... [ ok ]
+ * WARNING: clock skew detected!
+ * Setting the local clock based on last shutdown time ... [ ok ]
+ * Loading modules ... [ ok ]
+ * Setting system clock using the hardware clock [UTC] ... [ ok ]
+ * Configuring kernel parameters ...sysctl: error: 'net.ipv4.tcp_syncookies' is an unknown key
+ [ ok ]
+ * Creating user login records ... [ ok ]
+ * Wiping /tmp directory ... [ ok ]
+ * Setting hostname ... [ ok ]
+ * Starting busybox klogd ... [ ok ]
+ * Starting busybox syslog ... [ ok ]
+ * WARNING: clock skew detected!
+ * Starting D-BUS system messagebus ... [ ok ]
+ * Could not find a wireless interface
+ * ERROR: wpa_supplicant failed to start
+ * Starting networking ...awk: /etc/network/interfaces: No such file or directory
+ * ERROR: networking failed to start
+ * ERROR: cannot start chronyd as networking would not start
+ * ERROR: cannot start haveged as networking would not start
+ * Starting sshd ... [ ok ]
+ * Activating swap file ...Configured swap file size is 0, skipping creation.
+ [ ok ]
+���[14620] -- portchange --
+[14660] fastboot: getvar:slot-count
+[14660] fastboot: getvar:slot-suffixes
+[14670] fastboot: reboot
+[14670] rebooting the d
+Format: Log Type - Time(microsec) - Message
+Log type: B - since boot(excluding boot rom).  D - delta
+B -     83204 - SBL1, Start
+B -     88480 - scatterload_region && ram_init, Start
+D -         0 - scatterload_region && ram_init, Delta
+B -    105438 - pm_device_init, Start
+D -     26504 - pm_device_init, Delta
+B -    132065 - boot_flash_init Start
+D -     11742 - boot_flash_init, Delta
+B -    144204 - boot_config_data_table_init, Start
+D -         0 - boot_config_data_table_init, Delta
+    150365 - sbl1_ddr_set_params, Start
+B -    155153 - Pre_DDR_clocj_init, Start
+D -       274 - Pre_DDR_clock_init, Delta
+D -         0 - sbl1_ddr_set_params, Delta
+B -    168787 - pm_driver_init, Start
+D -     16531 - pm_driver_init, Delta
+B -    185318 - clock_init, Start
+D -       152 - clock_init, Delta
+B -    188398 - Image Load, Start
+B -    207186 - Tz Execution, Start
+D -    183671 - Tz Execution, Delta
+B -    398970 - Image Load, Start
+B -    408639 - Signal PBL to Jump to RPM FW
+B -    408913 - sbl1_wait_for_ddr_training, Start
+D -     31689 - sbl1_wait_for_ddr_training, Delta
+B -    447892 - Image Load, Start
+B -    448624 - WDT Execution, Start
+D -       213 - WDT Execution, Delta
+B -    451217 - Image Load, Start
+B -    469273 - sbl1_efs_handle_cookies, Start
+D -       244 - sbl1_efs_handle_cookies, Delta
+B -    471286 - RPM sync cookie updated
+B -    475556 - SBL1, End
+Android Bootloader - UART_DM Initialized!!!
+[0] welcome to lk
+
+[10] platform_init()
+[10] target_init()
+[210] hw version voltage value=3
+[210] ddr version  value=1,14
+[210] rf version voltage value=30
+[310] Done initialization of the card
+[330] Display Init: Start
+[330] detect pannel ID=:0x0
+[340] JDI panel, panel_id=1
+[580] MDP GDSC already enabled
+[580] msm_fb_alloc enter:fb->width=1080,fb->height=1920,fb->bpp=24
+[590] fbcon_setup  enter.
+[590] Config MIPI_CMD_PANEL.
+[720] Neal board_hardware_id = 8!
+[720] partition_get_index : name=reserve3
+[720] partition_get_index : name=reserve3, n=25
+[730] get_gamma_index : -48
+[730] msm_display_on  enter.
+[730] Turn on MIPI_CMD_PANEL.
+[730] Display Init: Done
+[740] vbatt_low_shutdown_handle enter.
+[740] lfc Configure gpios for QUP instance: 0
+[740] bq27541_init:OK
+[760] partition_get_index : name=aboot
+[760] partition_get_index : name=aboot, n=4
+[770] after msm_boot_mode_init, boot mode is=0
+[770]  reboot mode is=2003195137
+[770]  sxh  set_msm_boot_mode_by_gpio  goto normal mode power on!
+# [830] command not found
+# # [930]  wwx  reboot mode =2003195137
+[930] partition_get_index : name=LOGO
+[930] partition_get_index : name=LOGO, n=21
+[940] splash_screen_mmc:MAGIC: SPLASH!!, width: 1080, height: 1919
+[960] splash_screen_mmc 4101 YXQ first_read_flag=1
+[970] msm_display_on  enter.
+[970] Turn on MIPI_CMD_PANEL.
+YXQ backlight level 200
+[980] lm3630_enable-----lm3630_enable: !
+[980] yanghai Configure gpios for QUP instance: 1
+[990] QUP IN:bl:8, ff:32, OUT:bl:8, ff:32
+[990] gpio_ap_switch_config
+[990] lfc Configure gpios for QUP instance: 5
+[1000] bq24196_init:OK
+[1010] QUP IN:bl:8, ff:32, OUT:bl:8, ff:32
+[1020] partition_get_index : name=misc
+[1020] partition_get_index : name=misc, n=20
+[1020] ERROR: Partition table not found
+[1030] partition_get_index : name=bootselect
+[1030] Unable to locate /bootselect partition
+[1030] Boot Select Partition do not exists
+[1040] partition_get_index : name=misc
+[1040] partition_get_index : name=misc, n=20
+[1050] wwx read_misc:
+[1050] partition_get_index : name=misc
+[1050] partition_get_index : name=misc, n=20
+[1060] partition_get_index : name=boot
+[1060] partition_get_index : name=boot, n=6
+[1060] use_signed_kernel=0, is_unlocked=1, is_tampered=1.
+[1070] Loading boot image (7608320): start
+[1120] Loading boot image (7608320): done
+[1120] qcom,msm-id entry not found
+[1120] DTB found with bestmatch soc rev id 0x0.Board soc rev id 0x10001
+[1130] ddr info:  ddr_manufacture_info=Samsung  ddr_row0_info=14,len:47,version:1
+[1140] LCD_id 0 yxr
+[1140] cmdline: console=ttyMSM0,115200,n8 PMOS_NO_OUTPUT_REDIRECT androidboot.emmc=true androidboot.serialno=946806ce androidboot.baseband=msm mdss_mdp.panel=1:dsi:0:qcom,mdss_dsi_jdi_1080p_cmd oppo.pcb_version=12 ddr_manufacture_info=Samsung  ddr_row0_info=14 L[1160] pm8x41_get_is_cold_boot: Warm boot
+[1170] WARM: power_on_reason  is USB_CHG [0x90]
+[1170] pm8x41_get_is_cold_boot: Warm boot
+[1170] WARM: power_on_reason  is KPADPWR_N [0x90]
+[1180] pm8x41_get_is_cold_boot: Warm boot
+[1180] WARM: power_off_reason  is KPDPWR_N [0x80]
+[1190] The power_on_reason is  androidboot.startupmode=pwrkey
+[1190] cmdline = console=ttyMSM0,115200,n8 PMOS_NO_OUTPUT_REDIRECT androidboot.emmc=true androidboot.serialno=946806ce androidboot.baseband=msm mdss_mdp.panel=1:dsi:0:qcom,mdss_dsi_jdi_1080p_cmd oppo.pcb_version=12 ddr_manufacture_info=Samsung  ddr_row0_info=14 [1210] Updating device tree: start
+[1220] Updating device tree: done
+[1220] Turn off MIPI_CMD_PANEL.
+[1220] Continuous splash enabled, keeping panel alive.
+[1230] booting linux @ 0x8000, ramdisk @ 0x2000000 (1633548), tags/device tree @ 0x1e00000
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 4.15.0-rc6 (pmos@racecar) (gcc version 6.4.0 (Alpine 6.4.0)) #2-postmarketos-mainline SMP PREEMPT Fri Jan 5 09:22:09 UTC 2018
+[    0.000000] CPU: ARMv7 Processor [512f06f1] revision 1 (ARMv7), cr=10c5787d
+[    0.000000] CPU: div instructions available: patching division code
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, PIPT instruction cache
+[    0.000000] OF: fdt: Machine model: OnePlus One
+[    0.000000] Memory policy: Data cache writealloc
+[    0.000000] cma: Reserved 16 MiB at 0xbf000000
+[    0.000000] random: fast init done
+[    0.000000] percpu: Embedded 17 pages/cpu @(ptrval) s39116 r8192 d22324 u69632
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 752384
+[    0.000000] Kernel command line: console=ttyMSM0,115200,n8 PMOS_NO_OUTPUT_REDIRECT androidboot.emmc=true androidboot.serialno=946806ce androidboot.baseband=msm mdss_mdp.panel=1:dsi:0:qcom,mdss_dsi_jdi_1080p_cmd oppo.pcb_version=12 ddr_manufacture_info=Samsung  ddr_row0_info=14 LCD_id<4 oppo.rf_version=66 maxcpus=4 androidboot.startupmode=pwrkey androidboot.mode=reboot lk_version=V1.0
+[    0.000000] Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+[    0.000000] Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+[    0.000000] Memory: 2958520K/3015680K available (8192K kernel code, 809K rwdata, 3212K rodata, 1024K init, 280K bss, 40776K reserved, 16384K cma-reserved, 2342912K highmem)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+[    0.000000]     vmalloc : 0xf0800000 - 0xff800000   ( 240 MB)
+[    0.000000]     lowmem  : 0xc0000000 - 0xf0000000   ( 768 MB)
+[    0.000000]     pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+[    0.000000]     modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+[    0.000000]       .text : 0x(ptrval) - 0x(ptrval)   (9184 kB)
+[    0.000000]       .init : 0x(ptrval) - 0x(ptrval)   (1024 kB)
+[    0.000000]       .data : 0x(ptrval) - 0x(ptrval)   ( 810 kB)
+[    0.000000]        .bss : 0x(ptrval) - 0x(ptrval)   ( 281 kB)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[    0.000000] Preemptible hierarchical RCU implementation.
+[    0.000000]  Tasks RCU enabled.
+[    0.000000] NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+[    0.000000] arch_timer: cp15 and mmio timer(s) running at 19.20MHz (virt/virt).
+[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x46d987e47, max_idle_ns: 440795202767 ns
+[    0.000005] sched_clock: 56 bits at 19MHz, resolution 52ns, wraps every 4398046511078ns
+[    0.000018] Switching to timer-based delay loop, resolution 52ns
+[    0.000332] Console: colour dummy device 80x30
+[    0.000360] Calibrating delay loop (skipped), value calculated using timer frequency.. 38.40 BogoMIPS (lpj=192000)
+[    0.000376] pid_max: default: 32768 minimum: 301
+[    0.000484] Mount-cache hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.000498] Mountpoint-cache hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.001031] CPU: Testing write buffer coherency: ok
+[    0.001266] CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+[    0.039950] Setting up static identity map for 0x300000 - 0x300060
+[    0.059956] Hierarchical SRCU implementation.
+[    0.100038] smp: Bringing up secondary CPUs ...
+[    0.170444] CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+[    0.240598] CPU2: thread -1, cpu 2, socket 0, mpidr 80000002
+[    0.310751] CPU3: thread -1, cpu 3, socket 0, mpidr 80000003
+[    0.310943] smp: Brought up 1 node, 4 CPUs
+[    0.310964] SMP: Total of 4 processors activated (153.60 BogoMIPS).
+[    0.310973] CPU: All CPU(s) started in SVC mode.
+[    0.312240] devtmpfs: initialized
+[    0.319701] VFP support v0.3: implementor 51 architecture 64 part 6f variant 2 rev 1
+[    0.320014] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.320033] futex hash table entries: 1024 (order: 4, 65536 bytes)
+[    0.320885] pinctrl core: initialized pinctrl subsystem
+[    0.321801] NET: Registered protocol family 16
+[    0.323492] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.324662] cpuidle: using governor menu
+[    0.325270] hw-breakpoint: found 5 (+1 reserved) breakpoint and 4 watchpoint registers.
+[    0.325281] hw-breakpoint: maximum watchpoint size is 8 bytes.
+[    0.350882] reg-fixed-voltage vreg-boost: could not find pctldev for node /soc/spmi@fc4cf000/pm8941@0/gpios@c000/boost-bypass, deferring probe
+[    0.351678] vgaarb: loaded
+[    0.352150] SCSI subsystem initialized
+[    0.352561] usbcore: registered new interface driver usbfs
+[    0.352624] usbcore: registered new interface driver hub
+[    0.352724] usbcore: registered new device driver usb
+[    0.353800] Advanced Linux Sound Architecture Driver Initialized.
+[    0.354752] clocksource: Switched to clocksource arch_sys_counter
+[    0.421397] NET: Registered protocol family 2
+[    0.421827] TCP established hash table entries: 8192 (order: 3, 32768 bytes)
+[    0.421879] TCP bind hash table entries: 8192 (order: 4, 65536 bytes)
+[    0.421957] TCP: Hash tables configured (established 8192 bind 8192)
+[    0.422044] UDP hash table entries: 512 (order: 2, 16384 bytes)
+[    0.422069] UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+[    0.422223] NET: Registered protocol family 1
+[    0.422635] RPC: Registered named UNIX socket transport module.
+[    0.422646] RPC: Registered udp transport module.
+[    0.422655] RPC: Registered tcp transport module.
+[    0.422663] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.423315] Trying to unpack rootfs image as initramfs...
+[    0.522934] Freeing initrd memory: 1596K
+[    0.524011] hw perfevents: enabled with armv7_krait PMU driver, 5 counters available
+[    0.526349] Initialise system trusted keyrings
+[    0.526529] workingset: timestamp_bits=30 max_order=20 bucket_order=0
+[    0.533754] NFS: Registering the id_resolver key type
+[    0.533793] Key type id_resolver registered
+[    0.533807] Key type id_legacy registered
+[    0.534574] jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+[    0.535029] fuse init (API version 7.26)
+[    0.540843] Key type asymmetric registered
+[    0.540860] Asymmetric key parser 'x509' registered
+[    0.540936] bounce: pool size: 64 pages
+[    0.540998] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 249)
+[    0.541015] io scheduler noop registered
+[    0.541029] io scheduler deadline registered
+[    0.541306] io scheduler cfq registered (default)
+[    0.541323] io scheduler mq-deadline registered
+[    0.541338] io scheduler kyber registered
+[    0.570935] msm_serial f991e000.serial: msm_serial: detected port #0
+[    0.571004] msm_serial f991e000.serial: uartclk = 7372800
+[    0.571065] f991e000.serial: ttyMSM0 at MMIO 0xf991e000 (irq = 27, base_baud = 460800) is a MSM
+[    0.571102] msm_serial: console setup on port #0
+[    1.190004] console [ttyMSM0] enabled
+[    1.195241] msm_serial: driver initialized
+[    1.212697] brd: module loaded
+[    1.223865] loop: module loaded
+[    1.224499] SCSI Media Changer driver v0.25
+[    1.227000] spmi spmi-0: PMIC arbiter version v1 (0x20000002)
+[    1.250559] s1: supplied by regulator-dummy
+[    1.250980] s2: supplied by regulator-dummy
+[    1.253902] s3: supplied by regulator-dummy
+[    1.258205] s4: Bringing 5100000uV into 5000000-5000000uV
+[    1.262213] l1: supplied by regulator-dummy
+[    1.267882] l2: supplied by regulator-dummy
+[    1.271798] l3: supplied by regulator-dummy
+[    1.276035] l4: supplied by regulator-dummy
+[    1.280142] l5: supplied by regulator-dummy
+[    1.284322] l6: supplied by regulator-dummy
+[    1.288522] l7: supplied by regulator-dummy
+[    1.292644] l8: supplied by regulator-dummy
+[    1.296859] l9: supplied by regulator-dummy
+[    1.300988] l10: supplied by regulator-dummy
+[    1.305194] l11: supplied by regulator-dummy
+[    1.309675] l12: supplied by regulator-dummy
+[    1.313921] l13: supplied by regulator-dummy
+[    1.318238] l14: supplied by regulator-dummy
+[    1.322433] l15: supplied by regulator-dummy
+[    1.326731] l16: supplied by regulator-dummy
+[    1.330967] l17: supplied by regulator-dummy
+[    1.335234] l18: supplied by regulator-dummy
+[    1.339472] l19: supplied by regulator-dummy
+[    1.343712] l20: supplied by regulator-dummy
+[    1.348023] l21: supplied by regulator-dummy
+[    1.352236] l22: supplied by regulator-dummy
+[    1.356517] l23: supplied by regulator-dummy
+[    1.360748] l24: supplied by regulator-dummy
+[    1.365046] lvs1: supplied by regulator-dummy
+[    1.369170] lvs2: supplied by regulator-dummy
+[    1.373447] lvs3: supplied by regulator-dummy
+[    1.378035] 5vs1: supplied by s4
+[    1.382207] 5vs2: supplied by s4
+[    1.386729] libphy: Fixed MDIO Bus: probed
+[    1.388564] SLIP: version 0.8.4-NET3.019-NEWTTY (dynamic channels, max=256) (6 bit encapsulation enabled).
+[    1.392176] CSLIP: code copyright 1989 Regents of the University of California.
+[    1.401926] usbcore: registered new interface driver ax88179_178a
+[    1.409110] usbcore: registered new interface driver cdc_ether
+[    1.415351] usbcore: registered new interface driver net1080
+[    1.421043] usbcore: registered new interface driver cdc_subset
+[    1.426921] usbcore: registered new interface driver cdc_ncm
+[    1.432732] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    1.438408] ehci-pci: EHCI PCI platform driver
+[    1.444854] usbcore: registered new interface driver cdc_acm
+[    1.449114] cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+[    1.469290] udc-core: couldn't find an available UDC - added [g_ether] to list of pending drivers
+[    1.470348] input: pm8941_pwrkey as /devices/platform/soc/fc4cf000.spmi/spmi-0/0-00/fc4cf000.spmi:pm8941@0:pwrkey@800/input/input0
+[    1.478983] rtc-pm8xxx fc4cf000.spmi:pm8941@0:rtc@6000: rtc core: registered pm8xxx_rtc as rtc0
+[    1.489019] i2c /dev entries driver
+[    1.497772] IR NEC protocol handler initialized
+[    1.500832] IR RC5(x/sz) protocol handler initialized
+[    1.505379] IR RC6 protocol handler initialized
+[    1.510553] IR JVC protocol handler initialized
+[    1.514923] IR Sony protocol handler initialized
+[    1.519408] IR SANYO protocol handler initialized
+[    1.524269] IR Sharp protocol handler initialized
+[    1.528898] IR MCE Keyboard/mouse protocol handler initialized
+[    1.533559] IR XMP protocol handler initialized
+[    1.539876] qcom-smbb fc4cf000.spmi:pm8941@0:charger@1000: Initializing SMBB rev 3
+[    1.547779] otg-vbus: supplied by 5vs1
+[    1.552207] qcom-tsens fc4a8000.thermal-sensor: tsens calibration failed
+[    1.556154] device-mapper: ioctl: 4.37.0-ioctl (2017-09-20) initialised: dm-devel@redhat.com
+[    1.561986] cpuidle: enable-method property 'qcom,kpss-acc-v2' found operations
+[    1.570605] cpuidle: enable-method property 'qcom,kpss-acc-v2' found operations
+[    1.577596] cpuidle: enable-method property 'qcom,kpss-acc-v2' found operations
+[    1.584902] cpuidle: enable-method property 'qcom,kpss-acc-v2' found operations
+[    1.592642] sdhci: Secure Digital Host Controller Interface driver
+[    1.599309] sdhci: Copyright(c) Pierre Ossman
+[    1.605566] sdhci-pltfm: SDHCI platform and OF driver helper
+[    1.611890] usbcore: registered new interface driver usbhid
+[    1.615765] usbhid: USB HID core driver
+[    1.621486] remoteproc remoteproc0: releasing adsp-pil
+[    1.629253] oprofile: using timer interrupt.
+[    1.630297] NET: Registered protocol family 17
+[    1.634513] Key type dns_resolver registered
+[    1.639211] Registering SWP/SWPB emulation handler
+[    1.644004] Loading compiled-in X.509 certificates
+[    1.696198] remoteproc remoteproc0: releasing adsp-pil
+[    1.698303] rtc-pm8xxx fc4cf000.spmi:pm8941@0:rtc@6000: setting system clock to 1972-07-22 04:41:49 UTC (80628109)
+[    1.700437] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[    1.715999] cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[    1.718574] platform regulatory.0: Direct firmware load for regulatory.db failed with error -2
+[    1.720113] s1: supplied by regulator-dummy
+[    1.720166] s1: Bringing 0uV into 675000-675000uV
+[    1.721086] s2: supplied by regulator-dummy
+[    1.721141] s2: Bringing 0uV into 500000-500000uV
+[    1.721541] s3: supplied by regulator-dummy
+[    1.721591] s3: Bringing 0uV into 1050000-1050000uV
+[    1.722003] s4: supplied by regulator-dummy
+[    1.722291] s5: supplied by regulator-dummy
+[    1.722606] s6: supplied by regulator-dummy
+[    1.722898] s7: supplied by regulator-dummy
+[    1.723217] s8: supplied by regulator-dummy
+[    1.723801] s1: supplied by regulator-dummy
+[    1.723853] s1: Bringing 0uV into 1300000-1300000uV
+[    1.724400] s2: supplied by regulator-dummy
+[    1.724461] s2: Bringing 0uV into 2150000-2150000uV
+[    1.725699] s2: disabling
+[    1.725896] ALSA device list:
+[    1.725899]   No soundcards found.
+[    1.726308] qcom_adsp_pil adsp-pil: adsp-pil supply px not found, using dummy regulator
+[    1.726533] s3: supplied by regulator-dummy
+[    1.726587] s3: Bringing 0uV into 1800000-1800000uV
+[    1.727415] l1: supplied by s1
+[    1.727466] l1: Bringing 0uV into 1225000-1225000uV
+[    1.728028] l2: supplied by s3
+[    1.728078] l2: Bringing 0uV into 1200000-1200000uV
+[    1.728567] l3: supplied by s1
+[    1.728629] l3: Bringing 0uV into 1000000-1000000uV
+[    1.729104] l4: supplied by s1
+[    1.729155] l4: Bringing 0uV into 1225000-1225000uV
+[    1.729628] l5: supplied by s2
+[    1.729679] l5: Bringing 0uV into 1800000-1800000uV
+[    1.730096] l6: supplied by s2
+[    1.730152] l6: Bringing 0uV into 1800000-1800000uV
+[    1.730716] l7: supplied by s2
+[    1.730767] l7: Bringing 0uV into 1800000-1800000uV
+[    1.731297] l8: supplied by vph-pwr
+[    1.731361] l8: Bringing 0uV into 1800000-1800000uV
+[    1.731774] l9: supplied by vreg-boost
+[    1.731826] l9: Bringing 0uV into 1800000-1800000uV
+[    1.732267] l10: supplied by vreg-boost
+[    1.732319] l10: Bringing 0uV into 1800000-1800000uV
+[    1.732779] l11: supplied by s1
+[    1.732832] l11: Bringing 0uV into 1225000-1225000uV
+[    1.733303] l12: supplied by s2
+[    1.733354] l12: Bringing 0uV into 1800000-1800000uV
+[    1.734120] remoteproc remoteproc0: adsp-pil is available
+[    1.735933] l13: supplied by vreg-boost
+[    1.735985] l13: Bringing 0uV into 1800000-1800000uV
+[    1.736092] remoteproc remoteproc0: Direct firmware load for adsp.mdt failed with error -2
+[    1.736102] remoteproc remoteproc0: powering up adsp-pil
+[    1.736171] remoteproc remoteproc0: Direct firmware load for adsp.mdt failed with error -2
+[    1.736183] remoteproc remoteproc0: request_firmware failed: -2
+[    1.736887] l14: supplied by s2
+[    1.736943] l14: Bringing 0uV into 1800000-1800000uV
+[    1.737455] l15: supplied by s2
+[    1.737506] l15: Bringing 0uV into 2050000-2050000uV
+[    1.738364] l16: supplied by vph-pwr
+[    1.738416] l16: Bringing 0uV into 2700000-2700000uV
+[    1.738915] l17: supplied by vreg-boost
+[    1.738972] l17: Bringing 0uV into 2700000-2700000uV
+[    1.739429] l18: supplied by vph-pwr
+[    1.739480] l18: Bringing 0uV into 2850000-2850000uV
+[    1.739908] l19: supplied by vph-pwr
+[    1.739971] l19: Bringing 0uV into 2900000-2900000uV
+[    1.740459] l20: supplied by vreg-boost
+[    1.740514] l20: Bringing 0uV into 2950000-2950000uV
+[    1.741135] l21: supplied by vreg-boost
+[    1.741191] l21: Bringing 0uV into 2950000-2950000uV
+[    1.741839] l22: supplied by vreg-boost
+[    1.741889] l22: Bringing 0uV into 3000000-3000000uV
+[    1.742364] l23: supplied by vreg-boost
+[    1.742415] l23: Bringing 0uV into 2800000-2800000uV
+[    1.742914] l24: supplied by vreg-boost
+[    1.742976] l24: Bringing 0uV into 3075000-3075000uV
+[    1.743621] lvs1: supplied by s3
+[    1.743991] lvs2: supplied by s3
+[    1.744364] lvs3: supplied by s3
+[    1.744784] 5vs1: supplied by regulator-dummy
+[    1.745125] 5vs2: supplied by regulator-dummy
+[    1.747077] using random self ethernet address
+[    1.747083] using random host ethernet address
+[    1.747540] usb0: HOST MAC 32:dc:8e:81:e4:f0
+[    1.747570] usb0: MAC d2:64:ad:a0:84:59
+[    1.747589] using random self ethernet address
+[    1.747595] using random host ethernet address
+[    1.747654] g_ether gadget: Ethernet Gadget, version: Memorial Day 2008
+[    1.747659] g_ether gadget: g_ether ready
+[    1.751597] l24: voltage operation not allowed
+[    1.760627] mmc0: Switching to 3.3V signalling voltage failed
+[    1.814892] mmc0: SDHCI controller on f9824900.sdhci [f9824900.sdhci] using ADMA 64-bit
+[    1.903123] mmc0: new high speed MMC card at address 0001
+[    1.903479] mmcblk0: mmc0:0001 064GE2 58.2 GiB
+[    1.903734] mmcblk0boot0: mmc0:0001 064GE2 partition 1 4.00 MiB
+[    1.903881] mmcblk0boot1: mmc0:0001 064GE2 partition 2 4.00 MiB
+[    1.906253] mmcblk0rpmb: mmc0:0001 064GE2 partition 3 4.00 MiB, chardev (246:0)
+[    1.910918] Alternate GPT is invalid, using primary GPT.
+[    1.910992]  mmcblk0: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11 p12 p13 p14 p15 p16 p17 p18 p19 p20 p21 p22 p23 p24 p25 p26 p27 �[    2.178365] Freeing unused kernel memory: 1024K
+### postmarketOS initramfs ###
+modprobe: module ext4 not found in modules.dep
+[    2.235671] g_ether gadget: high-speed config #1: CDC Ethernet (ECM)
+Mount subpartitions of /dev/mmcblk0p14
+fbsplash: can't open '/dev/fb0': No such file or directory
+Setup usb network
+[    3.071222] using random self ethernet address
+[    3.071246] using random host ethernet address
+sh: write error: Resource busy
+ifconfig: SIOCSIFADDR: No such device
+Start the dhcpcd daemon (forks into background)
+Mount boot partition (/dev/dm-0)
+[    3.327256] EXT4-fs (dm-0): couldn't mount as ext3 due to feature incompatibilities
+[    3.330391] EXT4-fs (dm-0): mounted filesystem without journal. Opts: (null)
+Extract /boot/initramfs-postmarketos-mainline-extra
+23299 blocks
+Check/repair root filesystem (/dev/mapper/mmcblk0p14p2)
+e2fsck 1.43.7 (16-Oct-2017)
+pmOS_root: recovering journal
+Pass 1: Checking inodes, blocks, and sizes
+Pass 2: Checking directory structure
+Pass 3: Checking directory connectivity
+Pass 4: Checking reference counts
+Pass 5: Checking group summary information
+pmOS_root: 12590/77616 files (0.1% non-contiguous), 149948/329216 blocks
+Resize root filesystem (/dev/mapper/mmcblk0p14p2)
+resize2fs 1.43.7 (16-Oct-2017)
+The filesystem is already 329216 (4k) blocks long.  Nothing to do!
+
+Mount root partition (/dev/mapper/mmcblk0p14p2)
+[    5.754169] EXT4-fs (dm-1): mounted filesystem with ordered data mode. Opts: (null)
+umount: can't unmount /dev: Invalid argument
+
+   OpenRC 0.24.1.a941ee4a0b is starting up Linux 4.15.0-rc6 (armv7l)
+
+ * Mounting /proc ... [ ok ]
+ * Mounting /run ... * /run/openrc: creating directory
+ * /run/lock: creating directory
+ * /run/lock: correcting owner
+ * Caching service dependencies ... [ ok ]
+ * Caching service dependencies ... [ ok ]
+ * Clock skew detected with `/etc/init.d'
+ * Adjusting mtime of `/run/openrc/deptree' to Fri Jan  5 04:26:34 2018
+
+ * Mounting devtmpfs on /dev ... [ ok ]
+
+ * Mounting /dev/pts ... [ ok ]
+
+ * Mounting /dev/shm ... [ ok ]
+ * Mounting /sys ... [ ok ]
+ * Mounting debug filesystem ... [ ok ]
+ * Mounting config filesystem ... [ ok ]
+ * Mounting fuse control filesystem ... [ ok ]
+ * Mounting cgroup filesystem ... [ ok ]
+ * Starting udev ... [ ok ]
+ * Generating a rule to create a /dev/root symlink ... [ ok ]
+ * Populating /dev with existing devices through uevents ... [ ok ]
+ * Checking local filesystems  ...pmOS_root: clean, 12590/77616 files, 149948/329216 blocks
+pmOS_boot was not cleanly unmounted, check forced.
+pmOS_boot: 16/9480 files (31.3% non-contiguous), 27689/37888 blocks
+ * Filesystems repaired
+ [ !! ]
+ * Remounting root filesystem read/write ... [ ok ]
+ * Remounting filesystems ... [ ok ]
+ * Mounting local filesystems ... [ ok ]
+ * WARNING: clock skew detected!
+ * Setting the local clock based on last shutdown time ... [ ok ]
+ * Loading modules ... [ ok ]
+ * Setting system clock using the hardware clock [UTC] ... [ ok ]
+ * Configuring kernel parameters ...sysctl: error: 'net.ipv4.tcp_syncookies' is an unknown key
+ [ ok ]
+ * Creating user login records ... [ ok ]
+ * Wiping /tmp directory ... [ ok ]
+ * Setting hostname ... [ ok ]
+ * Starting busybox klogd ... [ ok ]
+ * Starting busybox syslog ... [ ok ]
+ * WARNING: clock skew detected!
+ * Starting D-BUS system messagebus ... [ ok ]
+ * Could not find a wireless interface
+ * ERROR: wpa_supplicant failed to start
+ * Starting networking ...awk: /etc/network/interfaces: No such file or directory
+ * ERROR: networking failed to start
+ * ERROR: cannot start chronyd as networking would not start
+ * ERROR: cannot start haveged as networking would not start
+ * Starting sshd ... [ ok ]
+ * Activating swap file ...Configured swap file size is 0, skipping creation.
+ [ ok ]
+

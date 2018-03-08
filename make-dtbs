@@ -1,0 +1,2 @@
+cd $HOME/Sources/linux
+ARCH=arm CROSS_COMPILE=arm-none-eabi- LOCALVERSION= make dtbs

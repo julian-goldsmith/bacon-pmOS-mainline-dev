@@ -1,0 +1,419 @@
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 4.15.0-rc1 (jean@racecar) (gcc version 7.2.0 (Arch Repository)) #26 SMP PREEMPT Fri Jan 5 02:26:08 EST 2018
+[    0.000000] CPU: ARMv7 Processor [512f06f1] revision 1 (ARMv7), cr=10c5787d
+[    0.000000] CPU: div instructions available: patching division code
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, PIPT instruction cache
+[    0.000000] OF: fdt: Machine model: OnePlus One
+[    0.000000] Memory policy: Data cache writealloc
+[    0.000000] cma: Reserved 16 MiB at 0xbf000000
+[    0.000000] random: fast init done
+[    0.000000] percpu: Embedded 17 pages/cpu @ee7a0000 s39116 r8192 d22324 u69632
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 752384
+[    0.000000] Kernel command line: console=ttyMSM0,115200,n8 PMOS_NO_OUTPUT_REDIRECT androidboot.emmc=true androidboot.serialno=946806ce androidboot.baseband=msm mdss_mdp.panel=1:dsi:0:qcom,mdss_dsi_jdi_1080p_cmd oppo.pcb_version=12 ddr_manufacture_info=Samsung  ddr_row0_info=14 LCD_id<4 oppo.rf_version=66 maxcpus=4 androidboot.startupmode=pwrkey androidboot.mode=normal lk_version=V1.0
+[    0.000000] Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+[    0.000000] Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+[    0.000000] Memory: 2951188K/3015680K available (8192K kernel code, 809K rwdata, 3172K rodata, 1024K init, 280K bss, 48108K reserved, 16384K cma-reserved, 2342912K highmem)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+[    0.000000]     vmalloc : 0xf0800000 - 0xff800000   ( 240 MB)
+[    0.000000]     lowmem  : 0xc0000000 - 0xf0000000   ( 768 MB)
+[    0.000000]     pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+[    0.000000]     modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+[    0.000000]       .text : 0xc0208000 - 0xc0b00000   (9184 kB)
+[    0.000000]       .init : 0xc0f00000 - 0xc1000000   (1024 kB)
+[    0.000000]       .data : 0xc1000000 - 0xc10ca7f0   ( 810 kB)
+[    0.000000]        .bss : 0xc10ca7f0 - 0xc1110ab4   ( 281 kB)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[    0.000000] Preemptible hierarchical RCU implementation.
+[    0.000000]  Tasks RCU enabled.
+[    0.000000] NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+[    0.000000] arch_timer: cp15 and mmio timer(s) running at 19.20MHz (virt/virt).
+[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x46d987e47, max_idle_ns: 440795202767 ns
+[    0.000005] sched_clock: 56 bits at 19MHz, resolution 52ns, wraps every 4398046511078ns
+[    0.000017] Switching to timer-based delay loop, resolution 52ns
+[    0.000328] Console: colour dummy device 80x30
+[    0.000356] Calibrating delay loop (skipped), value calculated using timer frequency.. 38.40 BogoMIPS (lpj=192000)
+[    0.000372] pid_max: default: 32768 minimum: 301
+[    0.000476] Mount-cache hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.000490] Mountpoint-cache hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.001007] CPU: Testing write buffer coherency: ok
+[    0.001240] CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+[    0.039947] Setting up static identity map for 0x300000 - 0x300060
+[    0.059952] Hierarchical SRCU implementation.
+[    0.100030] smp: Bringing up secondary CPUs ...
+[    0.170430] CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+[    0.240573] CPU2: thread -1, cpu 2, socket 0, mpidr 80000002
+[    0.310723] CPU3: thread -1, cpu 3, socket 0, mpidr 80000003
+[    0.310908] smp: Brought up 1 node, 4 CPUs
+[    0.310927] SMP: Total of 4 processors activated (153.60 BogoMIPS).
+[    0.310936] CPU: All CPU(s) started in SVC mode.
+[    0.312358] devtmpfs: initialized
+[    0.319619] VFP support v0.3: implementor 51 architecture 64 part 6f variant 2 rev 1
+[    0.319922] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.319941] futex hash table entries: 1024 (order: 4, 65536 bytes)
+[    0.320683] pinctrl core: initialized pinctrl subsystem
+[    0.321575] NET: Registered protocol family 16
+[    0.323216] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.324371] cpuidle: using governor menu
+[    0.324962] hw-breakpoint: found 5 (+1 reserved) breakpoint and 4 watchpoint registers.
+[    0.324973] hw-breakpoint: maximum watchpoint size is 8 bytes.
+[    0.350042] reg-fixed-voltage vreg-boost: could not find pctldev for node /soc/spmi@fc4cf000/pm8941@0/gpios@c000/boost-bypass, deferring probe
+[    0.350881] vgaarb: loaded
+[    0.351326] SCSI subsystem initialized
+[    0.351722] usbcore: registered new interface driver usbfs
+[    0.351782] usbcore: registered new interface driver hub
+[    0.351880] usbcore: registered new device driver usb
+[    0.352940] Advanced Linux Sound Architecture Driver Initialized.
+[    0.353881] clocksource: Switched to clocksource arch_sys_counter
+[    0.420210] NET: Registered protocol family 2
+[    0.420624] TCP established hash table entries: 8192 (order: 3, 32768 bytes)
+[    0.420676] TCP bind hash table entries: 8192 (order: 4, 65536 bytes)
+[    0.420755] TCP: Hash tables configured (established 8192 bind 8192)
+[    0.420838] UDP hash table entries: 512 (order: 2, 16384 bytes)
+[    0.420863] UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+[    0.421014] NET: Registered protocol family 1
+[    0.421413] RPC: Registered named UNIX socket transport module.
+[    0.421425] RPC: Registered udp transport module.
+[    0.421433] RPC: Registered tcp transport module.
+[    0.421441] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.422086] Trying to unpack rootfs image as initramfs...
+[    0.726219] Freeing initrd memory: 8928K
+[    0.727041] hw perfevents: enabled with armv7_krait PMU driver, 5 counters available
+[    0.728615] Initialise system trusted keyrings
+[    0.728804] workingset: timestamp_bits=30 max_order=20 bucket_order=0
+[    0.734103] NFS: Registering the id_resolver key type
+[    0.734125] Key type id_resolver registered
+[    0.734135] Key type id_legacy registered
+[    0.734692] jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+[    0.734989] fuse init (API version 7.26)
+[    0.739602] Key type asymmetric registered
+[    0.739615] Asymmetric key parser 'x509' registered
+[    0.739666] bounce: pool size: 64 pages
+[    0.739712] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 249)
+[    0.739725] io scheduler noop registered
+[    0.739735] io scheduler deadline registered
+[    0.739933] io scheduler cfq registered (default)
+[    0.739945] io scheduler mq-deadline registered
+[    0.739955] io scheduler kyber registered
+[    0.761553] msm_serial f991e000.serial: msm_serial: detected port #0
+[    0.761604] msm_serial f991e000.serial: uartclk = 7372800
+[    0.761648] f991e000.serial: ttyMSM0 at MMIO 0xf991e000 (irq = 27, base_baud = 460800) is a MSM
+[    0.761676] msm_serial: console setup on port #0
+[    1.378988] console [ttyMSM0] enabled
+[    1.384150] msm_serial: driver initialized
+[    1.397983] brd: module loaded
+[    1.406267] loop: module loaded
+[    1.406744] SCSI Media Changer driver v0.25
+[    1.408997] spmi spmi-0: PMIC arbiter version v1 (0x20000002)
+[    1.428276] s1: supplied by regulator-dummy
+[    1.428595] s2: supplied by regulator-dummy
+[    1.431536] s3: supplied by regulator-dummy
+[    1.435795] s4: Bringing 5100000uV into 5000000-5000000uV
+[    1.439839] l1: supplied by regulator-dummy
+[    1.445478] l2: supplied by regulator-dummy
+[    1.449426] l3: supplied by regulator-dummy
+[    1.453597] l4: supplied by regulator-dummy
+[    1.457797] l5: supplied by regulator-dummy
+[    1.461929] l6: supplied by regulator-dummy
+[    1.466147] l7: supplied by regulator-dummy
+[    1.470262] l8: supplied by regulator-dummy
+[    1.474472] l9: supplied by regulator-dummy
+[    1.478617] l10: supplied by regulator-dummy
+[    1.482774] l11: supplied by regulator-dummy
+[    1.487330] l12: supplied by regulator-dummy
+[    1.491540] l13: supplied by regulator-dummy
+[    1.495829] l14: supplied by regulator-dummy
+[    1.500066] l15: supplied by regulator-dummy
+[    1.504347] l16: supplied by regulator-dummy
+[    1.508574] l17: supplied by regulator-dummy
+[    1.512824] l18: supplied by regulator-dummy
+[    1.517106] l19: supplied by regulator-dummy
+[    1.521348] l20: supplied by regulator-dummy
+[    1.525616] l21: supplied by regulator-dummy
+[    1.529857] l22: supplied by regulator-dummy
+[    1.534127] l23: supplied by regulator-dummy
+[    1.538347] l24: supplied by regulator-dummy
+[    1.542627] lvs1: supplied by regulator-dummy
+[    1.546827] lvs2: supplied by regulator-dummy
+[    1.551067] lvs3: supplied by regulator-dummy
+[    1.555599] 5vs1: supplied by s4
+[    1.559807] 5vs2: supplied by s4
+[    1.564003] libphy: Fixed MDIO Bus: probed
+[    1.566191] SLIP: version 0.8.4-NET3.019-NEWTTY (dynamic channels, max=256) (6 bit encapsulation enabled).
+[    1.569888] CSLIP: code copyright 1989 Regents of the University of California.
+[    1.579606] usbcore: registered new interface driver ax88179_178a
+[    1.586789] usbcore: registered new interface driver cdc_ether
+[    1.593009] usbcore: registered new interface driver net1080
+[    1.598771] usbcore: registered new interface driver cdc_subset
+[    1.604601] usbcore: registered new interface driver cdc_ncm
+[    1.610389] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    1.616112] ehci-pci: EHCI PCI platform driver
+[    1.622489] usbcore: registered new interface driver cdc_acm
+[    1.626854] cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+[    1.646256] udc-core: couldn't find an available UDC - added [g_ether] to list of pending drivers
+[    1.647061] input: pm8941_pwrkey as /devices/platform/soc/fc4cf000.spmi/spmi-0/0-00/fc4cf000.spmi:pm8941@0:pwrkey@800/input/input0
+[    1.655511] rtc-pm8xxx fc4cf000.spmi:pm8941@0:rtc@6000: rtc core: registered pm8xxx_rtc as rtc0
+[    1.665921] i2c /dev entries driver
+[    1.674621] IR NEC protocol handler initialized
+[    1.677794] IR RC5(x/sz) protocol handler initialized
+[    1.682308] IR RC6 protocol handler initialized
+[    1.687537] IR JVC protocol handler initialized
+[    1.691856] IR Sony protocol handler initialized
+[    1.696391] IR SANYO protocol handler initialized
+[    1.701231] IR Sharp protocol handler initialized
+[    1.705854] IR MCE Keyboard/mouse protocol handler initialized
+[    1.710521] IR XMP protocol handler initialized
+[    1.716686] qcom-smbb fc4cf000.spmi:pm8941@0:charger@1000: Initializing SMBB rev 3
+[    1.724037] otg-vbus: supplied by 5vs1
+[    1.728976] qcom-tsens fc4a8000.thermal-sensor: tsens calibration failed
+[    1.732693] device-mapper: ioctl: 4.37.0-ioctl (2017-09-20) initialised: dm-devel@redhat.com
+[    1.739113] cpuidle: enable-method property 'qcom,kpss-acc-v2' found operations
+[    1.747496] cpuidle: enable-method property 'qcom,kpss-acc-v2' found operations
+[    1.754514] cpuidle: enable-method property 'qcom,kpss-acc-v2' found operations
+[    1.761762] cpuidle: enable-method property 'qcom,kpss-acc-v2' found operations
+[    1.769463] sdhci: Secure Digital Host Controller Interface driver
+[    1.776267] sdhci: Copyright(c) Pierre Ossman
+[    1.782480] sdhci-pltfm: SDHCI platform and OF driver helper
+[    1.788542] usbcore: registered new interface driver usbhid
+[    1.792637] usbhid: USB HID core driver
+[    1.798315] remoteproc remoteproc0: releasing adsp-pil
+[    1.805159] oprofile: using timer interrupt.
+[    1.807165] NET: Registered protocol family 17
+[    1.811451] Key type dns_resolver registered
+[    1.815997] Registering SWP/SWPB emulation handler
+[    1.821286] Loading compiled-in X.509 certificates
+[    1.863902] remoteproc remoteproc0: releasing adsp-pil
+[    1.865632] rtc-pm8xxx fc4cf000.spmi:pm8941@0:rtc@6000: setting system clock to 1972-07-21 09:31:00 UTC (80559060)
+[    1.868074] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[    1.885371] cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[    1.886278] platform regulatory.0: Direct firmware load for regulatory.db failed with error -2
+[    1.892499] cfg80211: failed to load regulatory.db
+[    1.894730] ALSA device list:
+[    1.894735]   No soundcards found.
+[    1.895730] s1: supplied by regulator-dummy
+[    1.895780] s1: Bringing 0uV into 675000-675000uV
+[    1.896660] s2: supplied by regulator-dummy
+[    1.896706] s2: Bringing 0uV into 500000-500000uV
+[    1.897074] s3: supplied by regulator-dummy
+[    1.897128] s3: Bringing 0uV into 1050000-1050000uV
+[    1.897512] s4: supplied by regulator-dummy
+[    1.897786] s5: supplied by regulator-dummy
+[    1.898048] s6: supplied by regulator-dummy
+[    1.898330] s7: supplied by regulator-dummy
+[    1.898604] s8: supplied by regulator-dummy
+[    1.899141] s1: supplied by regulator-dummy
+[    1.899186] s1: Bringing 0uV into 1300000-1300000uV
+[    1.899718] s2: supplied by regulator-dummy
+[    1.899762] s2: Bringing 0uV into 2150000-2150000uV
+[    1.900293] s3: supplied by regulator-dummy
+[    1.900347] s3: Bringing 0uV into 1800000-1800000uV
+[    1.901101] l1: supplied by s1
+[    1.901145] l1: Bringing 0uV into 1225000-1225000uV
+[    1.902326] qcom_adsp_pil adsp-pil: adsp-pil supply px not found, using dummy regulator
+[    1.902709] l2: supplied by s3
+[    1.902758] l2: Bringing 0uV into 1200000-1200000uV
+[    1.903211] l3: supplied by s1
+[    1.903270] l3: Bringing 0uV into 1000000-1000000uV
+[    1.903731] l4: supplied by s1
+[    1.903785] l4: Bringing 0uV into 1225000-1225000uV
+[    1.904236] l5: supplied by s2
+[    1.904283] l5: Bringing 0uV into 1800000-1800000uV
+[    1.904670] l6: supplied by s2
+[    1.904715] l6: Bringing 0uV into 1800000-1800000uV
+[    1.905255] l7: supplied by s2
+[    1.905305] l7: Bringing 0uV into 1800000-1800000uV
+[    1.905817] l8: supplied by vph-pwr
+[    1.905873] l8: Bringing 0uV into 1800000-1800000uV
+[    1.906523] remoteproc remoteproc0: adsp-pil is available
+[    1.908271] l9: supplied by vreg-boost
+[    1.908317] l9: Bringing 0uV into 1800000-1800000uV
+[    1.908429] remoteproc remoteproc0: Direct firmware load for adsp.mdt failed with error -2
+[    1.908463] remoteproc remoteproc0: powering up adsp-pil
+[    1.908535] remoteproc remoteproc0: Direct firmware load for adsp.mdt failed with error -2
+[    1.908543] remoteproc remoteproc0: request_firmware failed: -2
+[    1.908847] l10: supplied by vreg-boost
+[    1.908893] l10: Bringing 0uV into 1800000-1800000uV
+[    1.909749] l11: supplied by s1
+[    1.909798] l11: Bringing 0uV into 1225000-1225000uV
+[    1.910278] l12: supplied by s2
+[    1.910328] l12: Bringing 0uV into 1800000-1800000uV
+[    1.910903] l13: supplied by vreg-boost
+[    1.910950] l13: Bringing 0uV into 1800000-1800000uV
+[    1.911597] l14: supplied by s2
+[    1.911657] l14: Bringing 0uV into 1800000-1800000uV
+[    1.912155] l15: supplied by s2
+[    1.912209] l15: Bringing 0uV into 2050000-2050000uV
+[    1.912650] l16: supplied by vph-pwr
+[    1.912699] l16: Bringing 0uV into 2700000-2700000uV
+[    1.913193] l17: supplied by vreg-boost
+[    1.913242] l17: Bringing 0uV into 2700000-2700000uV
+[    1.913690] l18: supplied by vph-pwr
+[    1.913749] l18: Bringing 0uV into 2850000-2850000uV
+[    1.914191] l19: supplied by vph-pwr
+[    1.914247] l19: Bringing 0uV into 2900000-2900000uV
+[    1.914704] l20: supplied by vreg-boost
+[    1.914748] l20: Bringing 0uV into 2950000-2950000uV
+[    1.915341] l21: supplied by vreg-boost
+[    1.915386] l21: Bringing 0uV into 2950000-2950000uV
+[    1.915997] l22: supplied by vreg-boost
+[    1.916043] l22: Bringing 0uV into 3000000-3000000uV
+[    1.916489] l23: supplied by vreg-boost
+[    1.916535] l23: Bringing 0uV into 2800000-2800000uV
+[    1.916999] l24: supplied by vreg-boost
+[    1.917053] l24: Bringing 0uV into 3075000-3075000uV
+[    1.917666] lvs1: supplied by s3
+[    1.918004] lvs2: supplied by s3
+[    1.918335] lvs3: supplied by s3
+[    1.918680] 5vs1: supplied by regulator-dummy
+[    1.919010] 5vs2: supplied by regulator-dummy
+[    1.920658] using random self ethernet address
+[    1.920664] using random host ethernet address
+[    1.921108] usb0: HOST MAC 16:b3:37:45:84:74
+[    1.921138] usb0: MAC 1e:a3:7f:c1:46:e2
+[    1.921158] using random self ethernet address
+[    1.921164] using random host ethernet address
+[    1.921221] g_ether gadget: Ethernet Gadget, version: Memorial Day 2008
+[    1.921226] g_ether gadget: g_ether ready
+[    1.925398] l24: voltage operation not allowed
+[    1.931099] mmc0: Switching to 3.3V signalling voltage failed
+[    1.984004] mmc0: SDHCI controller on f9824900.sdhci [f9824900.sdhci] using ADMA 64-bit
+[    2.073622] mmc0: new HS200 MMC card at address 0001
+[    2.073997] mmcblk0: mmc0:0001 064GE2 58.2 GiB
+[    2.074313] mmcblk0boot0: mmc0:0001 064GE2 partition 1 4.00 MiB
+[    2.074467] mmcblk0boot1: mmc0:0001 064GE2 partition 2 4.00 MiB
+[    2.080816] mmcblk0rpmb: mmc0:0001 064GE2 partition 3 4.00 MiB, chardev (246:0)
+[    2.087742] Alternate GPT is invalid, using primar�[    2.336367] Freeing unused kernel memory: 1024K
+### postmarketOS initramfs ###
+modprobe: module ext4 not found in modules.dep
+[    2.401162] g_ether gadget: high-speed config #1: CDC Ethernet (ECM)
+Mount subpartitions of /dev/mmcblk0p14
+fbsplash: can't open '/dev/fb0': No such file or directory
+Setup usb network
+[    2.963756] using random self ethernet address
+[    2.963782] using random host ethernet address
+sh: write error: Resource busy
+ifconfig: SIOCSIFADDR: No such device
+Start the dhcpcd daemon (forks into background)
+Mount boot partition (/dev/dm-0)
+[    3.096638] EXT4-fs (dm-0): couldn't mount as ext3 due to feature incompatibilities
+[    3.099453] EXT4-fs (dm-0): mounted filesystem without journal. Opts: (null)
+Extract /boot/initramfs-postmarketos-mainline-extra
+23299 blocks
+Check/repair root filesystem (/dev/mapper/mmcblk0p14p2)
+e2fsck 1.43.7 (16-Oct-2017)
+Pass 1: Checking inodes, blocks, and sizes
+Pass 2: Checking directory structure
+Pass 3: Checking directory connectivity
+Pass 4: Checking reference counts
+Pass 5: Checking group summary information
+[    4.673454] mmcblk0: error -84 transferring data, sector 897024, nr 8, cmd response 0x900, card status 0xc00
+[    4.677684] mmc0: Switching to 3.3V signalling voltage failed
+[    4.861423] mmcblk0: error -84 transferring data, sector 897024, nr 8, cmd response 0x900, card status 0xc00
+[    4.861457] print_req_error: I/O error, dev mmcblk0, sector 897024
+[    4.870370] Buffer I/O error on dev dm-1, logical block 65536, lost async page write
+[    4.878052] mmcblk0: error -84 transferring data, sector 372744, nr 8, cmd response 0x900, card status 0xc00
+[    4.884257] print_req_error: I/O error, dev mmcblk0, sector 372744
+[    4.894040] Buffer I/O error on dev dm-1, logical block 1, lost async page write
+Error writing file system info: I/O error
+
+pmOS_root: ***** FILE SYSTEM WAS MODIFIED *****
+Resize root filesystem (/dev/mapper/mmcblk0p14p2)
+resize2fs 1.43.7 (16-Oct-2017)
+Resizing the filesystem on /dev/mapper/mmcblk0p14p2 to 329216 (4k) blocks.
+[    4.926254] mmcblk0: error -84 transferring data, sector 372744, nr 8, cmd response 0x900, card status 0xc00
+[    4.929517] print_req_error: I/O error, dev mmcblk0, sector 372744
+[    4.939378] Buffer I/O error on dev dm-1, logical block 1, lost async page write
+[    5.059721] mmcblk0: error -84 transferring data, sector 372744, nr 608, cmd response 0x900, card status 0xc00
+[    5.059772] print_req_error: I/O error, dev mmcblk0, sector 372744
+[    5.068668] Buffer I/O error on dev dm-1, logical block 1, lost async page write
+[    5.074846] print_req_error: I/O error, dev mmcblk0, sector 372752
+[    5.082387] Buffer I/O error on dev dm-1, logical block 2, lost async page write
+[    5.088358] print_req_error: I/O error, dev mmcblk0, sector 372760
+[    5.095914] Buffer I/O error on dev dm-1, logical block 3, lost async page write
+[    5.101877] print_req_error: I/O error, dev mmcblk0, sector 372768
+[    5.109487] Buffer I/O error on dev dm-1, logical block 4, lost async page write
+[    5.115467] print_req_error: I/O error, dev mmcblk0, sector 372776
+[    5.122952] Buffer I/O error on dev dm-1, logical block 5, lost async page write
+[    5.129017] print_req_error: I/O error, dev mmcblk0, sector 372784
+[    5.136537] Buffer I/O error on dev dm-1, logical block 6, lost async page write
+[    5.142501] print_req_error: I/O error, dev mmcblk0, sector 372792
+[    5.150059] Buffer I/O error on dev dm-1, logical block 7, lost async page write
+[    5.159503] mmcblk0: error -84 transferring data, sector 373368, nr 8, cmd response 0x900, card status 0xc00
+[    5.165306] mmcblk0: error -84 transferring data, sector 390688, nr 8, cmd response 0x900, card status 0xc00
+[    5.175161] mmcblk0: error -84 transferring data, sector 476312, nr 8, cmd response 0x900, card status 0xc00
+[    5.184948] mmcblk0: error -84 transferring data, sector 483256, nr 8, cmd response 0x900, card status 0xc00
+[    5.194658] mmcblk0: error -84 transferring data, sector 490200, nr 8, cmd response 0x900, card status 0xc00
+[    5.204492] mmcblk0: error -84 transferring data, sector 493672, nr 8, cmd response 0x900, card status 0xc00
+[    5.214314] mmcblk0: error -84 transferring data, sector 634880, nr 16, cmd response 0x900, card status 0xc00
+[    5.224181] mmcblk0: error -84 transferring data, sector 1159168, nr 16, cmd response 0x900, card status 0xc00
+[    5.233957] mmcblk0: error -84 transferring data, sector 1683456, nr 16, cmd response 0x900, card status 0xc00
+[    5.243917] mmcblk0: error -84 transferring data, sector 2207744, nr 16, cmd response 0x900, card status 0xc00
+[    5.253815] mmcblk0: error -84 transferring data, sector 2732032, nr 16, cmd response 0x900, card status 0xc00
+[    5.264256] mmcblk0: error -84 transferring data, sector 372744, nr 8, cmd response 0x900, card status 0xc00
+resize2fs: I/O error while trying to resize /dev/mapper/mmcblk0p14p2
+Please run 'e2fsck -fy /dev/mapper/mmcblk0p14p2' to fix the filesystem
+after the aborted resize operation.
+Mount root partition (/dev/mapper/mmcblk0p14p2)
+[    5.389870] EXT4-fs (dm-1): mounted filesystem with ordered data mode. Opts: (null)
+umount: can't unmount /dev: Invalid argument
+
+   OpenRC 0.24.1.a941ee4a0b is starting up Linux 4.15.0-rc1 (armv7l)
+
+ * Mounting /proc ... [ ok ]
+ * Mounting /run ... * /run/openrc: creating directory
+ * /run/lock: creating directory
+ * /run/lock: correcting owner
+ * Caching service dependencies ... [ ok ]
+ * Caching service dependencies ... [ ok ]
+ * Clock skew detected with `/etc/init.d'
+ * Adjusting mtime of `/run/openrc/deptree' to Thu Jan  4 20:09:22 2018
+
+ * Mounting devtmpfs on /dev ... [ ok ]
+
+ * Mounting /dev/pts ... [ ok ]
+
+ * Mounting /dev/shm ... [ ok ]
+ * Mounting /sys ... [ ok ]
+ * Mounting debug filesystem ... [ ok ]
+ * Mounting config filesystem ... [ ok ]
+ * Mounting fuse control filesystem ... [ ok ]
+ * Mounting cgroup filesystem ... [ ok ]
+ * Starting udev ... [ ok ]
+ * Generating a rule to create a /dev/root symlink ... [ ok ]
+ * Populating /dev with existing devices through uevents ... [ ok ]
+ * Checking local filesystems  ...pmOS_root primary superblock features different from backup, check forced.
+pmOS_root: Error writing file system info: I/O error
+
+
+pmOS_root: UNEXPECTED INCONSISTENCY; RUN fsck MANUALLY.
+        (i.e., without -a or -p options)
+ * Fileystem errors left uncorrected, aborting
+ [ !! ]
+ * rc: Aborting!
+ * fsck: caught SIGTERM, aborting
+ * rc-abort: failed to signal parent 251: No such process
+ * WARNING: clock skew detected!
+ * Checking local filesystems  ...pmOS_root: clean, 10823/34560 files, 118163/137984 blocks
+pmOS_boot was not cleanly unmounted, check forced.
+pmOS_boot: Error writing file system info: I/O error
+
+
+pmOS_boot: UNEXPECTED INCONSISTENCY; RUN fsck MANUALLY.
+        (i.e., without -a or -p options)
+ * Fileystem errors left uncorrected, aborting
+ [ !! ]
+ * rc: Aborting!
+ * fsck: caught SIGTERM, aborting
+ * WARNING: clock skew detected!
+ * Checking local filesystems  ...pmOS_root: clean, 10823/34560 files, 118163/137984 blocks
+pmOS_boot was not cleanly unmounted, check forced.
+pmOS_boot: Error writing file system info: I/O error
+
+
+pmOS_boot: UNEXPECTED INCONSISTENCY; RUN fsck MANUALLY.
+        (i.e., without -a or -p options)
+ * Fileystem errors left uncorrected, aborting
+ [ !! ]
+ * rc: Aborting!
+ * fsck: caught SIGTERM, aborting

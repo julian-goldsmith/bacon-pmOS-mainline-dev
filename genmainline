@@ -1,0 +1,17 @@
+cat \
+  ../linux/arch/arm/boot/zImage \
+  ../linux/arch/arm/boot/dts/qcom-msm8974-oneplus-bacon.dtb \
+  > zImage-dtb
+
+mkbootimg \
+  --kernel zImage-dtb \
+  --ramdisk initramfs/initramfs-bacon \
+  --cmdline "console=ttyMSM0,115200,n8 PMOS_NO_OUTPUT_REDIRECT" \
+  --base 0 \
+  --kernel_offset 0x8000 \
+  --ramdisk_offset 0x2000000 \
+  --second_offset 0xf00000 \
+  --tags_offset 0x1e00000 \
+  --pagesize 2048 \
+  -o zImage-bacon
+  #--ramdisk ~/.local/var/pmbootstrap/chroot_rootfs_oneplus-bacon/boot/initramfs-postmarketos-mainline \

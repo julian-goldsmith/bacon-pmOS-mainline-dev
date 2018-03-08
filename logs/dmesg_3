@@ -1,0 +1,110 @@
+[    1.914948] l20: Bringing 0uV into 2950000-2950000uV
+[    1.915556] l21: supplied by vreg-boost
+[    1.915612] l21: Bringing 0uV into 2950000-2950000uV
+[    1.916225] l22: supplied by vreg-boost
+[    1.916271] l22: Bringing 0uV into 3000000-3000000uV
+[    1.916725] l23: supplied by vreg-boost
+[    1.916774] l23: Bringing 0uV into 2800000-2800000uV
+[    1.917426] l24: supplied by vreg-boost
+[    1.917471] l24: Bringing 0uV into 3075000-3075000uV
+[    1.918090] lvs1: supplied by s3
+[    1.918432] lvs2: supplied by s3
+[    1.918784] lvs3: supplied by s3
+[    1.919128] 5vs1: supplied by regulator-dummy
+[    1.919465] 5vs2: supplied by regulator-dummy
+[    1.923430] mmc0: Switching to 3.3V signalling voltage failed
+[    1.973789] mmc0: SDHCI controller on f9824900.sdhci [f9824900.sdhci] using ADMA 64-bit
+[    2.060176] mmc0: new high speed MMC card at address 0001
+[    2.060690] mmcblk0: mmc0:0001 064GE2 58.2 GiB
+[    2.061075] mmcblk0boot0: mmc0:0001 064GE2 partition 1 4.00 MiB
+[    2.061470] mmcblk0boot1: mmc0:0001 064GE2 partition 2 4.00 MiB
+[    2.061790] mmcblk0rpmb: mmc0:0001 064GE2 partition 3 4.00 MiB, chardev (246:0)
+[    2.063564] Alternate GPT is invalid, using primary GPT.
+[    2.063667]  mmcblk0: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11 p12 p13 p14 p15 p16 p17 p18 p19 p20 p21 p22 p23 p24 p25 p26 p27 �[    2.301194] Freeing unused kernel memory: 1024K
+### postmarketOS initramfs ###
+modprobe: module ext4 not found in modules.dep
+Mount subpartitions of /dev/mmcblk0p14
+fbsplash: can't open '/dev/fb0': No such file or directory
+Setup usb network
+ifconfig: SIOCSIFADDR: No such device
+ifconfig: SIOCSIFADDR: No such device
+ifconfig: SIOCSIFADDR: No such device
+Start the dhcpcd daemon (forks into background)
+Mount boot partition (/dev/dm-0)
+[    3.422175] EXT4-fs (dm-0): couldn't mount as ext3 due to feature incompatibilities
+[    3.425316] EXT4-fs (dm-0): mounted filesystem without journal. Opts: (null)
+Extract /boot/initramfs-postmarketos-mainline-extra
+23299 blocks
+Check/repair root filesystem (/dev/mapper/mmcblk0p14p2)
+e2fsck 1.43.7 (16-Oct-2017)
+Pass 1: Checking inodes, blocks, and sizes
+Pass 2: Checking directory structure
+Pass 3: Checking directory connectivity
+Pass 4: Checking reference counts
+Pass 5: Checking group summary information
+pmOS_root: 10823/34560 files (0.0% non-contiguous), 118163/137984 blocks
+Resize root filesystem (/dev/mapper/mmcblk0p14p2)
+resize2fs 1.43.7 (16-Oct-2017)
+Resizing the filesystem on /dev/mapper/mmcblk0p14p2 to 329216 (4k) blocks.
+The filesystem on /dev/mapper/mmcblk0p14p2 is now 329216 (4k) blocks long.
+
+Mount root partition (/dev/mapper/mmcblk0p14p2)
+[    5.903732] EXT4-fs (dm-1): mounted filesystem with ordered data mode. Opts: (null)
+umount: can't unmount /dev: Invalid argument
+
+   OpenRC 0.24.1.a941ee4a0b is starting up Linux 4.15.0-rc5 (armv7l)
+
+ * Mounting /proc ... [ ok ]
+ * Mounting /run ... * /run/openrc: creating directory
+ * /run/lock: creating directory
+ * /run/lock: correcting owner
+ * Caching service dependencies ... [ ok ]
+ * Caching service dependencies ... [ ok ]
+ * Clock skew detected with `/etc/init.d'
+ * Adjusting mtime of `/run/openrc/deptree' to Thu Jan  4 20:09:22 2018
+
+ * Mounting devtmpfs on /dev ... [ ok ]
+
+ * Mounting /dev/pts ... [ ok ]
+
+ * Mounting /dev/shm ... [ ok ]
+ * Mounting /sys ... [ ok ]
+ * Mounting debug filesystem ... [ ok ]
+ * Mounting config filesystem ... [ ok ]
+ * Mounting fuse control filesystem ... [ ok ]
+ * Mounting cgroup filesystem ... [ ok ]
+ * Starting udev ... [ ok ]
+ * Generating a rule to create a /dev/root symlink ... [ ok ]
+ * Populating /dev with existing devices through uevents ... [ ok ]
+ * Checking local filesystems  ...pmOS_root: clean, 10823/76032 files, 120974/329216 blocks
+pmOS_boot was not cleanly unmounted, check forced.
+pmOS_boot: 16/9480 files (31.3% non-contiguous), 27688/37888 blocks
+ * Filesystems repaired
+ [ !! ]
+ * Remounting root filesystem read/write ... [ ok ]
+ * Remounting filesystems ... [ ok ]
+ * Mounting local filesystems ... [ ok ]
+ * WARNING: clock skew detected!
+ * Setting the local clock based on last shutdown time ... [ ok ]
+ * Loading modules ... [ ok ]
+ * Setting system clock using the hardware clock [UTC] ... [ ok ]
+ * Configuring kernel parameters ...sysctl: error: 'net.ipv4.tcp_syncookies' is an unknown key
+ [ ok ]
+ * Migrating /var/lock to /run/lock ... [ ok ]
+ * Creating user login records ... [ ok ]
+ * Wiping /tmp directory ... [ ok ]
+ * Setting hostname ... [ ok ]
+ * Starting busybox klogd ... [ ok ]
+ * Starting busybox syslog ... [ ok ]
+ * WARNING: clock skew detected!
+ * Starting D-BUS system messagebus ... [ ok ]
+ * Could not find a wireless interface
+ * ERROR: wpa_supplicant failed to start
+ * Starting networking ...awk: /etc/network/interfaces: No such file or directory
+ * ERROR: networking failed to start
+ * ERROR: cannot start chronyd as networking would not start
+ * ERROR: cannot start haveged as networking would not start
+ssh-keygen: generating new host keys: RSA DSA ECDSA ED25519
+ * Starting sshd ... [ ok ]
+ * Activating swap file ...Configured swap file size is 0, skipping creation.
+ [ ok ]

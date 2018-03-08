@@ -1,0 +1,343 @@
+From 1932faf6ec0c223e57be03380ce52fcfaa3e9deb Mon Sep 17 00:00:00 2001
+From: Jean Lucas <jean@4ray.co>
+Date: Tue, 2 Jan 2018 12:25:29 -0500
+Subject: [PATCH] ARM: dts: qcom: Add initial DT for OnePlus Bacon
+
+WIP
+
+Signed-off-by: Jean Lucas <jean@4ray.co>
+---
+ .../devicetree/bindings/vendor-prefixes.txt        |   1 +
+ arch/arm/boot/dts/Makefile                         |   3 +-
+ arch/arm/boot/dts/qcom-msm8974-oneplus-bacon.dts   | 278 +++++++++++++++++++++
+ drivers/mmc/host/sdhci-msm.c                       |   3 +-
+ 4 files changed, 283 insertions(+), 2 deletions(-)
+ create mode 100644 arch/arm/boot/dts/qcom-msm8974-oneplus-bacon.dts
+
+diff --git a/Documentation/devicetree/bindings/vendor-prefixes.txt b/Documentation/devicetree/bindings/vendor-prefixes.txt
+index 0994bdd82cd3..69325e9ed8c9 100644
+--- a/Documentation/devicetree/bindings/vendor-prefixes.txt
++++ b/Documentation/devicetree/bindings/vendor-prefixes.txt
+@@ -249,6 +249,7 @@ nxp	NXP Semiconductors
+ okaya	Okaya Electric America, Inc.
+ oki	Oki Electric Industry Co., Ltd.
+ olimex	OLIMEX Ltd.
++oneplus	Shenzhen OnePlus Science & Technology Co., Ltd.
+ onion	Onion Corporation
+ onnn	ON Semiconductor Corp.
+ ontat	On Tat Industrial Company
+diff --git a/arch/arm/boot/dts/Makefile b/arch/arm/boot/dts/Makefile
+index d0381e9caf21..020f4a437572 100644
+--- a/arch/arm/boot/dts/Makefile
++++ b/arch/arm/boot/dts/Makefile
+@@ -731,7 +731,8 @@ dtb-$(CONFIG_ARCH_QCOM) += \
+ 	qcom-msm8974-lge-nexus5-hammerhead.dtb \
+ 	qcom-msm8974-sony-xperia-castor.dtb \
+ 	qcom-msm8974-sony-xperia-honami.dtb \
+-	qcom-mdm9615-wp8548-mangoh-green.dtb
++	qcom-mdm9615-wp8548-mangoh-green.dtb \
++	qcom-msm8974-oneplus-bacon.dtb
+ dtb-$(CONFIG_ARCH_REALVIEW) += \
+ 	arm-realview-pb1176.dtb \
+ 	arm-realview-pb11mp.dtb \
+diff --git a/arch/arm/boot/dts/qcom-msm8974-oneplus-bacon.dts b/arch/arm/boot/dts/qcom-msm8974-oneplus-bacon.dts
+new file mode 100644
+index 000000000000..dfca0c30234d
+--- /dev/null
++++ b/arch/arm/boot/dts/qcom-msm8974-oneplus-bacon.dts
+@@ -0,0 +1,278 @@
++#include "qcom-msm8974.dtsi"
++#include "qcom-pm8841.dtsi"
++#include "qcom-pm8941.dtsi"
++#include <dt-bindings/gpio/gpio.h>
++#include <dt-bindings/input/input.h>
++#include <dt-bindings/pinctrl/qcom,pmic-gpio.h>
++
++/ {
++	model = "OnePlus One";
++	compatible = "oneplus,bacon", "qcom,msm8974";
++
++	aliases {
++		serial0 = &blsp1_uart1;
++	};
++
++	chosen {
++		stdout-path = "serial0:115200n8";
++	};
++
++	smd {
++		rpm {
++			rpm_requests {
++				pm8841-regulators {
++					s1 {
++						regulator-min-microvolt = <675000>;
++						regulator-max-microvolt = <1050000>;
++					};
++
++					s2 {
++						regulator-min-microvolt = <500000>;
++						regulator-max-microvolt = <1050000>;
++					};
++
++					s3 {
++						regulator-min-microvolt = <1050000>;
++						regulator-max-microvolt = <1050000>;
++					};
++				};
++
++				pm8941-regulators {
++					vdd_l1_l3-supply = <&pm8941_s1>;
++					vdd_l2_lvs1_2_3-supply = <&pm8941_s3>;
++					vdd_l4_l11-supply = <&pm8941_s1>;
++					vdd_l5_l7-supply = <&pm8941_s2>;
++					vdd_l6_l12_l14_l15-supply = <&pm8941_s2>;
++					vdd_l8_l16_l18_l19-supply = <&vreg_vph_pwr>;
++					vdd_l9_l10_l17_l22-supply = <&vreg_boost>;
++					vdd_l13_l20_l23_l24-supply = <&vreg_boost>;
++					vdd_l21-supply = <&vreg_boost>;
++
++					s1 {
++						regulator-min-microvolt = <1300000>;
++						regulator-max-microvolt = <1300000>;
++
++						regulator-always-on;
++						regulator-boot-on;
++					};
++
++					s2 {
++						regulator-min-microvolt = <2150000>;
++						regulator-max-microvolt = <2150000>;
++
++						regulator-boot-on;
++					};
++
++					s3 {
++						regulator-min-microvolt = <1800000>;
++						regulator-max-microvolt = <1800000>;
++
++						regulator-always-on;
++						regulator-boot-on;
++					};
++
++					l1 {
++						regulator-min-microvolt = <1225000>;
++						regulator-max-microvolt = <1225000>;
++
++						regulator-always-on;
++						regulator-boot-on;
++					};
++
++					l2 {
++						regulator-min-microvolt = <1200000>;
++						regulator-max-microvolt = <1200000>;
++					};
++
++					l3 {
++						regulator-min-microvolt = <1000000>;
++						regulator-max-microvolt = <1225000>;
++					};
++
++					l4 {
++						regulator-min-microvolt = <1225000>;
++						regulator-max-microvolt = <1225000>;
++					};
++
++					l5 {
++						regulator-min-microvolt = <1800000>;
++						regulator-max-microvolt = <1800000>;
++					};
++
++					l6 {
++						regulator-min-microvolt = <1800000>;
++						regulator-max-microvolt = <1800000>;
++
++						regulator-boot-on;
++					};
++
++					l7 {
++						regulator-min-microvolt = <1800000>;
++						regulator-max-microvolt = <1800000>;
++
++						regulator-boot-on;
++					};
++
++					l8 {
++						regulator-min-microvolt = <1800000>;
++						regulator-max-microvolt = <1800000>;
++					};
++
++					l9 {
++						regulator-min-microvolt = <1800000>;
++						regulator-max-microvolt = <2950000>;
++					};
++
++					l10 {
++						regulator-min-microvolt = <1800000>;
++						regulator-max-microvolt = <2950000>;
++					};
++
++					l11 {
++						regulator-min-microvolt = <1225000>;
++						regulator-max-microvolt = <1350000>;
++					};
++
++					l12 {
++						regulator-min-microvolt = <1800000>;
++						regulator-max-microvolt = <1800000>;
++
++						regulator-always-on;
++						regulator-boot-on;
++					};
++
++					l13 {
++						regulator-min-microvolt = <1800000>;
++						regulator-max-microvolt = <2950000>;
++
++						regulator-boot-on;
++					};
++
++					l14 {
++						regulator-min-microvolt = <1800000>;
++						regulator-max-microvolt = <1800000>;
++					};
++
++					l15 {
++						regulator-min-microvolt = <2050000>;
++						regulator-max-microvolt = <2050000>;
++					};
++
++					l16 {
++						regulator-min-microvolt = <2700000>;
++						regulator-max-microvolt = <2700000>;
++					};
++
++					l17 {
++						regulator-min-microvolt = <2700000>;
++						regulator-max-microvolt = <2850000>;
++					};
++
++					l18 {
++						regulator-min-microvolt = <2850000>;
++						regulator-max-microvolt = <2850000>;
++					};
++
++					l19 {
++						regulator-min-microvolt = <2900000>;
++						regulator-max-microvolt = <3350000>;
++					};
++
++					l20 {
++						regulator-min-microvolt = <2950000>;
++						regulator-max-microvolt = <2950000>;
++
++						regulator-boot-on;
++
++						regulator-system-load = <200000>;
++						regulator-allow-set-load;
++					};
++
++					l21 {
++						regulator-min-microvolt = <2950000>;
++						regulator-max-microvolt = <2950000>;
++
++						regulator-boot-on;
++					};
++
++					l22 {
++						regulator-min-microvolt = <3000000>;
++						regulator-max-microvolt = <3000000>;
++					};
++
++					l23 {
++						regulator-min-microvolt = <2800000>;
++						regulator-max-microvolt = <3000000>;
++					};
++
++					l24 {
++						regulator-min-microvolt = <3075000>;
++						regulator-max-microvolt = <3075000>;
++
++						regulator-boot-on;
++					};
++				};
++			};
++		};
++	};
++};
++
++&soc {
++	serial@f991e000 {
++		status = "ok";
++	};
++
++	pinctrl@fd510000 {
++		sdhc1_pin_a: sdhc1-pin-active {
++			clk {
++				pins = "sdc1_clk";
++				drive-strength = <4>;
++				bias-disable;
++			};
++
++			cmd-data {
++				pins = "sdc1_cmd", "sdc1_data";
++				drive-strength = <4>;
++				bias-pull-up;
++			};
++		};
++	};
++
++	sdhci@f9824900 {
++		status = "ok";
++
++		vmmc-supply = <&pm8941_l20>;
++		vqmmc-supply = <&pm8941_s3>;
++
++		bus-width = <8>;
++		non-removable;
++
++		pinctrl-names = "default";
++		pinctrl-0 = <&sdhc1_pin_a>;
++	};
++
++        usb@f9a55000 {
++                status = "ok";
++
++                phys = <&usb_hs1_phy>;
++                phy-select = <&tcsr 0xb000 0>;
++                extcon = <&smbb>, <&usb_id>;
++                vbus-supply = <&chg_otg>;
++
++                hnp-disable;
++                srp-disable;
++                adp-disable;
++
++                ulpi {
++                        phy@a {
++                                status = "ok";
++
++                                v1p8-supply = <&pm8941_l6>;
++                                v3p3-supply = <&pm8941_l24>;
++
++                                extcon = <&smbb>;
++                                qcom,init-seq = /bits/ 8 <0x1 0x64>;
++                        };
++                };
++        };
++};
+diff --git a/drivers/mmc/host/sdhci-msm.c b/drivers/mmc/host/sdhci-msm.c
+index c283291db705..6fb7a7135711 100644
+--- a/drivers/mmc/host/sdhci-msm.c
++++ b/drivers/mmc/host/sdhci-msm.c
+@@ -1336,7 +1336,8 @@ static const struct sdhci_pltfm_data sdhci_msm_pdata = {
+ 		  SDHCI_QUIRK_NO_CARD_NO_RESET |
+ 		  SDHCI_QUIRK_SINGLE_POWER_WRITE |
+ 		  SDHCI_QUIRK_CAP_CLOCK_BASE_BROKEN,
+-	.quirks2 = SDHCI_QUIRK2_PRESET_VALUE_BROKEN,
++	.quirks2 = SDHCI_QUIRK2_PRESET_VALUE_BROKEN |
++		   SDHCI_QUIRK2_BROKEN_HS200,
+ 	.ops = &sdhci_msm_ops,
+ };
+ 
+-- 
+2.15.1
+

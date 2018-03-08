@@ -1,0 +1,2 @@
+sudo fastboot erase boot
+sudo fastboot flash boot zImage-bacon
