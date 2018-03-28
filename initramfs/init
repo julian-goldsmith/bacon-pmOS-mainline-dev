@@ -36,7 +36,8 @@ setup_usb_network
 start_udhcpd
 
 mount_boot_partition
-extract_initramfs_extra /boot/initramfs-postmarketos-mainline-extra
+extract_initramfs_extra /boot/initramfs-oneplus-bacon-extra
+start_charging_mode
 wait_root_partition
 resize_root_partition
 unlock_root_partition

@@ -1,6 +1,6 @@
 cat \
-  ../linux/arch/arm/boot/zImage \
-  ../linux/arch/arm/boot/dts/qcom-msm8974-oneplus-bacon.dtb \
+  ../linux-flto/arch/arm/boot/zImage \
+  ../linux-flto/arch/arm/boot/dts/qcom-msm8974-oneplus-bacon.dtb \
   > zImage-dtb
 
 mkbootimg \
