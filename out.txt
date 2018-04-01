@@ -1,0 +1,318 @@
+Trying 172.16.42.1...
+Connected to 172.16.42.1.
+Escape character is '^]'.
+
+Type 'pmos_continue_boot' to continue booting:
+/ # [6ndmesg
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 4.16.0-rc5-next-20180315-g3727b120ef81-dirty (styx@jrg-laptop) (gcc version 7.3.0 (Arch Repository)) #4 SMP PREEMPT Thu Mar 29 01:28:22 EDT 2018
+[    0.000000] CPU: ARMv7 Processor [512f06f1] revision 1 (ARMv7), cr=10c5787d
+[    0.000000] CPU: div instructions available: patching division code
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, PIPT instruction cache
+[    0.000000] OF: fdt: Machine model: OnePlus One
+[    0.000000] Memory policy: Data cache writealloc
+[    0.000000] cma: Reserved 16 MiB at 0xbf000000
+[    0.000000] On node 0 totalpages: 753920
+[    0.000000]   Normal zone: 1536 pages used for memmap
+[    0.000000]   Normal zone: 0 pages reserved
+[    0.000000]   Normal zone: 164096 pages, LIFO batch:31
+[    0.000000]   HighMem zone: 589824 pages, LIFO batch:31
+[    0.000000] random: fast init done
+[    0.000000] percpu: Embedded 17 pages/cpu @(ptrval) s39180 r8192 d22260 u69632
+[    0.000000] pcpu-alloc: s39180 r8192 d22260 u69632 alloc=17*4096
+[    0.000000] pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3 
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 752384
+[    0.000000] Kernel command line:  androidboot.emmc=true androidboot.serialno=5af6e8e1 androidboot.baseband=msm mdss_mdp.panel=1:dsi:0:qcom,mdss_dsi_jdi_1080p_cmd oppo.pcb_version=12 ddr_manufacture_info=Samsung  ddr_row0_info=14 LCD_id<4 oppo.rf_version=99 maxcpus=4 androidboot.startupmode=pwrkey androidboot.mode=reboot lk_version=V1.0
+[    0.000000] Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+[    0.000000] Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+[    0.000000] Memory: 2958768K/3015680K available (8192K kernel code, 859K rwdata, 3360K rodata, 1024K init, 281K bss, 40528K reserved, 16384K cma-reserved, 2342912K highmem)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+[    0.000000]     vmalloc : 0xf0800000 - 0xff800000   ( 240 MB)
+[    0.000000]     lowmem  : 0xc0000000 - 0xf0000000   ( 768 MB)
+[    0.000000]     pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+[    0.000000]     modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+[    0.000000]       .text : 0x(ptrval) - 0x(ptrval)   (9184 kB)
+[    0.000000]       .init : 0x(ptrval) - 0x(ptrval)   (1024 kB)
+[    0.000000]       .data : 0x(ptrval) - 0x(ptrval)   ( 860 kB)
+[    0.000000]        .bss : 0x(ptrval) - 0x(ptrval)   ( 282 kB)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[    0.000000] Preemptible hierarchical RCU implementation.
+[    0.000000]  Tasks RCU enabled.
+[    0.000000] NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+[    0.000000] arch_timer: cp15 and mmio timer(s) running at 19.20MHz (virt/virt).
+[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x46d987e47, max_idle_ns: 440795202767 ns
+[    0.000005] sched_clock: 56 bits at 19MHz, resolution 52ns, wraps every 4398046511078ns
+[    0.000018] Switching to timer-based delay loop, resolution 52ns
+[    0.000362] Console: colour dummy device 80x30
+[    0.000782] console [tty0] enabled
+[    0.000814] Calibrating delay loop (skipped), value calculated using timer frequency.. 38.40 BogoMIPS (lpj=192000)
+[    0.000847] pid_max: default: 32768 minimum: 301
+[    0.000974] Mount-cache hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.001000] Mountpoint-cache hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.001546] CPU: Testing write buffer coherency: ok
+[    0.001795] CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+[    0.059978] Setting up static identity map for 0x300000 - 0x300060
+[    0.079980] Hierarchical SRCU implementation.
+[    0.120062] smp: Bringing up secondary CPUs ...
+[    0.190478] CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+[    0.260620] CPU2: thread -1, cpu 2, socket 0, mpidr 80000002
+[    0.330777] CPU3: thread -1, cpu 3, socket 0, mpidr 80000003
+[    0.330966] smp: Brought up 1 node, 4 CPUs
+[    0.331024] SMP: Total of 4 processors activated (153.60 BogoMIPS).
+[    0.331043] CPU: All CPU(s) started in SVC mode.
+[    0.332469] devtmpfs: initialized
+[    0.340401] Built 1 zonelists, mobility grouping on.  Total pages: 743788
+[    0.341060] VFP support v0.3: implementor 51 architecture 64 part 6f variant 2 rev 1
+[    0.341375] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.341410] futex hash table entries: 1024 (order: 4, 65536 bytes)
+[    0.341569] pinctrl core: initialized pinctrl subsystem
+[    0.342490] NET: Registered protocol family 16
+[    0.344139] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.345525] cpuidle: using governor menu
+[    0.346122] hw-breakpoint: found 5 (+1 reserved) breakpoint and 4 watchpoint registers.
+[    0.346148] hw-breakpoint: maximum watchpoint size is 8 bytes.
+[    0.371342] reg-fixed-voltage vreg-boost: could not find pctldev for node /soc/spmi@fc4cf000/pm8941@0/gpios@c000/boost-bypass, deferring probe
+[    0.372169] vgaarb: loaded
+[    0.372636] SCSI subsystem initialized
+[    0.372836] libata version 3.00 loaded.
+[    0.373056] usbcore: registered new interface driver usbfs
+[    0.373127] usbcore: registered new interface driver hub
+[    0.373227] usbcore: registered new device driver usb
+[    0.374101] Advanced Linux Sound Architecture Driver Initialized.
+[    0.375052] clocksource: Switched to clocksource arch_sys_counter
+[    0.443351] NET: Registered protocol family 2
+[    0.443797] tcp_listen_portaddr_hash hash table entries: 512 (order: 0, 6144 bytes)
+[    0.443835] TCP established hash table entries: 8192 (order: 3, 32768 bytes)
+[    0.443898] TCP bind hash table entries: 8192 (order: 4, 65536 bytes)
+[    0.443987] TCP: Hash tables configured (established 8192 bind 8192)
+[    0.444084] UDP hash table entries: 512 (order: 2, 16384 bytes)
+[    0.444125] UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+[    0.444287] NET: Registered protocol family 1
+[    0.444801] net_namespace: Pernet operations sunrpc_net_ops are sync.
+[    0.444840] RPC: Registered named UNIX socket transport module.
+[    0.444861] RPC: Registered udp transport module.
+[    0.444878] RPC: Registered tcp transport module.
+[    0.444896] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.445344] PCI: CLS 0 bytes, default 64
+[    0.445603] Trying to unpack rootfs image as initramfs...
+[    0.512585] Freeing initrd memory: 1296K
+[    0.513364] hw perfevents: enabled with armv7_krait PMU driver, 5 counters available
+[    0.515119] Initialise system trusted keyrings
+[    0.515309] workingset: timestamp_bits=30 max_order=20 bucket_order=0
+[    0.521782] NFS: Registering the id_resolver key type
+[    0.521817] Key type id_resolver registered
+[    0.521836] Key type id_legacy registered
+[    0.522490] jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+[    0.522800] fuse init (API version 7.26)
+[    0.527537] Key type asymmetric registered
+[    0.527562] Asymmetric key parser 'x509' registered
+[    0.527622] bounce: pool size: 64 pages
+[    0.527682] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 249)
+[    0.527708] io scheduler noop registered
+[    0.527727] io scheduler deadline registered
+[    0.527943] io scheduler cfq registered (default)
+[    0.527965] io scheduler mq-deadline registered
+[    0.527984] io scheduler kyber registered
+[    0.549856] msm_serial f991e000.serial: msm_serial: detected port #0
+[    0.549911] msm_serial f991e000.serial: uartclk = 7372800
+[    0.549969] f991e000.serial: ttyMSM0 at MMIO 0xf991e000 (irq = 28, base_baud = 460800) is a MSM
+[    0.550325] msm_serial: driver initialized
+[    0.561142] brd: module loaded
+[    0.569216] loop: module loaded
+[    0.569714] SCSI Media Changer driver v0.25 
+[    0.570519] spmi spmi-0: PMIC arbiter version v1 (0x20000002)
+[    0.586688] s1: supplied by regulator-dummy
+[    0.587002] s2: supplied by regulator-dummy
+[    0.587306] s3: supplied by regulator-dummy
+[    0.587681] s4: Bringing 5100000uV into 5000000-5000000uV
+[    0.587948] l1: supplied by regulator-dummy
+[    0.588269] l2: supplied by regulator-dummy
+[    0.588575] l3: supplied by regulator-dummy
+[    0.588899] l4: supplied by regulator-dummy
+[    0.589211] l5: supplied by regulator-dummy
+[    0.589529] l6: supplied by regulator-dummy
+[    0.589860] l7: supplied by regulator-dummy
+[    0.590180] l8: supplied by regulator-dummy
+[    0.590506] l9: supplied by regulator-dummy
+[    0.590833] l10: supplied by regulator-dummy
+[    0.591166] l11: supplied by regulator-dummy
+[    0.591499] l12: supplied by regulator-dummy
+[    0.591828] l13: supplied by regulator-dummy
+[    0.592164] l14: supplied by regulator-dummy
+[    0.592492] l15: supplied by regulator-dummy
+[    0.592823] l16: supplied by regulator-dummy
+[    0.593174] l17: supplied by regulator-dummy
+[    0.593511] l18: supplied by regulator-dummy
+[    0.593862] l19: supplied by regulator-dummy
+[    0.594201] l20: supplied by regulator-dummy
+[    0.594542] l21: supplied by regulator-dummy
+[    0.594893] l22: supplied by regulator-dummy
+[    0.595273] l23: supplied by regulator-dummy
+[    0.595630] l24: supplied by regulator-dummy
+[    0.595973] lvs1: supplied by regulator-dummy
+[    0.596264] lvs2: supplied by regulator-dummy
+[    0.596557] lvs3: supplied by regulator-dummy
+[    0.597002] 5vs1: supplied by s4
+[    0.597354] 5vs2: supplied by s4
+[    0.598593] libphy: Fixed MDIO Bus: probed
+[    0.598843] SLIP: version 0.8.4-NET3.019-NEWTTY (dynamic channels, max=256) (6 bit encapsulation enabled).
+[    0.598869] CSLIP: code copyright 1989 Regents of the University of California.
+[    0.599122] usbcore: registered new interface driver ax88179_178a
+[    0.599184] usbcore: registered new interface driver cdc_ether
+[    0.599244] usbcore: registered new interface driver net1080
+[    0.599304] usbcore: registered new interface driver cdc_subset
+[    0.599384] usbcore: registered new interface driver cdc_ncm
+[    0.599613] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    0.599648] ehci-pci: EHCI PCI platform driver
+[    0.599752] usbcore: registered new interface driver cdc_acm
+[    0.599773] cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+[    0.614305] input: pm8941_pwrkey as /devices/platform/soc/fc4cf000.spmi/spmi-0/0-00/fc4cf000.spmi:pm8941@0:pwrkey@800/input/input0
+[    0.615952] rtc-pm8xxx fc4cf000.spmi:pm8941@0:rtc@6000: rtc core: registered pm8xxx_rtc as rtc0
+[    0.616140] i2c /dev entries driver
+[    0.616435] IR NEC protocol handler initialized
+[    0.616456] IR RC5(x/sz) protocol handler initialized
+[    0.616474] IR RC6 protocol handler initialized
+[    0.616490] IR JVC protocol handler initialized
+[    0.616508] IR Sony protocol handler initialized
+[    0.616526] IR SANYO protocol handler initialized
+[    0.616543] IR Sharp protocol handler initialized
+[    0.616561] IR MCE Keyboard/mouse protocol handler initialized
+[    0.616580] IR XMP protocol handler initialized
+[    0.617017] qcom-smbb fc4cf000.spmi:pm8941@0:charger@1000: Initializing SMBB rev 3
+[    0.620191] otg-vbus: supplied by 5vs1
+[    0.620885] qcom-tsens fc4a8000.thermal-sensor: tsens calibration failed
+[    0.621542] device-mapper: ioctl: 4.37.0-ioctl (2017-09-20) initialised: dm-devel@redhat.com
+[    0.621593] cpuidle: enable-method property 'qcom,kpss-acc-v2' found operations
+[    0.621755] cpuidle: enable-method property 'qcom,kpss-acc-v2' found operations
+[    0.621891] cpuidle: enable-method property 'qcom,kpss-acc-v2' found operations
+[    0.622034] cpuidle: enable-method property 'qcom,kpss-acc-v2' found operations
+[    0.622543] sdhci: Secure Digital Host Controller Interface driver
+[    0.622564] sdhci: Copyright(c) Pierre Ossman
+[    0.622581] sdhci-pltfm: SDHCI platform and OF driver helper
+[    0.624045] usbcore: registered new interface driver usbhid
+[    0.624068] usbhid: USB HID core driver
+[    0.624449] remoteproc remoteproc0: releasing adsp-pil
+[    0.625675] qcom-q6v5-pil fc880000.modem-rproc: Failed to get proxy regulators.
+[    0.625705] remoteproc remoteproc0: releasing fc880000.modem-rproc
+[    0.629371] oprofile: using timer interrupt.
+[    0.629599] NET: Registered protocol family 17
+[    0.629688] Key type dns_resolver registered
+[    0.630009] Registering SWP/SWPB emulation handler
+[    0.631017] Loading compiled-in X.509 certificates
+[    0.678754] remoteproc remoteproc0: releasing adsp-pil
+[    0.680019] qcom-q6v5-pil fc880000.modem-rproc: Failed to get proxy regulators.
+[    0.680048] remoteproc remoteproc0: releasing fc880000.modem-rproc
+[    0.682276] rtc-pm8xxx fc4cf000.spmi:pm8941@0:rtc@6000: setting system clock to 1970-05-01 00:19:33 UTC (10369173)
+[    0.682459] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[    0.684804] cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[    0.685620] ALSA device list:
+[    0.685640]   No soundcards found.
+[    0.686060] platform regulatory.0: Direct firmware load for regulatory.db failed with error -2
+[    0.686091] cfg80211: failed to load regulatory.db
+[    0.687074] Freeing unused kernel memory: 1024K
+[    0.779124] s1: supplied by regulator-dummy
+[    0.779193] s1: Bringing 0uV into 675000-675000uV
+[    0.780908] remoteproc remoteproc0: releasing adsp-pil
+[    0.782125] qcom-q6v5-pil fc880000.modem-rproc: Failed to get proxy regulators.
+[    0.782156] remoteproc remoteproc0: releasing fc880000.modem-rproc
+[    0.783432] s2: supplied by regulator-dummy
+[    0.783505] s2: Bringing 0uV into 500000-500000uV
+[    0.786227] s3: supplied by regulator-dummy
+[    0.786322] s3: Bringing 0uV into 1050000-1050000uV
+[    0.787473] s4: supplied by regulator-dummy
+[    0.787865] s5: supplied by regulator-dummy
+[    0.788292] s6: supplied by regulator-dummy
+[    0.788752] s7: supplied by regulator-dummy
+[    0.789170] s8: supplied by regulator-dummy
+[    0.790028] s1: supplied by regulator-dummy
+[    0.790101] s1: Bringing 0uV into 1300000-1300000uV
+[    0.791519] s2: supplied by regulator-dummy
+[    0.791603] s2: Bringing 0uV into 2150000-2150000uV
+[    0.792258] s3: supplied by regulator-dummy
+[    0.792322] s3: Bringing 0uV into 1800000-1800000uV
+[    0.793389] l1: supplied by s1
+[    0.793469] l1: Bringing 0uV into 1225000-1225000uV
+[    0.795419] qcom_adsp_pil adsp-pil: adsp-pil supply px not found, using dummy regulator
+[    0.795623] l2: supplied by s3
+[    0.795724] l2: Bringing 0uV into 1200000-1200000uV
+[    0.796355] l3: supplied by s1
+[    0.796426] l3: Bringing 0uV into 1000000-1000000uV
+[    0.797813] l4: supplied by s1
+[    0.797914] l4: Bringing 0uV into 1225000-1225000uV
+[    0.798476] l5: supplied by s2
+[    0.798545] l5: Bringing 0uV into 1800000-1800000uV
+[    0.799019] l6: supplied by s2
+[    0.799101] l6: Bringing 0uV into 1800000-1800000uV
+[    0.800146] l7: supplied by s2
+[    0.800227] l7: Bringing 0uV into 1800000-1800000uV
+[    0.800790] l8: supplied by vph-pwr
+[    0.800865] l8: Bringing 0uV into 1800000-1800000uV
+[    0.801315] l9: supplied by vreg-boost
+[    0.801398] l9: Bringing 0uV into 1800000-1800000uV
+[    0.801907] l10: supplied by vreg-boost
+[    0.801979] l10: Bringing 0uV into 1800000-1800000uV
+[    0.802534] l11: supplied by s1
+[    0.802600] l11: Bringing 0uV into 1225000-1225000uV
+[    0.803088] l12: supplied by s2
+[    0.803150] l12: Bringing 0uV into 1800000-1800000uV
+[    0.803833] l13: supplied by vreg-boost
+[    0.803898] l13: Bringing 0uV into 1800000-1800000uV
+[    0.804653] l14: supplied by s2
+[    0.804722] l14: Bringing 0uV into 1800000-1800000uV
+[    0.805281] l15: supplied by s2
+[    0.805355] l15: Bringing 0uV into 2050000-2050000uV
+[    0.805596] qcom_adsp_pil adsp-pil: no fatal IRQ defined
+[    0.805624] remoteproc remoteproc0: releasing adsp-pil
+[    0.808096] l16: supplied by vph-pwr
+[    0.808180] l16: Bringing 0uV into 2700000-2700000uV
+[    0.808788] l17: supplied by vreg-boost
+[    0.808871] l17: Bringing 0uV into 2700000-2700000uV
+[    0.809428] l18: supplied by vph-pwr
+[    0.809500] l18: Bringing 0uV into 2850000-2850000uV
+[    0.810057] l19: supplied by vph-pwr
+[    0.810152] l19: Bringing 0uV into 2900000-2900000uV
+[    0.810745] l20: supplied by vreg-boost
+[    0.810836] l20: Bringing 0uV into 2950000-2950000uV
+[    0.811617] l21: supplied by vreg-boost
+[    0.811690] l21: Bringing 0uV into 2950000-2950000uV
+[    0.811943] qcom-q6v5-pil fc880000.modem-rproc: no fatal IRQ defined
+[    0.811969] remoteproc remoteproc0: releasing fc880000.modem-rproc
+[    0.814042] l22: supplied by vreg-boost
+[    0.814113] l22: Bringing 0uV into 3000000-3000000uV
+[    0.814738] l23: supplied by vreg-boost
+[    0.814822] l23: Bringing 0uV into 2800000-2800000uV
+[    0.815641] l24: supplied by vreg-boost
+[    0.815726] l24: Bringing 0uV into 3075000-3075000uV
+[    0.816437] lvs1: supplied by s3
+[    0.816847] lvs2: supplied by s3
+[    0.817253] lvs3: supplied by s3
+[    0.817747] 5vs1: supplied by regulator-dummy
+[    0.818190] 5vs2: supplied by regulator-dummy
+[    0.834329] mmc0: Switching to 3.3V signalling voltage failed
+[    0.857824] mmc0: SDHCI controller on f9824900.sdhci [f9824900.sdhci] using ADMA 64-bit
+[    0.858599] qcom_adsp_pil adsp-pil: adsp-pil supply px not found, using dummy regulator
+[    0.858913] qcom_adsp_pil adsp-pil: no fatal IRQ defined
+[    0.858938] remoteproc remoteproc0: releasing adsp-pil
+[    0.861052] qcom-q6v5-pil fc880000.modem-rproc: no fatal IRQ defined
+[    0.861098] remoteproc remoteproc0: releasing fc880000.modem-rproc
+[    0.916891] using random self ethernet address
+[    0.916924] using random host ethernet address
+[    0.917474] mmc0: new high speed MMC card at address 0001
+[    0.918040] mmcblk0: mmc0:0001 064GE2 58.2 GiB 
+[    0.918451] mmcblk0boot0: mmc0:0001 064GE2 partition 1 4.00 MiB
+[    0.918878] mmcblk0boot1: mmc0:0001 064GE2 partition 2 4.00 MiB
+[    0.919162] mmcblk0rpmb: mmc0:0001 064GE2 partition 3 4.00 MiB, chardev (245:0)
+[    0.931422] Alternate GPT is invalid, using primary GPT.
+[    0.931519]  mmcblk0: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11 p12 p13 p14 p15 p16 p17 p18 p19 p20 p21 p22 p23 p24 p25 p26 p27 p28 p29
+[    0.940394] usb0: HOST MAC 6e:e1:63:b1:0d:e0
+[    0.940458] usb0: MAC 06:f4:27:cc:55:2b
+[    0.940617] l24: voltage operation not allowed
+[    0.944380] qcom_adsp_pil adsp-pil: adsp-pil supply px not found, using dummy regulator
+[    0.954780] qcom_adsp_pil adsp-pil: no fatal IRQ defined
+[    0.954842] remoteproc remoteproc0: releasing adsp-pil
+[    0.958346] qcom-q6v5-pil fc880000.modem-rproc: no fatal IRQ defined
+[    0.958403] remoteproc remoteproc0: releasing fc880000.modem-rproc
+[    1.290761] configfs-gadget gadget: high-speed config #1: c
+/ # [6n

@@ -3,10 +3,11 @@ cat \
   ../linux-flto/arch/arm/boot/dts/qcom-msm8974-oneplus-bacon.dtb \
   > zImage-dtb
 
+  #--cmdline "console=ttyMSM0,115200,n8 PMOS_NO_OUTPUT_REDIRECT" \
 mkbootimg \
   --kernel zImage-dtb \
   --ramdisk initramfs/initramfs-bacon \
-  --cmdline "console=ttyMSM0,115200,n8 PMOS_NO_OUTPUT_REDIRECT" \
+  --cmdline "msm.vram=16m" \
   --base 0 \
   --kernel_offset 0x8000 \
   --ramdisk_offset 0x2000000 \
