@@ -1,1 +1,1 @@
-./mkinitramfs && ./genmainline && ./flash && ./reboot
+./make.sh && ./mkinitramfs && ./genmainline && ./flash && ./reboot

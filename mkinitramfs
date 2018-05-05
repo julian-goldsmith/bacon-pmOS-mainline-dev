@@ -4,13 +4,13 @@ WORK="$HOME/Sources/bacon-pmOS-mainline-dev/initramfs"
 
 sudo rm -r $WORK/*
 cd "$WORK" || exit 1
-cp "$HOME/.local/var/pmbootstrap/chroot_rootfs_oneplus-bacon/boot/initramfs-oneplus-bacon" initramfs.gz
+cp "$HOME/.local/var/pmbootstrap/chroot_rootfs_oneplus-bacon/boot/initramfs-postmarketos-qcom" initramfs.gz
 gzip -d initramfs.gz
 sudo cat initramfs | sudo cpio -i
 sudo rm -rf initramfs lib/modules
 
-cd "$HOME/Sources/linux-flto" || exit 1
+cd "$HOME/Sources/linux" || exit 1
 INSTALL_MOD_PATH=../bacon-pmOS-mainline-dev/initramfs sudo make ARCH=arm CROSS_COMPILE=arm-none-eabi- LOCALVERSION= modules_install
 
 cd "$WORK" || exit 1
-find . -print | cpio --quiet -o -H newc | gzip -1 > initramfs-bacon
+find . -print | cpio --quiet -o -H newc | gzip -1 > initramfs-postmarketos-qcom

@@ -1,2 +1,0 @@
-cd $HOME/Sources/linux-flto
-ARCH=arm CROSS_COMPILE=arm-none-eabi- LOCALVERSION= make dtbs

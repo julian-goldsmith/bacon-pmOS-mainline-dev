@@ -1,13 +1,14 @@
 cat \
-  ../linux-flto/arch/arm/boot/zImage \
-  ../linux-flto/arch/arm/boot/dts/qcom-msm8974-oneplus-bacon.dtb \
+  ../linux/arch/arm/boot/zImage \
+  ../linux/arch/arm/boot/dts/qcom-msm8974-oneplus-bacon.dtb \
   > zImage-dtb
 
   #--cmdline "console=ttyMSM0,115200,n8 PMOS_NO_OUTPUT_REDIRECT" \
+  #--cmdline "console=ttyGS0,115200 cma=512m msm.vram=128m" \
 mkbootimg \
   --kernel zImage-dtb \
-  --ramdisk initramfs/initramfs-bacon \
-  --cmdline "msm.vram=16m" \
+  --ramdisk initramfs/initramfs-postmarketos-qcom \
+  --cmdline "log_buf_len=8M cma=512m msm.vram=128m" \
   --base 0 \
   --kernel_offset 0x8000 \
   --ramdisk_offset 0x2000000 \
