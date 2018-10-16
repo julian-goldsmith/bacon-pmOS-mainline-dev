@@ -1,3 +1,3 @@
 #!/bin/bash
 cd ../linux
-make ARCH=arm CROSS_COMPILE=arm-none-eabi- LOCALVERSION= -j9 "$@"
+make ARCH=arm CROSS_COMPILE="ccache arm-none-eabi-" LOCALVERSION= -j9 "$@"

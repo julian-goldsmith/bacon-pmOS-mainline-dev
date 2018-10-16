@@ -8,7 +8,7 @@ cat \
 mkbootimg \
   --kernel zImage-dtb \
   --ramdisk initramfs/initramfs-postmarketos-qcom \
-  --cmdline "log_buf_len=8M cma=512m msm.vram=128m" \
+  --cmdline "log_buf_len=8M clk_ignore_unused pd_ignore_unused cma=1024m msm.vram=778m" \
   --base 0 \
   --kernel_offset 0x8000 \
   --ramdisk_offset 0x2000000 \

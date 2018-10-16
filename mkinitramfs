@@ -10,7 +10,7 @@ sudo cat initramfs | sudo cpio -i
 sudo rm -rf initramfs lib/modules
 
 cd "$HOME/Sources/linux" || exit 1
-INSTALL_MOD_PATH=../bacon-pmOS-mainline-dev/initramfs sudo make ARCH=arm CROSS_COMPILE=arm-none-eabi- LOCALVERSION= modules_install
+INSTALL_MOD_PATH="$WORK" sudo make ARCH=arm CROSS_COMPILE=arm-none-eabi- LOCALVERSION= modules_install
 
 cd "$WORK" || exit 1
 find . -print | cpio --quiet -o -H newc | gzip -1 > initramfs-postmarketos-qcom
