@@ -1,3 +1,3 @@
-adb reboot bootloader
+sudo adb reboot bootloader
 sudo fastboot erase boot
 sudo fastboot flash boot zImage-bacon

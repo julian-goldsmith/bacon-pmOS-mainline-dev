@@ -42,25 +42,36 @@ mount_subpartitions() {
 	# Do not create subpartition mappings if pmOS_boot
 	# already exists (e.g. installed on an sdcard)
 	blkid |grep -q "pmOS_boot"  && return
-
-	for i in /dev/mmcblk*; do
-		case "$(kpartx -l "$i" 2>/dev/null | wc -l)" in
-			2)
-				echo "Mount subpartitions of $i"
-				kpartx -afs "$i"
-				# Ensure that this was the *correct* subpartition
-				# Some devices have mmc partitions that appear to have
-				# subpartitions, but aren't our subpartition.
-				if blkid | grep -q "pmOS_boot"; then
-					break
-				fi
-				kpartx -d "$i"
-				continue
-				;;
-			*)
-				continue
-				;;
-		esac
+	attempt_count=0
+	echo "Trying to mount subpartitions for 10 seconds..."
+	while [ -z "$(find_boot_partition)" ]; do
+		partitions="$(grep -v "loop\|ram" < /proc/diskstats |\
+			sed 's/\(\s\+[0-9]\+\)\+\s\+//;s/ .*//;s/^/\/dev\//')"
+		echo "$partitions" | while read -r partition; do
+			case "$(kpartx -l "$partition" 2>/dev/null | wc -l)" in
+				2)
+					echo "Mount subpartitions of $partition"
+					kpartx -afs "$partition"
+					# Ensure that this was the *correct* subpartition
+					# Some devices have mmc partitions that appear to have
+					# subpartitions, but aren't our subpartition.
+					if blkid | grep -q "pmOS_boot"; then
+						break
+					fi
+					kpartx -d "$partition"
+					continue
+					;;
+				*)
+					continue
+					;;
+			esac
+		done
+		attempt_count=$(( attempt_count + 1 ));
+		if [ "$attempt_count" -gt "100" ]; then
+			echo "ERROR: failed to mount subpartitions!"
+			return;
+		fi
+		sleep 0.1;
 	done
 }
 
@@ -121,8 +132,8 @@ extract_initramfs_extra() {
 
 wait_root_partition() {
 	while [ -z "$(find_root_partition)" ]; do
-		show_splash /splash-nosystem.ppm.gz
-		echo "Could not find the root partition."
+		show_splash /splash-norootfs.ppm.gz
+		echo "Could not find the rootfs."
 		echo "Maybe you need to insert the sdcard, if your device has"
 		echo "any? Trying again in one second..."
 		sleep 1
@@ -241,6 +252,14 @@ start_udhcpd() {
 	# Only run once
 	[ -e /etc/udhcpd.conf ] && return
 
+	# Skip if disabled
+	# shellcheck disable=SC2154
+	if [ "$deviceinfo_disable_dhcpd" = "true" ]; then
+		echo "NOTE: start of dhcpd is disabled (deviceinfo_disable_dhcpd)"
+		touch /etc/udhcpcd.conf
+		return
+	fi
+
 	# Get usb interface
 	INTERFACE=""
 	ifconfig rndis0 "$IP" && INTERFACE=rndis0
@@ -292,6 +311,8 @@ start_charging_mode(){
 		lpm_boot=1
 		androidboot.huawei_type=oem_rtc
 		startup=0x00010004
+		lpcharge=1
+		androidboot.bootchg=true
 	"
 	# shellcheck disable=SC2086
 	grep -Eq "$(echo $chargingmodes | tr ' ' '|')" /proc/cmdline || return
@@ -303,7 +324,10 @@ start_charging_mode(){
 		echo "KEY_POWER 1 pgrep -x charging-sdl || charging-sdl -pcf $fontpath"
 	} >/etc/triggerhappy.conf
 	# Start it once and then start triggerhappy
-	charging-sdl -pcf "$fontpath" &
+	(
+		charging-sdl -pcf "$fontpath" \
+			|| show_splash /splash-charging-error.ppm.gz
+	) &
 	thd --deviceglob /dev/input/event* --triggers /etc/triggerhappy.conf
 }
 
@@ -313,13 +337,6 @@ show_splash() {
 	fbsplash -s /tmp/splash.ppm
 }
 
-start_msm_refresher() {
-	# shellcheck disable=SC2154,SC2086
-	if [ "${deviceinfo_msm_refresher}" = "true" ]; then
-		/usr/sbin/msm-fb-refresher --loop &
-	fi
-}
-
 set_framebuffer_mode() {
 	[ -e "/sys/class/graphics/fb0/modes" ] || return
 	[ -z "$(cat /sys/class/graphics/fb0/mode)" ] || return
@@ -327,6 +344,30 @@ set_framebuffer_mode() {
 	_mode="$(cat /sys/class/graphics/fb0/modes)"
 	echo "Setting framebuffer mode to: $_mode"
 	echo "$_mode" > /sys/class/graphics/fb0/mode
+}
+
+setup_framebuffer() {
+	# Skip for non-framebuffer devices
+	# shellcheck disable=SC2154
+	if [ "$deviceinfo_no_framebuffer" = "true" ]; then
+		echo "NOTE: Skipping framebuffer setup (deviecinfo_no_framebuffer)"
+		return
+	fi
+
+	# Wait for /dev/fb0
+	echo "NOTE: Waiting 10 seconds for the framebuffer /dev/fb0."
+	echo "If your device does not have a framebuffer, disable this with:"
+	echo "no_framebuffer=true in <https://postmarketos.org/deviceinfo>"
+	for _ in $(seq 1 100); do
+		[ -e "/dev/fb0" ] && break
+		sleep 0.1
+	done
+	if ! [ -e "/dev/fb0" ]; then
+		echo "ERROR: /dev/fb0 did not appear!"
+		return
+	fi
+
+	set_framebuffer_mode
 }
 
 loop_forever() {

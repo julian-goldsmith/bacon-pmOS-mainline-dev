@@ -1,16 +1,18 @@
 #!/bin/bash
 
-WORK="$HOME/Sources/bacon-pmOS-mainline-dev/initramfs"
+WORK="$HOME/src/bacon/bacon-pmOS-mainline-dev/initramfs"
 
-sudo rm -r $WORK/*
+#sudo rm -r $WORK/*
 cd "$WORK" || exit 1
-cp "$HOME/.local/var/pmbootstrap/chroot_rootfs_oneplus-bacon/boot/initramfs-postmarketos-qcom" initramfs.gz
-gzip -d initramfs.gz
-sudo cat initramfs | sudo cpio -i
+#cp "$HOME/.local/var/pmbootstrap/chroot_rootfs_oneplus-bacon/boot/initramfs-postmarketos-qcom" initramfs.gz
+#gzip -d initramfs.gz
+#sudo cat initramfs | sudo cpio -i
 sudo rm -rf initramfs lib/modules
 
-cd "$HOME/Sources/linux" || exit 1
-INSTALL_MOD_PATH="$WORK" sudo make ARCH=arm CROSS_COMPILE=arm-none-eabi- LOCALVERSION= modules_install
+cd "$HOME/src/bacon/linux" || exit 1
+sudo make ARCH=arm CROSS_COMPILE=arm-none-eabi- LOCALVERSION= INSTALL_MOD_PATH="$WORK" modules_install
+sudo rm $WORK/lib/modules/*/{source,build}
 
 cd "$WORK" || exit 1
+rm -f initramfs-postmarketos-qcom
 find . -print | cpio --quiet -o -H newc | gzip -1 > initramfs-postmarketos-qcom
