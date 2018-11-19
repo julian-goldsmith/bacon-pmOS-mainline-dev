@@ -1,1 +1,1 @@
-./make.sh && ./mkinitramfs && ./genmainline && ./flash && ./reboot
+./make.sh && ./mkinitramfs && ./genmainline && ./flash && ./reboot && sleep 10 && sudo /sbin/dhcpcd enp0s20u1

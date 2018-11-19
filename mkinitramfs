@@ -15,4 +15,4 @@ sudo rm $WORK/lib/modules/*/{source,build}
 
 cd "$WORK" || exit 1
 rm -f initramfs-postmarketos-qcom
-find . -print | cpio --quiet -o -H newc | gzip -1 > initramfs-postmarketos-qcom
+find . -print | cpio --quiet -o -H newc | gzip > initramfs-postmarketos-qcom
